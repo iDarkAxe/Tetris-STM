@@ -100,7 +100,7 @@ int main(void)
 		 HAL_GPIO_TogglePin(testLed_GPIO_Port, testLed_Pin);
 		 HAL_Delay(100);
 	  }
-	  if(!HAL_GPIO_ReadPin(rotateButton_GPIO_Port, rotateButton_Pin))
+	  if(!HAL_GPIO_ReadPin(rotateButton_Button_GPIO_Port, rotateButton_Pin))
 	  {
 		 HAL_GPIO_TogglePin(testLed_GPIO_Port, testLed_Pin);
 		 HAL_Delay(200);

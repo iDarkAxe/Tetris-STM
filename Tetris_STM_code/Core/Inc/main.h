@@ -57,8 +57,18 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define rightButton_Pin GPIO_PIN_1
+#define rightButton_GPIO_Port GPIOA
 #define VCP_TX_Pin GPIO_PIN_2
 #define VCP_TX_GPIO_Port GPIOA
+#define rotateButton_Pin GPIO_PIN_3
+#define rotateButton_GPIO_Port GPIOA
+#define fallButton_Pin GPIO_PIN_4
+#define fallButton_GPIO_Port GPIOA
+#define testLed_Pin GPIO_PIN_5
+#define testLed_GPIO_Port GPIOA
+#define menuButton_Pin GPIO_PIN_6
+#define menuButton_GPIO_Port GPIOA
 #define TMS_Pin GPIO_PIN_13
 #define TMS_GPIO_Port GPIOA
 #define TCK_Pin GPIO_PIN_14

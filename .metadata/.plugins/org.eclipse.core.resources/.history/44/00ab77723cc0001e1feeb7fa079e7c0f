@@ -95,22 +95,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  if(!HAL_GPIO_ReadPin(rightButton_GPIO_Port, rightButton_Pin))
-	  {
-		 HAL_GPIO_TogglePin(testLed_GPIO_Port, testLed_Pin);
-		 HAL_Delay(100);
-	  }
-	  if(!HAL_GPIO_ReadPin(rotateButton_GPIO_Port, rotateButton_Pin))
-	  {
-		 HAL_GPIO_TogglePin(testLed_GPIO_Port, testLed_Pin);
-		 HAL_Delay(200);
-	  }
-	  if(!HAL_GPIO_ReadPin(fallButton_GPIO_Port, fallButton_Pin))
-	  {
-		 HAL_GPIO_TogglePin(testLed_GPIO_Port, testLed_Pin);
-		 HAL_Delay(500);
-	  }
-
+	  if(HAL_GPIO_ReadPin(rightButton_GPIO_Port, rightButton_Pin))
+		  HAL_GPIO_TogglePin(testLed_GPIO_Port, testLed_Pin);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
