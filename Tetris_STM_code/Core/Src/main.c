@@ -50,7 +50,9 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-
+void tetrisInit();
+void tetrisBordureDecor(SSD1306_COLOR);
+void tetrisStartMenu(SSD1306_COLOR);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -95,21 +97,6 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  if(!HAL_GPIO_ReadPin(rightButton_GPIO_Port, rightButton_Pin))
-	  {
-		 HAL_GPIO_TogglePin(testLed_GPIO_Port, testLed_Pin);
-		 HAL_Delay(100);
-	  }
-	  if(!HAL_GPIO_ReadPin(rotateButton_GPIO_Port, rotateButton_Pin))
-	  {
-		 HAL_GPIO_TogglePin(testLed_GPIO_Port, testLed_Pin);
-		 HAL_Delay(200);
-	  }
-	  if(!HAL_GPIO_ReadPin(fallButton_GPIO_Port, fallButton_Pin))
-	  {
-		 HAL_GPIO_TogglePin(testLed_GPIO_Port, testLed_Pin);
-		 HAL_Delay(500);
-	  }
 
     /* USER CODE END WHILE */
 
@@ -169,7 +156,92 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+void tetrisInit()
+{
+  ssd1306_Init();
+  //dessiner la bordure
+  ssd1306_DrawRectangle(0, 0, 128, 64, White);  //ext border
+  ssd1306_DrawRectangle(1, 1, 127, 63, White);  //interior
+  ssd1306_UpdateScreen();   //!! Could Blink ?
 
+  //FACULTATIF DECORS
+  tetrisStartMenu(White);
+  
+  //ecrire le nom du jeu en GROS
+  //initialiser le reste
+}
+
+void tetrisBordureDecor(SSD1306_COLOR color)
+{
+  //BORD DROIT HAUT
+  ssd1306_DrawPixel(3, 4, color);
+  ssd1306_DrawPixel(4, 3, color);
+  ssd1306_DrawPixel(5, 4, color);
+  ssd1306_DrawPixel(4, 5, color);
+  ssd1306_DrawPixel(6, 6, color);
+
+  ssd1306_DrawPixel(6, 3, color);
+  ssd1306_DrawPixel(7, 3, color);
+  ssd1306_DrawPixel(8, 3, color);
+
+  ssd1306_DrawPixel(3, 6, color);
+  ssd1306_DrawPixel(3, 7, color);
+  ssd1306_DrawPixel(3, 8, color);
+
+  //BORD GAUCHE HAUT
+  ssd1306_DrawPixel(3, 61, color);
+  ssd1306_DrawPixel(4, 62, color);
+  ssd1306_DrawPixel(3, 60, color);
+  ssd1306_DrawPixel(5, 61, color);
+  ssd1306_DrawPixel(6, 59, color);
+
+  ssd1306_DrawPixel(3, 57, color);
+  ssd1306_DrawPixel(3, 58, color);
+  ssd1306_DrawPixel(3, 59, color);
+
+  ssd1306_DrawPixel(6, 62, color);
+  ssd1306_DrawPixel(7, 62, color);
+  ssd1306_DrawPixel(8, 62, color);
+
+  //BORD DROIT BAS
+  ssd1306_DrawPixel(124, 4, color);
+  ssd1306_DrawPixel(126, 4, color);
+  ssd1306_DrawPixel(125, 4, color);
+  ssd1306_DrawPixel(125, 5, color);
+  ssd1306_DrawPixel(123, 6, color);
+
+  ssd1306_DrawPixel(121, 3, color);
+  ssd1306_DrawPixel(122, 3, color);
+  ssd1306_DrawPixel(123, 3, color);
+
+  ssd1306_DrawPixel(126, 6, color);
+  ssd1306_DrawPixel(126, 7, color);
+  ssd1306_DrawPixel(126, 8, color);
+
+  //BORD GAUCHE BAS
+  ssd1306_DrawPixel(126, 62, color);
+  ssd1306_DrawPixel(125, 61, color);
+  ssd1306_DrawPixel(124, 61, color);
+  ssd1306_DrawPixel(123, 60, color);
+  ssd1306_DrawPixel(122, 59, color);
+
+  ssd1306_DrawPixel(121, 57, color);
+  ssd1306_DrawPixel(122, 58, color);
+  ssd1306_DrawPixel(123, 59, color);
+
+  ssd1306_DrawPixel(126, 62, color);
+  ssd1306_DrawPixel(126, 62, color);
+  ssd1306_DrawPixel(126, 62, color);
+}
+
+void tetrisStartMenu(SSD1306_COLOR color){
+  tetrisBordureDecor(color);
+  ssd1306_UpdateScreen();
+  //afficher "Tetris The GAME"
+  //afficher flèche click
+  //afficher "Click to Start"
+  //afficher les tetriminos
+}
 /* USER CODE END 4 */
 
 /**
