@@ -242,6 +242,15 @@ void tetrisStartMenu(SSD1306_COLOR color){
   //afficher "Click to Start"
   //afficher les tetriminos
 }
+
+//functions to draw pieces
+void drawL(uint8_t x, uint8_t y) { 
+	// ssd1306_FillRectangle(x, y, x+17, y+5, White); 
+	// ssd1306_FillRectangle(x+12, y+6, x+17, y+11, White); //left L but work
+  ssd1306_FillRectangle(x, y+6, x+17, y+11, White); 
+	ssd1306_FillRectangle(x+12, y+11, x+17, y+17, White); 
+} 
+
 /* USER CODE END 4 */
 
 /**
