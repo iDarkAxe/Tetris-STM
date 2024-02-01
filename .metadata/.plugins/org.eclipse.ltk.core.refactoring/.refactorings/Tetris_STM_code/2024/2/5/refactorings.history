@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Tetris_STM_code/ssd1306/ssd1306_conf_template.h&apos; to &apos;ssd1306_conf.h&apos;" description="Rename resource &apos;ssd1306_conf_template.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="ssd1306/ssd1306_conf_template.h" name="ssd1306_conf.h" stamp="1706789015973" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Tetris_STM_code/ssd1306&apos; to &apos;ssd1306_2&apos;" description="Rename resource &apos;ssd1306&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="ssd1306" name="ssd1306_2" stamp="1706789300396" updateReferences="false"/>
+</session>

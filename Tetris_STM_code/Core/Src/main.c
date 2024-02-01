@@ -18,12 +18,13 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "i2c.h"
 #include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "ssd1306.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -89,15 +90,19 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART2_UART_Init();
+  MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-
+  tetrisInit();
+  drawL(10, 50);
+  drawL(20, 30);
+  drawL(50, 10);
+  ssd1306_UpdateScreen();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -147,8 +152,9 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2;
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2|RCC_PERIPHCLK_I2C1;
   PeriphClkInit.Usart2ClockSelection = RCC_USART2CLKSOURCE_PCLK1;
+  PeriphClkInit.I2c1ClockSelection = RCC_I2C1CLKSOURCE_PCLK1;
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
     Error_Handler();
@@ -156,12 +162,10 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-void tetrisInit()
-{
+void tetrisInit(){
   ssd1306_Init();
-  //dessiner la bordure
-  ssd1306_DrawRectangle(0, 0, 128, 64, White);  //ext border
-  ssd1306_DrawRectangle(1, 1, 127, 63, White);  //interior
+  ssd1306_DrawRectangle(0, 0, 127, 63, White);  //ext border
+  ssd1306_DrawRectangle(1, 1, 126, 62, White);  //interior
   ssd1306_UpdateScreen();   //!! Could Blink ?
 
   //FACULTATIF DECORS
@@ -174,51 +178,51 @@ void tetrisInit()
 void tetrisBordureDecor(SSD1306_COLOR color)
 {
   //BORD DROIT HAUT
-  ssd1306_DrawPixel(3, 4, color);
+  ssd1306_DrawPixel(2, 3, color);
+  ssd1306_DrawPixel(3, 2, color);
   ssd1306_DrawPixel(4, 3, color);
-  ssd1306_DrawPixel(5, 4, color);
-  ssd1306_DrawPixel(4, 5, color);
-  ssd1306_DrawPixel(6, 6, color);
+  ssd1306_DrawPixel(3, 4, color);
+  ssd1306_DrawPixel(5, 5, color);
 
-  ssd1306_DrawPixel(6, 3, color);
-  ssd1306_DrawPixel(7, 3, color);
-  ssd1306_DrawPixel(8, 3, color);
+  ssd1306_DrawPixel(5, 2, color);
+  ssd1306_DrawPixel(6, 2, color);
+  ssd1306_DrawPixel(7, 2, color);
 
-  ssd1306_DrawPixel(3, 6, color);
-  ssd1306_DrawPixel(3, 7, color);
-  ssd1306_DrawPixel(3, 8, color);
+  ssd1306_DrawPixel(2, 5, color);
+  ssd1306_DrawPixel(2, 6, color);
+  ssd1306_DrawPixel(2, 7, color);
 
   //BORD GAUCHE HAUT
+  ssd1306_DrawPixel(2, 60, color);
   ssd1306_DrawPixel(3, 61, color);
-  ssd1306_DrawPixel(4, 62, color);
-  ssd1306_DrawPixel(3, 60, color);
+  ssd1306_DrawPixel(2, 59, color);
+  ssd1306_DrawPixel(4, 60, color);
+  ssd1306_DrawPixel(5, 58, color);
+
+  ssd1306_DrawPixel(2, 56, color);
+  ssd1306_DrawPixel(2, 57, color);
+  ssd1306_DrawPixel(2, 58, color);
+
   ssd1306_DrawPixel(5, 61, color);
-  ssd1306_DrawPixel(6, 59, color);
-
-  ssd1306_DrawPixel(3, 57, color);
-  ssd1306_DrawPixel(3, 58, color);
-  ssd1306_DrawPixel(3, 59, color);
-
-  ssd1306_DrawPixel(6, 62, color);
-  ssd1306_DrawPixel(7, 62, color);
-  ssd1306_DrawPixel(8, 62, color);
+  ssd1306_DrawPixel(6, 61, color);
+  ssd1306_DrawPixel(7, 61, color);
 
   //BORD DROIT BAS
-  ssd1306_DrawPixel(124, 4, color);
-  ssd1306_DrawPixel(126, 4, color);
+  ssd1306_DrawPixel(124, 3, color);
+  ssd1306_DrawPixel(126, 3, color);
+  ssd1306_DrawPixel(125, 3, color);
   ssd1306_DrawPixel(125, 4, color);
-  ssd1306_DrawPixel(125, 5, color);
-  ssd1306_DrawPixel(123, 6, color);
+  ssd1306_DrawPixel(123, 5, color);
 
-  ssd1306_DrawPixel(121, 3, color);
-  ssd1306_DrawPixel(122, 3, color);
-  ssd1306_DrawPixel(123, 3, color);
+  ssd1306_DrawPixel(121, 2, color);
+  ssd1306_DrawPixel(122, 2, color);
+  ssd1306_DrawPixel(123, 2, color);
 
+  ssd1306_DrawPixel(126, 5, color);
   ssd1306_DrawPixel(126, 6, color);
   ssd1306_DrawPixel(126, 7, color);
-  ssd1306_DrawPixel(126, 8, color);
 
-  //BORD GAUCHE BAS
+  //BORD GAUCHE BAS		//A REFAIRE RIEN n'est BON
   ssd1306_DrawPixel(126, 62, color);
   ssd1306_DrawPixel(125, 61, color);
   ssd1306_DrawPixel(124, 61, color);
@@ -232,11 +236,12 @@ void tetrisBordureDecor(SSD1306_COLOR color)
   ssd1306_DrawPixel(126, 62, color);
   ssd1306_DrawPixel(126, 62, color);
   ssd1306_DrawPixel(126, 62, color);
+  HAL_Delay(100);
 }
 
 void tetrisStartMenu(SSD1306_COLOR color){
-  tetrisBordureDecor(color);
-  ssd1306_UpdateScreen();
+//  tetrisBordureDecor(color);
+//  ssd1306_UpdateScreen();
   //afficher "Tetris The GAME"
   //afficher flèche click
   //afficher "Click to Start"

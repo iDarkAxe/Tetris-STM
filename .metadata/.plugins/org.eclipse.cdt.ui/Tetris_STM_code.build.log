@@ -1,10 +1,20 @@
-14:49:59 **** Incremental Build of configuration Debug for project Tetris_STM_code ****
+13:37:28 **** Incremental Build of configuration Debug for project Tetris_STM_code ****
 make -j16 all 
+arm-none-eabi-gcc "../Core/Src/i2c.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L031xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/pontet/Documents/Git_Repos/Tetris_STM/Tetris_STM_code/ssd1306" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/i2c.d" -MT"Core/Src/i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/i2c.o"
+arm-none-eabi-gcc -o "Tetris_STM_code.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\pontet\Documents\Git_Repos\Tetris_STM\Tetris_STM_code\STM32L031K6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tetris_STM_code.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Tetris_STM_code.elf
+ 
 arm-none-eabi-size  Tetris_STM_code.elf 
+arm-none-eabi-objdump -h -S Tetris_STM_code.elf  > "Tetris_STM_code.list"
    text	   data	    bss	    dec	    hex	filename
-   9972	     20	   1708	  11700	   2db4	Tetris_STM_code.elf
+  14344	     20	   2820	  17184	   4320	Tetris_STM_code.elf
+arm-none-eabi-objcopy  -O binary Tetris_STM_code.elf  "Tetris_STM_code.bin"
 Finished building: default.size.stdout
  
+Finished building: Tetris_STM_code.bin
+ 
+Finished building: Tetris_STM_code.list
+ 
 
-14:49:59 Build Finished. 0 errors, 0 warnings. (took 188ms)
+13:37:29 Build Finished. 0 errors, 0 warnings. (took 690ms)
 
