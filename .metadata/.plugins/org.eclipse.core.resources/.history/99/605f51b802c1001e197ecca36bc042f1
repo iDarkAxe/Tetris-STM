@@ -1,0 +1,5 @@
+#include "tetrisScoring.h"
+
+void getScore(){
+	return score;
+}

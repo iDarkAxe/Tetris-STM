@@ -1,0 +1,47 @@
+#include "tetrisScoring.h"
+
+/**
+  * @brief Getter of score
+  * @retval Return the value of score
+  */
+uint16_t getScore(){
+	return score;
+}
+
+/**
+  * @brief  Add points to the score,
+  * 		using numberOfLineCompleted and levelNumber as factors
+  * @param  numberOfLineCompleted: numberOfLineCompleted in one fall by a piece
+  */
+void addScore(uint8_t numberOfLineCompleted)
+{
+	//ajouter des points si on clique sur fallButton ? == augmenter la difficulté
+
+	uint8_t levelNumber = 1;	//VERIFIER COMMENT ON LE GERE
+	switch(numberOfLineCompleted){
+	case 1:
+		score += 100*levelNumber;
+		break;
+	case 2:
+		score += 300*levelNumber;
+		break;
+	case 3:
+		score += 500*levelNumber;
+		break;
+	case 4:
+		score += 800*levelNumber;
+		break;
+	case 0:
+		//erreur
+		break;
+	}
+}
+
+/**
+  * @brief  Print the score on the screen
+  */
+void printScore(){
+	char strScore[12];
+	sprintf(strScore, "%d", strScore);
+	ssd1306_WriteString(str, Font_16x24, White);
+}
