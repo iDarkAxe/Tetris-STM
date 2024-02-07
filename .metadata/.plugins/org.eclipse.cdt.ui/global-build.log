@@ -1286,3 +1286,208 @@ Finished building: Tetris_STM_code.bin
  
 Finished building: Tetris_STM_code.list
  
+08:52:22 **** Incremental Build of configuration Debug for project Tetris_STM_code ****
+make -j16 all 
+arm-none-eabi-gcc "../tetrisGame/tetrisScoring.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L031xx -c -I../Core/Inc -I"C:/Users/pontet/Documents/Git_Repos/Tetris_STM/Tetris_STM_code/tetrisGame" -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/pontet/Documents/Git_Repos/Tetris_STM/Tetris_STM_code/ssd1306" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"tetrisGame/tetrisScoring.d" -MT"tetrisGame/tetrisScoring.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "tetrisGame/tetrisScoring.o"
+../tetrisGame/tetrisScoring.c: In function 'printScore':
+../tetrisGame/tetrisScoring.c:58:9: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   58 |         sprintf(strScore, "%d points", tetrisScore);
+      |         ^~~~~~~
+../tetrisGame/tetrisScoring.c:4:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+    3 | #include "ssd1306.h"
+  +++ |+#include <stdio.h>
+    4 | 
+../tetrisGame/tetrisScoring.c:58:9: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   58 |         sprintf(strScore, "%d points", tetrisScore);
+      |         ^~~~~~~
+../tetrisGame/tetrisScoring.c:58:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../tetrisGame/tetrisScoring.c:58:29: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   58 |         sprintf(strScore, "%d points", tetrisScore);
+      |                            ~^          ~~~~~~~~~~~
+      |                             |          |
+      |                             int        uint32_t {aka long unsigned int}
+      |                            %ld
+arm-none-eabi-gcc -o "Tetris_STM_code.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\pontet\Documents\Git_Repos\Tetris_STM\Tetris_STM_code\STM32L031K6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tetris_STM_code.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Tetris_STM_code.elf
+ 
+arm-none-eabi-size  Tetris_STM_code.elf 
+arm-none-eabi-objdump -h -S Tetris_STM_code.elf  > "Tetris_STM_code.list"
+arm-none-eabi-objcopy  -O binary Tetris_STM_code.elf  "Tetris_STM_code.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19120	    112	   3152	  22384	   5770	Tetris_STM_code.elf
+Finished building: default.size.stdout
+ 
+Finished building: Tetris_STM_code.bin
+ 
+Finished building: Tetris_STM_code.list
+ 
+08:52:35 **** Incremental Build of configuration Debug for project Tetris_STM_code ****
+make -j16 all 
+arm-none-eabi-gcc "../tetrisGame/tetrisScoring.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L031xx -c -I../Core/Inc -I"C:/Users/pontet/Documents/Git_Repos/Tetris_STM/Tetris_STM_code/tetrisGame" -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/pontet/Documents/Git_Repos/Tetris_STM/Tetris_STM_code/ssd1306" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"tetrisGame/tetrisScoring.d" -MT"tetrisGame/tetrisScoring.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "tetrisGame/tetrisScoring.o"
+../tetrisGame/tetrisScoring.c: In function 'printScore':
+../tetrisGame/tetrisScoring.c:58:9: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   58 |         sprintf(strScore, "%ld points", tetrisScore);
+      |         ^~~~~~~
+../tetrisGame/tetrisScoring.c:4:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+    3 | #include "ssd1306.h"
+  +++ |+#include <stdio.h>
+    4 | 
+../tetrisGame/tetrisScoring.c:58:9: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   58 |         sprintf(strScore, "%ld points", tetrisScore);
+      |         ^~~~~~~
+../tetrisGame/tetrisScoring.c:58:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+arm-none-eabi-gcc -o "Tetris_STM_code.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\pontet\Documents\Git_Repos\Tetris_STM\Tetris_STM_code\STM32L031K6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tetris_STM_code.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Tetris_STM_code.elf
+ 
+arm-none-eabi-size  Tetris_STM_code.elf 
+arm-none-eabi-objdump -h -S Tetris_STM_code.elf  > "Tetris_STM_code.list"
+   text	   data	    bss	    dec	    hex	filename
+  19120	    112	   3152	  22384	   5770	Tetris_STM_code.elf
+arm-none-eabi-objcopy  -O binary Tetris_STM_code.elf  "Tetris_STM_code.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Tetris_STM_code.bin
+ 
+Finished building: Tetris_STM_code.list
+ 
+08:53:36 **** Incremental Build of configuration Debug for project Tetris_STM_code ****
+make -j16 all 
+arm-none-eabi-gcc "../tetrisGame/tetrisScoring.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L031xx -c -I../Core/Inc -I"C:/Users/pontet/Documents/Git_Repos/Tetris_STM/Tetris_STM_code/tetrisGame" -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/pontet/Documents/Git_Repos/Tetris_STM/Tetris_STM_code/ssd1306" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"tetrisGame/tetrisScoring.d" -MT"tetrisGame/tetrisScoring.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "tetrisGame/tetrisScoring.o"
+arm-none-eabi-gcc -o "Tetris_STM_code.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\pontet\Documents\Git_Repos\Tetris_STM\Tetris_STM_code\STM32L031K6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tetris_STM_code.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Tetris_STM_code.elf
+ 
+arm-none-eabi-size  Tetris_STM_code.elf 
+arm-none-eabi-objdump -h -S Tetris_STM_code.elf  > "Tetris_STM_code.list"
+   text	   data	    bss	    dec	    hex	filename
+  19120	    112	   3152	  22384	   5770	Tetris_STM_code.elf
+arm-none-eabi-objcopy  -O binary Tetris_STM_code.elf  "Tetris_STM_code.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Tetris_STM_code.bin
+ 
+Finished building: Tetris_STM_code.list
+ 
+08:54:58 **** Incremental Build of configuration Debug for project Tetris_STM_code ****
+make -j16 all 
+arm-none-eabi-gcc "../tetrisGame/tetrisScoring.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L031xx -c -I../Core/Inc -I"C:/Users/pontet/Documents/Git_Repos/Tetris_STM/Tetris_STM_code/tetrisGame" -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/pontet/Documents/Git_Repos/Tetris_STM/Tetris_STM_code/ssd1306" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"tetrisGame/tetrisScoring.d" -MT"tetrisGame/tetrisScoring.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "tetrisGame/tetrisScoring.o"
+../tetrisGame/tetrisScoring.c: In function 'printScore':
+../tetrisGame/tetrisScoring.c:58:9: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   58 |         sprintf(strScore, "%ld points", tetrisScore);
+      |         ^~~~~~~
+../tetrisGame/tetrisScoring.c:4:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+    3 | #include "ssd1306.h"
+  +++ |+#include <stdio.h>
+    4 | 
+../tetrisGame/tetrisScoring.c:58:9: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   58 |         sprintf(strScore, "%ld points", tetrisScore);
+      |         ^~~~~~~
+../tetrisGame/tetrisScoring.c:58:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+arm-none-eabi-gcc -o "Tetris_STM_code.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\pontet\Documents\Git_Repos\Tetris_STM\Tetris_STM_code\STM32L031K6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tetris_STM_code.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Tetris_STM_code.elf
+ 
+arm-none-eabi-size  Tetris_STM_code.elf 
+arm-none-eabi-objdump -h -S Tetris_STM_code.elf  > "Tetris_STM_code.list"
+   text	   data	    bss	    dec	    hex	filename
+  19120	    112	   3152	  22384	   5770	Tetris_STM_code.elf
+arm-none-eabi-objcopy  -O binary Tetris_STM_code.elf  "Tetris_STM_code.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Tetris_STM_code.bin
+ 
+Finished building: Tetris_STM_code.list
+ 
+08:55:12 **** Incremental Build of configuration Debug for project Tetris_STM_code ****
+make -j16 all 
+arm-none-eabi-gcc "../tetrisGame/tetrisScoring.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L031xx -c -I../Core/Inc -I"C:/Users/pontet/Documents/Git_Repos/Tetris_STM/Tetris_STM_code/tetrisGame" -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/pontet/Documents/Git_Repos/Tetris_STM/Tetris_STM_code/ssd1306" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"tetrisGame/tetrisScoring.d" -MT"tetrisGame/tetrisScoring.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "tetrisGame/tetrisScoring.o"
+arm-none-eabi-gcc -o "Tetris_STM_code.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\pontet\Documents\Git_Repos\Tetris_STM\Tetris_STM_code\STM32L031K6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tetris_STM_code.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Tetris_STM_code.elf
+ 
+arm-none-eabi-size  Tetris_STM_code.elf 
+arm-none-eabi-objdump -h -S Tetris_STM_code.elf  > "Tetris_STM_code.list"
+   text	   data	    bss	    dec	    hex	filename
+  19120	    112	   3152	  22384	   5770	Tetris_STM_code.elf
+arm-none-eabi-objcopy  -O binary Tetris_STM_code.elf  "Tetris_STM_code.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Tetris_STM_code.bin
+ 
+Finished building: Tetris_STM_code.list
+ 
+08:55:20 **** Incremental Build of configuration Debug for project Tetris_STM_code ****
+make -j16 all 
+arm-none-eabi-size  Tetris_STM_code.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19120	    112	   3152	  22384	   5770	Tetris_STM_code.elf
+Finished building: default.size.stdout
+ 
+08:58:42 **** Incremental Build of configuration Debug for project Tetris_STM_code ****
+make -j16 all 
+arm-none-eabi-gcc "../tetrisGame/tetrisScoring.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L031xx -c -I../Core/Inc -I"C:/Users/pontet/Documents/Git_Repos/Tetris_STM/Tetris_STM_code/tetrisGame" -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/pontet/Documents/Git_Repos/Tetris_STM/Tetris_STM_code/ssd1306" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"tetrisGame/tetrisScoring.d" -MT"tetrisGame/tetrisScoring.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "tetrisGame/tetrisScoring.o"
+arm-none-eabi-gcc -o "Tetris_STM_code.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\pontet\Documents\Git_Repos\Tetris_STM\Tetris_STM_code\STM32L031K6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tetris_STM_code.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Tetris_STM_code.elf
+ 
+arm-none-eabi-size  Tetris_STM_code.elf 
+arm-none-eabi-objdump -h -S Tetris_STM_code.elf  > "Tetris_STM_code.list"
+   text	   data	    bss	    dec	    hex	filename
+  19120	    112	   3152	  22384	   5770	Tetris_STM_code.elf
+arm-none-eabi-objcopy  -O binary Tetris_STM_code.elf  "Tetris_STM_code.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Tetris_STM_code.bin
+ 
+Finished building: Tetris_STM_code.list
+ 
+08:59:14 **** Incremental Build of configuration Debug for project Tetris_STM_code ****
+make -j16 all 
+arm-none-eabi-gcc "../tetrisGame/tetrisScoring.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L031xx -c -I../Core/Inc -I"C:/Users/pontet/Documents/Git_Repos/Tetris_STM/Tetris_STM_code/tetrisGame" -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/pontet/Documents/Git_Repos/Tetris_STM/Tetris_STM_code/ssd1306" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"tetrisGame/tetrisScoring.d" -MT"tetrisGame/tetrisScoring.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "tetrisGame/tetrisScoring.o"
+arm-none-eabi-gcc -o "Tetris_STM_code.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\pontet\Documents\Git_Repos\Tetris_STM\Tetris_STM_code\STM32L031K6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tetris_STM_code.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Tetris_STM_code.elf
+ 
+arm-none-eabi-size  Tetris_STM_code.elf 
+arm-none-eabi-objdump -h -S Tetris_STM_code.elf  > "Tetris_STM_code.list"
+   text	   data	    bss	    dec	    hex	filename
+  19120	    112	   3152	  22384	   5770	Tetris_STM_code.elf
+arm-none-eabi-objcopy  -O binary Tetris_STM_code.elf  "Tetris_STM_code.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Tetris_STM_code.bin
+ 
+Finished building: Tetris_STM_code.list
+ 
+08:59:34 **** Incremental Build of configuration Debug for project Tetris_STM_code ****
+make -j16 all 
+arm-none-eabi-gcc "../tetrisGame/tetrisScoring.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L031xx -c -I../Core/Inc -I"C:/Users/pontet/Documents/Git_Repos/Tetris_STM/Tetris_STM_code/tetrisGame" -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/pontet/Documents/Git_Repos/Tetris_STM/Tetris_STM_code/ssd1306" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"tetrisGame/tetrisScoring.d" -MT"tetrisGame/tetrisScoring.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "tetrisGame/tetrisScoring.o"
+../tetrisGame/tetrisScoring.c:13:10: error: conflicting types for 'getScore'; have 'uint32_t()' {aka 'long unsigned int()'}
+   13 | uint32_t getScore(){
+      |          ^~~~~~~~
+In file included from ../tetrisGame/tetrisScoring.c:1:
+../tetrisGame/tetrisScoring.h:14:10: note: previous declaration of 'getScore' with type 'uint16_t()' {aka 'short unsigned int()'}
+   14 | uint16_t getScore();
+      |          ^~~~~~~~
+make: *** [tetrisGame/subdir.mk:22: tetrisGame/tetrisScoring.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+09:01:46 **** Incremental Build of configuration Debug for project Tetris_STM_code ****
+make -j16 all 
+arm-none-eabi-gcc "../tetrisGame/tetrisScoring.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L031xx -c -I../Core/Inc -I"C:/Users/pontet/Documents/Git_Repos/Tetris_STM/Tetris_STM_code/tetrisGame" -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/pontet/Documents/Git_Repos/Tetris_STM/Tetris_STM_code/ssd1306" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"tetrisGame/tetrisScoring.d" -MT"tetrisGame/tetrisScoring.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "tetrisGame/tetrisScoring.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L031xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/pontet/Documents/Git_Repos/Tetris_STM/Tetris_STM_code/ssd1306" -I"C:/Users/pontet/Documents/Git_Repos/Tetris_STM/Tetris_STM_code/tetrisGame" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Tetris_STM_code.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\pontet\Documents\Git_Repos\Tetris_STM\Tetris_STM_code\STM32L031K6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tetris_STM_code.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Tetris_STM_code.elf
+ 
+arm-none-eabi-size  Tetris_STM_code.elf 
+arm-none-eabi-objdump -h -S Tetris_STM_code.elf  > "Tetris_STM_code.list"
+   text	   data	    bss	    dec	    hex	filename
+  19120	    112	   3152	  22384	   5770	Tetris_STM_code.elf
+arm-none-eabi-objcopy  -O binary Tetris_STM_code.elf  "Tetris_STM_code.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Tetris_STM_code.bin
+ 
+Finished building: Tetris_STM_code.list
+ 
+09:01:52 **** Incremental Build of configuration Debug for project Tetris_STM_code ****
+make -j16 all 
+arm-none-eabi-size  Tetris_STM_code.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19120	    112	   3152	  22384	   5770	Tetris_STM_code.elf
+Finished building: default.size.stdout
+ 

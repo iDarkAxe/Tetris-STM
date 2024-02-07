@@ -10,12 +10,13 @@ uint8_t piecePosee = 100;
   * @brief Getter of score
   * @retval Return the value of score
   */
-uint32_t getScore(){
+uint16_t getScore(){
 	return tetrisScore;
 }
 
-/** @brief  Add points to the score when a Piece fall to its place
-*/
+/**
+  * @brief  Add points to the score when a Piece fall to its place
+  */
 void addScorePiece()
 {
 	tetrisScore += piecePosee;

@@ -10,7 +10,7 @@ uint8_t piecePosee = 100;
   * @brief Getter of score
   * @retval Return the value of score
   */
-uint32_t getScore(){
+uint16_t getScore(){
 	return tetrisScore;
 }
 

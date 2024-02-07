@@ -11,8 +11,7 @@
 #include "main.h"
 
 
-uint32_t getScore();
-void addScorePiece();
+uint16_t getScore();
 void addScore(uint8_t numberOfLineCompleted);
 
 void printScore();
