@@ -82,7 +82,9 @@ int playStack[23][16] =
     {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
     {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}};
     
-//structure to locate the current tetramino in the game
+
+/** @brief Structure to locate the current tetramino in the game
+  */
 typedef struct{
     int coordY;
     int coordX;
@@ -92,11 +94,13 @@ typedef struct{
 
 uint32_t nextFallTime = 0;
 
-int fallDelay = 1000;   // les diminuer au fil du temps/score ?
+int fallDelay = 1000;   // les diminuer au fil du temps/level ?
 int rotateFallDelay = 500;
 int moveFallDelay = 500;
 
-enum inputs { gauche = 0, droite = 1, bas = 2, rotate = 3, menu = 4};
+/** @brief Inputs du jeu, permet de simplifier le code
+  */
+enum inputs { gauche = 0, droite = 1, bas = 2, rotate = 3, menu = 4};   
 
 //declaration fonctions
 void addPieceIntoStack(TETRAMINO_ATM*);  // int[][16]
@@ -222,7 +226,9 @@ int tetrisGame()
     return 0;
 }
 
-
+/** @brief Permet de placer une pièce dans le jeu
+ *  @param *tetraminoAtm: Current tetramino used
+  */
 void addPieceIntoStack(TETRAMINO_ATM* tetraminoAtm){
     for (int i = 0; i < 4; i++){
         for(int j = 0; j < 4; j++){
@@ -233,7 +239,9 @@ void addPieceIntoStack(TETRAMINO_ATM* tetraminoAtm){
     }
 }
 
-
+/** @brief Permet de supprimer une pièce du jeu
+ *  @param *tetraminoAtm: Current tetramino used
+  */
 void removePieceFromStack(TETRAMINO_ATM* tetraminoAtm){
     for (int i = 0; i < 4; i++){
         for(int j = 0; j < 4; j++){
@@ -244,9 +252,11 @@ void removePieceFromStack(TETRAMINO_ATM* tetraminoAtm){
     }
 }
 
-
-// returns 1 if the current piece would clip into the stack
-// else returns 0
+/** @brief Permet prédire si la pièce va rentrer en colision avec les blocs déjà présents
+ *  @param *tetraminoAtm: Current tetramino used
+ * 
+ *  @retval state: 1 if would clip, 0 if not
+  */
 int isClippingInStack(TETRAMINO_ATM* tetraminoAtm)
 {
     for(int i = 0; i < 4; i++){
@@ -260,7 +270,11 @@ int isClippingInStack(TETRAMINO_ATM* tetraminoAtm)
     return 0;
 }
 
-
+/** @brief Permet de faire descendre naturellement une pièce du jeu
+ *  @param *tetraminoAtm: Current tetramino used
+ * 
+ *  @retval state: PIECE_TOUCHED, or PIECE_FALLED
+  */
 int falling(TETRAMINO_ATM* tetraminoAtm)
 {
     if(HAL_GetTick() < nextFallTime){
@@ -277,7 +291,8 @@ int falling(TETRAMINO_ATM* tetraminoAtm)
     }
 }
 
-
+/** @brief Affiche la stack sur le terminal
+  */
 void printStack(void)
 {
     printf("\n\n\n");
@@ -290,10 +305,14 @@ void printStack(void)
     return;
 }
 
-
+/** @brief Permet de déplacer une pièce en fonction de sa direction
+ *  @param *tetraminoAtm: Current tetramino used
+ *  @param direction: 
+ *  @retval state: //TODO ????? JE MET quoi là ?
+  */
 int movePiece(TETRAMINO_ATM* tetraminoAtm, int direction)
 {
-    int movement = 0;
+    int movement = 0;   //TODO OPTIMISER POUR SUPPRIMER movement
 
     if(direction == gauche) {
         movement = -1;
@@ -313,8 +332,10 @@ int movePiece(TETRAMINO_ATM* tetraminoAtm, int direction)
     }
 }
 
-
-// returns 1 if rotation was applied, or 0 if it didn't rotate because of clipping
+/** @brief Permet tourner une pièce, seulement si elle ne va pas clip
+ *  @param *tetraminoAtm: Current tetramino used
+ *  @retval state: 1 if rotated and 0 if clipping
+  */
 int rotatePiece(TETRAMINO_ATM* tetraminoAtm)
 {
     int tempCopy[4][4];

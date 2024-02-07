@@ -13,7 +13,7 @@
   */
 void tetrisBordureDecor(SSD1306_COLOR color)
 {
-  //BORD DROIT HAUT
+  //BORD DROIT HAUT 
   ssd1306_DrawPixel(2, 3, color);
   ssd1306_DrawPixel(3, 2, color);
   ssd1306_DrawPixel(4, 3, color);
@@ -28,7 +28,7 @@ void tetrisBordureDecor(SSD1306_COLOR color)
   ssd1306_DrawPixel(2, 6, color);
   ssd1306_DrawPixel(2, 7, color);
 
-  //BORD GAUCHE HAUT
+  //BORD GAUCHE HAUT  //TODO A REFAIRE RIEN n'est BON
   ssd1306_DrawPixel(2, 60, color);
   ssd1306_DrawPixel(3, 61, color);
   ssd1306_DrawPixel(2, 59, color);
@@ -43,7 +43,7 @@ void tetrisBordureDecor(SSD1306_COLOR color)
   ssd1306_DrawPixel(6, 61, color);
   ssd1306_DrawPixel(7, 61, color);
 
-  //BORD DROIT BAS
+  //BORD DROIT BAS  //TODO A REFAIRE RIEN n'est BON
   ssd1306_DrawPixel(124, 3, color);
   ssd1306_DrawPixel(126, 3, color);
   ssd1306_DrawPixel(125, 3, color);
@@ -58,7 +58,7 @@ void tetrisBordureDecor(SSD1306_COLOR color)
   ssd1306_DrawPixel(126, 6, color);
   ssd1306_DrawPixel(126, 7, color);
 
-  //BORD GAUCHE BAS		//A REFAIRE RIEN n'est BON
+  //BORD GAUCHE BAS		//TODO A REFAIRE RIEN n'est BON
   ssd1306_DrawPixel(126, 62, color);
   ssd1306_DrawPixel(125, 61, color);
   ssd1306_DrawPixel(124, 61, color);
@@ -79,7 +79,7 @@ void tetrisBordureDecor(SSD1306_COLOR color)
   */
 void tetrisStartMenu(SSD1306_COLOR color){
   tetrisBordureDecor(color);
-  ssd1306_UpdateScreen();
+  ssd1306_UpdateScreen();   //TODO METTRE LES FONCTIONS DE LOU ICI
   //afficher "Tetris The GAME"
   //afficher flèche click
   //afficher "Click to Start"
