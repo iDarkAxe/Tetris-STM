@@ -54,5 +54,16 @@ dkms.conf
 up0T<K6fkN5-
 
 # user gitignore
-.settings
+*.pydevproject
+.project
 .metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
