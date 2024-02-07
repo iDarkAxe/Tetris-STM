@@ -54,5 +54,5 @@ dkms.conf
 up0T<K6fkN5-
 
 # user gitignore
-/Tetris_STM_code/.settings/
-/.metadata/
+.settings
+.metadata
