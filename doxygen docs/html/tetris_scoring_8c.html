@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Tetris_STM_code: C:/Users/pontet/Documents/Git_Repos/Tetris_STM/Tetris_STM_code/tetrisGame/tetrisScoring.c File Reference</title>
+<title>Tetris_STM_code: C:/Users/pontet/Desktop/Tetris_STM/Tetris_STM_code/tetrisGame/tetrisScoring.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -88,22 +88,23 @@ $(function() {
 <code>#include &quot;ssd1306_fonts.h&quot;</code><br />
 <code>#include &quot;ssd1306.h&quot;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &quot;tetrisLeveling.h&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:abf4ef5f0f52581fe195737642ff99062" id="r_abf4ef5f0f52581fe195737642ff99062"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf4ef5f0f52581fe195737642ff99062">getScore</a> ()</td></tr>
 <tr class="memdesc:abf4ef5f0f52581fe195737642ff99062"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter of score.  <br /></td></tr>
 <tr class="separator:abf4ef5f0f52581fe195737642ff99062"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab75449209112e9c46002f0b4f8fd8b2b" id="r_ab75449209112e9c46002f0b4f8fd8b2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab75449209112e9c46002f0b4f8fd8b2b">calculateScore</a> (int numberOfLineCompleted)</td></tr>
-<tr class="memdesc:ab75449209112e9c46002f0b4f8fd8b2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the Score.  <br /></td></tr>
-<tr class="separator:ab75449209112e9c46002f0b4f8fd8b2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5449638cab4d1f6a50bf72a798d2cf8" id="r_ab5449638cab4d1f6a50bf72a798d2cf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5449638cab4d1f6a50bf72a798d2cf8">calculateScore</a> (int _numberOfLineCompleted)</td></tr>
+<tr class="memdesc:ab5449638cab4d1f6a50bf72a798d2cf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the Score.  <br /></td></tr>
+<tr class="separator:ab5449638cab4d1f6a50bf72a798d2cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d376a9de4a0761a7b6c55d4ffaecc16" id="r_a3d376a9de4a0761a7b6c55d4ffaecc16"><td class="memItemLeft" align="right" valign="top"><a id="a3d376a9de4a0761a7b6c55d4ffaecc16" name="a3d376a9de4a0761a7b6c55d4ffaecc16"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>addScorePiece</b> ()</td></tr>
 <tr class="memdesc:a3d376a9de4a0761a7b6c55d4ffaecc16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add points to the score when a Piece fall to its place. <br /></td></tr>
 <tr class="separator:a3d376a9de4a0761a7b6c55d4ffaecc16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f87c79589f763313467235c321cf325" id="r_a3f87c79589f763313467235c321cf325"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f87c79589f763313467235c321cf325">addScoreLine</a> (uint8_t numberOfLineCompleted)</td></tr>
-<tr class="memdesc:a3f87c79589f763313467235c321cf325"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add points to the score, using numberOfLineCompleted and levelNumber as factors.  <br /></td></tr>
-<tr class="separator:a3f87c79589f763313467235c321cf325"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a133fc5864ff727c69ac9701c7d42750a" id="r_a133fc5864ff727c69ac9701c7d42750a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a133fc5864ff727c69ac9701c7d42750a">addScoreLine</a> (uint8_t _numberOfLineCompleted)</td></tr>
+<tr class="memdesc:a133fc5864ff727c69ac9701c7d42750a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add points to the score, using numberOfLineCompleted and levelNumber as factors.  <br /></td></tr>
+<tr class="separator:a133fc5864ff727c69ac9701c7d42750a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26da11a341ee07a8a79252f3464ed1d6" id="r_a26da11a341ee07a8a79252f3464ed1d6"><td class="memItemLeft" align="right" valign="top"><a id="a26da11a341ee07a8a79252f3464ed1d6" name="a26da11a341ee07a8a79252f3464ed1d6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>printScore</b> ()</td></tr>
 <tr class="memdesc:a26da11a341ee07a8a79252f3464ed1d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the score on the screen. <br /></td></tr>
@@ -121,8 +122,8 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>piecePosee</b> = 1
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>: Program for Tetris Scoring system </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a3f87c79589f763313467235c321cf325" name="a3f87c79589f763313467235c321cf325"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f87c79589f763313467235c321cf325">&#9670;&#160;</a></span>addScoreLine()</h2>
+<a id="a133fc5864ff727c69ac9701c7d42750a" name="a133fc5864ff727c69ac9701c7d42750a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a133fc5864ff727c69ac9701c7d42750a">&#9670;&#160;</a></span>addScoreLine()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -130,7 +131,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>piecePosee</b> = 1
         <tr>
           <td class="memname">void addScoreLine </td>
           <td>(</td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>numberOfLineCompleted</em></span></td><td>)</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>_numberOfLineCompleted</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -146,8 +147,8 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>piecePosee</b> = 1
 
 </div>
 </div>
-<a id="ab75449209112e9c46002f0b4f8fd8b2b" name="ab75449209112e9c46002f0b4f8fd8b2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab75449209112e9c46002f0b4f8fd8b2b">&#9670;&#160;</a></span>calculateScore()</h2>
+<a id="ab5449638cab4d1f6a50bf72a798d2cf8" name="ab5449638cab4d1f6a50bf72a798d2cf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5449638cab4d1f6a50bf72a798d2cf8">&#9670;&#160;</a></span>calculateScore()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -155,7 +156,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>piecePosee</b> = 1
         <tr>
           <td class="memname">void calculateScore </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>numberOfLineCompleted</em></span></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>_numberOfLineCompleted</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
