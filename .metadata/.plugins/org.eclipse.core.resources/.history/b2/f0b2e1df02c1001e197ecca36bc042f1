@@ -1,5 +1,0 @@
-#include "tetrisScoring.h"
-
-uint16_t getScore(){
-	return score;
-}
