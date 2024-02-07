@@ -1,3 +1,9 @@
+#settings
+.settings/
+
+#metadata
+.metadata/
+
 # Prerequisites
 *.d
 
