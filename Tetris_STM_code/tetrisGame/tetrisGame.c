@@ -11,9 +11,7 @@
 #include <string.h> // memcpy
 #include <stdlib.h> // random
 #include "tetrisScoring.h"
-
-#define MOVE_LEFT -1
-#define MOVE_RIGHT 1
+#include "userOled.h"
 
 #define PIECE_TOUCHED 2
 #define PIECE_FALLED 1
@@ -24,35 +22,41 @@
 #define SPAWN_STATE 2
 #define GAMEOVER_STATE 3
 
-
+/** @brief Zigzag piece in 4 by 4 grid
+  */
 int pieceZigzag[4][4]= {{0,0,0,0},
                         {1,1,0,0},
                         {0,1,1,0},
                         {0,0,0,0}};
 
-
+/** @brief Bar piece in 4 by 4 grid
+  */
 int pieceBar[4][4]= {   {0,1,0,0},
                         {0,1,0,0},
                         {0,1,0,0},
                         {0,1,0,0}};
-
+/** @brief Square piece in 4 by 4 grid
+  */
 int pieceSquare[4][4]= {{0,0,0,0},
                         {0,1,1,0},
                         {0,1,1,0},
                         {0,0,0,0}};         
-
+/** @brief L piece in 4 by 4 grid
+  */
 int pieceL[4][4]= { {0,0,0,0},
                     {0,1,0,0},
                     {0,1,0,0},
                     {0,1,1,0}};
-
+/** @brief T piece in 4 by 4 grid
+  */
 int pieceT[4][4]= { {0,0,0,0},
                     {1,1,1,0},
                     {0,1,0,0},
                     {0,0,0,0}};   
 
 
-//play window
+/** @brief PlayWindow
+  */
 int playStack[23][16] = 
     {{1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1},
     {1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1},
@@ -110,9 +114,7 @@ void randomPiece(TETRAMINO_ATM*);
 
 int tetrisGame()
 {
-    // Init the RNG
-//    srand(time(NULL)); 	//TODO verifier si cùest grave de l'enlever
-
+	//TODO REFLECHIR SI ON VEUT VRAIMENT DE LA RNG OU PAS
     // Structure avec la pièce
     TETRAMINO_ATM tetramino;
 
@@ -120,7 +122,6 @@ int tetrisGame()
     int userInput = 5;
     int fallState;
     int gameState = SPAWN_STATE;
-    int scoreTotal = 0;
     
     while(1)
     {
@@ -131,34 +132,34 @@ int tetrisGame()
                 {
 //                	userInput = 's';  //TODO changer pour détecter les inputs
 					//old : userInput = getch();
-                    if(userInput == gauche)
-                    {
-                        if(movePiece(&tetramino, MOVE_LEFT)){
+            		switch(userInput)
+            		{
+            		case gauche:
+            			if(movePiece(&tetramino, gauche)){
                             pieceMoved = 1;
                         }
-                    } 
-                    else if(userInput == droite)
-                    {
-                        if(movePiece(&tetramino, MOVE_RIGHT)){
+            			break;
+            		case droite:
+						if(movePiece(&tetramino, droite)){
                             pieceMoved = 1;
                         }
-                    }
-                    else if(userInput == bas)
-                    {
-                    	//TODO TESTER la clock
+						break;
+            		case bas:
+						//TODO TESTER la clock
                     	nextFallTime = HAL_GetTick() + 0; // trigger fall immediatly when falling() is called (below)
 //                        nextFallTime = clock() + 0;
-                    }
-                    else if(userInput == rotate)
-                    {
-                        if(rotatePiece(&tetramino)){
+                    	break;
+            		case rotate:
+						if(rotatePiece(&tetramino)){
                             pieceMoved = 1;
                         }
-                    }
-                    else if(userInput == ' ')	//TODO on implémente ou pas ?
-                    {
-                        gameState = GAMEOVER_STATE;
-                    }
+						break;
+            		case 19:	//TODO on implémente ou pas ?
+            			gameState = GAMEOVER_STATE;
+            			break;
+            		default:
+            			break;	//TODO gerer les erreurs
+            		}
                 }
 
                 fallState = falling(&tetramino);
@@ -171,7 +172,7 @@ int tetrisGame()
                 {
                     pieceMoved = 0;
                     addPieceIntoStack(&tetramino);
-                    printStack();
+                    drawStack(playStack);
                     removePieceFromStack(&tetramino);
                 }
 
@@ -186,7 +187,7 @@ int tetrisGame()
         case SCORE_STATE:
             addPieceIntoStack(&tetramino);  //piece wont move anymore, add it to stack before score calculation
             calculateScore(getLineCompleted());
-            printStack();
+            drawStack(playStack);
             printf("score : %ld\n", getScore());
             gameState = SPAWN_STATE;
             
@@ -202,7 +203,7 @@ int tetrisGame()
                 gameState = GAMEOVER_STATE;
             } else {
                 addPieceIntoStack(&tetramino);
-                printStack();
+                drawStack(playStack);
                 removePieceFromStack(&tetramino);
                 gameState = PLAY_STATE;
             }
@@ -212,7 +213,7 @@ int tetrisGame()
 
         case GAMEOVER_STATE:
             printf("\nGame over !\n");
-            printf("Score total : %d\n", scoreTotal);
+            printf("Score total : %ld\n", getScore());
             printf("\nAppuyez sur entree pour quitter...\n");
             getchar();
             return 0;
@@ -294,10 +295,10 @@ int movePiece(TETRAMINO_ATM* tetraminoAtm, int direction)
 {
     int movement = 0;
 
-    if(direction == MOVE_LEFT) {
+    if(direction == gauche) {
         movement = -1;
     } 
-    else if(direction == MOVE_RIGHT) {
+    else if(direction == droite) {
         movement = 1;
     }
 
@@ -338,6 +339,7 @@ int rotatePiece(TETRAMINO_ATM* tetraminoAtm)
 
 /**
   * @brief  calculate LineCompleted and moveDownStack if lineFull
+  * @retval linesCount: number of Lines completed
   */
 int getLineCompleted()
 {
@@ -371,6 +373,7 @@ void removeLine(int line)
 }
 
 /** @brief Move all the stack  above "startLine" down by one line
+ *  @param startLine: line which got cleared
   */
 void moveDownStack(int startLine)
 {

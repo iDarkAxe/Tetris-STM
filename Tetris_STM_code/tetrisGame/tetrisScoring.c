@@ -11,6 +11,7 @@
 #include "ssd1306_fonts.h"
 #include "ssd1306.h"
 #include <stdio.h>
+#include "tetrisLeveling.h"
 
 uint32_t tetrisScore = 100000;
 uint8_t piecePosee = 100;
@@ -25,9 +26,10 @@ uint32_t getScore(){
 /** @brief Calculate the Score
  * @param  numberOfLineCompleted
   */
-void calculateScore(int numberOfLineCompleted){
+void calculateScore(int _numberOfLineCompleted){
 	addScorePiece();
-	addScoreLine(numberOfLineCompleted);
+	addScoreLine(_numberOfLineCompleted);
+	newLevelCalculate(_numberOfLineCompleted);
 	return;
 }
 
@@ -43,12 +45,11 @@ void addScorePiece()
   * 		using numberOfLineCompleted and levelNumber as factors
   * @param  numberOfLineCompleted: numberOfLineCompleted in one fall by a piece
   */
-void addScoreLine(uint8_t numberOfLineCompleted)
+void addScoreLine(uint8_t _numberOfLineCompleted)
 {
 	//ajouter des points si on clique sur fallButton ? == augmenter la difficulté
-
-	uint8_t levelNumber = 1;	//VERIFIER COMMENT ON LE GERE
-	switch(numberOfLineCompleted){
+	int levelNumber = getLevelNumber();
+	switch(_numberOfLineCompleted){
 	case 0:
 		//pas de nouveau point
 		break;

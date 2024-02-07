@@ -1,5 +1,5 @@
-\doxysection{C\+:/\+Users/pontet/\+Documents/\+Git\+\_\+\+Repos/\+Tetris\+\_\+\+STM/\+Tetris\+\_\+\+STM\+\_\+code/tetris\+Game/tetris\+Game.c File Reference}
-\hypertarget{tetris_game_8c}{}\label{tetris_game_8c}\index{C:/Users/pontet/Documents/Git\_Repos/Tetris\_STM/Tetris\_STM\_code/tetrisGame/tetrisGame.c@{C:/Users/pontet/Documents/Git\_Repos/Tetris\_STM/Tetris\_STM\_code/tetrisGame/tetrisGame.c}}
+\doxysection{C\+:/\+Users/pontet/\+Desktop/\+Tetris\+\_\+\+STM/\+Tetris\+\_\+\+STM\+\_\+code/tetris\+Game/tetris\+Game.c File Reference}
+\hypertarget{tetris_game_8c}{}\label{tetris_game_8c}\index{C:/Users/pontet/Desktop/Tetris\_STM/Tetris\_STM\_code/tetrisGame/tetrisGame.c@{C:/Users/pontet/Desktop/Tetris\_STM/Tetris\_STM\_code/tetrisGame/tetrisGame.c}}
 
 
 \+: Main program of the Tetris Game  
@@ -7,9 +7,9 @@
 
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$string.\+h$>$}\newline
-{\ttfamily \#include $<$time.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \#include "{}tetris\+Scoring.\+h"{}}\newline
+{\ttfamily \#include "{}user\+Oled.\+h"{}}\newline
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -17,12 +17,6 @@ struct \mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
-\item 
-\Hypertarget{tetris_game_8c_a4796d02bb619233fee554b3ff9c8da48}\label{tetris_game_8c_a4796d02bb619233fee554b3ff9c8da48} 
-\#define {\bfseries MOVE\+\_\+\+LEFT}~-\/1
-\item 
-\Hypertarget{tetris_game_8c_a001bb501c43a2caa67dc0d3245bd073c}\label{tetris_game_8c_a001bb501c43a2caa67dc0d3245bd073c} 
-\#define {\bfseries MOVE\+\_\+\+RIGHT}~1
 \item 
 \Hypertarget{tetris_game_8c_ac656fec9bf408d2b08738c81ba720371}\label{tetris_game_8c_ac656fec9bf408d2b08738c81ba720371} 
 \#define {\bfseries PIECE\+\_\+\+TOUCHED}~2
@@ -44,6 +38,19 @@ struct \mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}}
 \item 
 \Hypertarget{tetris_game_8c_ac62481dbdcd378742c98abdd1d326e73}\label{tetris_game_8c_ac62481dbdcd378742c98abdd1d326e73} 
 \#define {\bfseries GAMEOVER\+\_\+\+STATE}~3
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{tetris_game_8c_afde3b66b6b41bd008469f366fa756e54}\label{tetris_game_8c_afde3b66b6b41bd008469f366fa756e54} 
+enum {\bfseries inputs} \{ \newline
+{\bfseries gauche} = 0
+, {\bfseries droite} = 1
+, {\bfseries bas} = 2
+, {\bfseries rotate} = 3
+, \newline
+{\bfseries menu} = 4
+ \}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -69,13 +76,11 @@ int {\bfseries move\+Piece} (\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{
 \Hypertarget{tetris_game_8c_a612c3e71b1fb7c1ebb922dbd5673db15}\label{tetris_game_8c_a612c3e71b1fb7c1ebb922dbd5673db15} 
 int {\bfseries rotate\+Piece} (\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*})
 \item 
-\Hypertarget{tetris_game_8c_a08cf243217343b641447c591f3c00483}\label{tetris_game_8c_a08cf243217343b641447c591f3c00483} 
-int {\bfseries get\+Line\+Completed} ()
+int \mbox{\hyperlink{tetris_game_8c_a08cf243217343b641447c591f3c00483}{get\+Line\+Completed}} ()
 \begin{DoxyCompactList}\small\item\em calculate Line\+Completed and move\+Down\+Stack if line\+Full \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{tetris_game_8c_a7c23a5fa3b48f5020d6a71fc47a86031}{remove\+Line}} (int line)
 \begin{DoxyCompactList}\small\item\em Remove the selected line. \end{DoxyCompactList}\item 
-\Hypertarget{tetris_game_8c_ac30a0cd4694054e0c19ac09dd5f9771a}\label{tetris_game_8c_ac30a0cd4694054e0c19ac09dd5f9771a} 
-void {\bfseries move\+Down\+Stack} (int start\+Line)
+void \mbox{\hyperlink{tetris_game_8c_ac30a0cd4694054e0c19ac09dd5f9771a}{move\+Down\+Stack}} (int start\+Line)
 \begin{DoxyCompactList}\small\item\em Move all the stack above "{}start\+Line"{} down by one line. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{tetris_game_8c_a2ed5bd4d5ecf8d9597e80b61dad4f0e9}{random\+Piece}} (\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}tetramino\+Atm)
 \begin{DoxyCompactList}\small\item\em Select a random piece among the tetraminos. \end{DoxyCompactList}\item 
@@ -86,19 +91,19 @@ int {\bfseries tetris\+Game} ()
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{tetris_game_8c_af26d357baa41d307fa45584a48bfe733}{piece\+Zigzag}} \mbox{[}4\mbox{]}\mbox{[}4\mbox{]}
-\item 
+\begin{DoxyCompactList}\small\item\em Zigzag piece in 4 by 4 grid. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{tetris_game_8c_ac86ee2d2c05564b3d9f159c0a553913c}{piece\+Bar}} \mbox{[}4\mbox{]}\mbox{[}4\mbox{]}
-\item 
+\begin{DoxyCompactList}\small\item\em Bar piece in 4 by 4 grid. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{tetris_game_8c_a2dc8d45c928817ebdc407620216fc78d}{piece\+Square}} \mbox{[}4\mbox{]}\mbox{[}4\mbox{]}
-\item 
+\begin{DoxyCompactList}\small\item\em Square piece in 4 by 4 grid. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{tetris_game_8c_a5b2e17510c0e92ae5ff2986fdec4932a}{pieceL}} \mbox{[}4\mbox{]}\mbox{[}4\mbox{]}
-\item 
+\begin{DoxyCompactList}\small\item\em L piece in 4 by 4 grid. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{tetris_game_8c_ac378d659dc480fdcad748ff2a083ede9}{pieceT}} \mbox{[}4\mbox{]}\mbox{[}4\mbox{]}
-\item 
+\begin{DoxyCompactList}\small\item\em T piece in 4 by 4 grid. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{tetris_game_8c_a15f6a876cfe88237588b2ae13f1cb2f8}{play\+Stack}} \mbox{[}23\mbox{]}\mbox{[}16\mbox{]}
-\item 
-\Hypertarget{tetris_game_8c_ada2e61e1205218c430b67f095164a493}\label{tetris_game_8c_ada2e61e1205218c430b67f095164a493} 
-long int {\bfseries next\+Fall\+Time} = 0
+\begin{DoxyCompactList}\small\item\em Play\+Window. \end{DoxyCompactList}\item 
+\Hypertarget{tetris_game_8c_a26a0ac6017e6c2c5d95c6c4ef9cd0c77}\label{tetris_game_8c_a26a0ac6017e6c2c5d95c6c4ef9cd0c77} 
+uint32\+\_\+t {\bfseries next\+Fall\+Time} = 0
 \item 
 \Hypertarget{tetris_game_8c_ada7ca60e1d5c30c0f558d141f8498570}\label{tetris_game_8c_ada7ca60e1d5c30c0f558d141f8498570} 
 int {\bfseries fall\+Delay} = 1000
@@ -117,6 +122,36 @@ int {\bfseries move\+Fall\+Delay} = 500
 
 
 \doxysubsection{Function Documentation}
+\Hypertarget{tetris_game_8c_a08cf243217343b641447c591f3c00483}\label{tetris_game_8c_a08cf243217343b641447c591f3c00483} 
+\index{tetrisGame.c@{tetrisGame.c}!getLineCompleted@{getLineCompleted}}
+\index{getLineCompleted@{getLineCompleted}!tetrisGame.c@{tetrisGame.c}}
+\doxysubsubsection{\texorpdfstring{getLineCompleted()}{getLineCompleted()}}
+{\footnotesize\ttfamily int get\+Line\+Completed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+calculate Line\+Completed and move\+Down\+Stack if line\+Full 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em lines\+Count} & number of Lines completed \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{tetris_game_8c_ac30a0cd4694054e0c19ac09dd5f9771a}\label{tetris_game_8c_ac30a0cd4694054e0c19ac09dd5f9771a} 
+\index{tetrisGame.c@{tetrisGame.c}!moveDownStack@{moveDownStack}}
+\index{moveDownStack@{moveDownStack}!tetrisGame.c@{tetrisGame.c}}
+\doxysubsubsection{\texorpdfstring{moveDownStack()}{moveDownStack()}}
+{\footnotesize\ttfamily void move\+Down\+Stack (\begin{DoxyParamCaption}\item[{int}]{start\+Line }\end{DoxyParamCaption})}
+
+
+
+Move all the stack above "{}start\+Line"{} down by one line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Line} & line which got cleared \\
+\hline
+\end{DoxyParams}
 \Hypertarget{tetris_game_8c_a2ed5bd4d5ecf8d9597e80b61dad4f0e9}\label{tetris_game_8c_a2ed5bd4d5ecf8d9597e80b61dad4f0e9} 
 \index{tetrisGame.c@{tetrisGame.c}!randomPiece@{randomPiece}}
 \index{randomPiece@{randomPiece}!tetrisGame.c@{tetrisGame.c}}
@@ -164,6 +199,10 @@ Remove the selected line.
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,1,0,0\}\}}
 
 \end{DoxyCode}
+
+
+Bar piece in 4 by 4 grid. 
+
 \Hypertarget{tetris_game_8c_a5b2e17510c0e92ae5ff2986fdec4932a}\label{tetris_game_8c_a5b2e17510c0e92ae5ff2986fdec4932a} 
 \index{tetrisGame.c@{tetrisGame.c}!pieceL@{pieceL}}
 \index{pieceL@{pieceL}!tetrisGame.c@{tetrisGame.c}}
@@ -178,6 +217,10 @@ Remove the selected line.
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,1,1,0\}\}}
 
 \end{DoxyCode}
+
+
+L piece in 4 by 4 grid. 
+
 \Hypertarget{tetris_game_8c_a2dc8d45c928817ebdc407620216fc78d}\label{tetris_game_8c_a2dc8d45c928817ebdc407620216fc78d} 
 \index{tetrisGame.c@{tetrisGame.c}!pieceSquare@{pieceSquare}}
 \index{pieceSquare@{pieceSquare}!tetrisGame.c@{tetrisGame.c}}
@@ -192,6 +235,10 @@ Remove the selected line.
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,0,0,0\}\}}
 
 \end{DoxyCode}
+
+
+Square piece in 4 by 4 grid. 
+
 \Hypertarget{tetris_game_8c_ac378d659dc480fdcad748ff2a083ede9}\label{tetris_game_8c_ac378d659dc480fdcad748ff2a083ede9} 
 \index{tetrisGame.c@{tetrisGame.c}!pieceT@{pieceT}}
 \index{pieceT@{pieceT}!tetrisGame.c@{tetrisGame.c}}
@@ -206,6 +253,10 @@ Remove the selected line.
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,0,0,0\}\}}
 
 \end{DoxyCode}
+
+
+T piece in 4 by 4 grid. 
+
 \Hypertarget{tetris_game_8c_af26d357baa41d307fa45584a48bfe733}\label{tetris_game_8c_af26d357baa41d307fa45584a48bfe733} 
 \index{tetrisGame.c@{tetrisGame.c}!pieceZigzag@{pieceZigzag}}
 \index{pieceZigzag@{pieceZigzag}!tetrisGame.c@{tetrisGame.c}}
@@ -220,6 +271,10 @@ Remove the selected line.
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,0,0,0\}\}}
 
 \end{DoxyCode}
+
+
+Zigzag piece in 4 by 4 grid. 
+
 \Hypertarget{tetris_game_8c_a15f6a876cfe88237588b2ae13f1cb2f8}\label{tetris_game_8c_a15f6a876cfe88237588b2ae13f1cb2f8} 
 \index{tetrisGame.c@{tetrisGame.c}!playStack@{playStack}}
 \index{playStack@{playStack}!tetrisGame.c@{tetrisGame.c}}
@@ -254,3 +309,7 @@ Remove the selected line.
 \DoxyCodeLine{\ \ \ \ \{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1\}\}}
 
 \end{DoxyCode}
+
+
+Play\+Window. 
+
