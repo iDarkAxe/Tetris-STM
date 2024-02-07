@@ -18,12 +18,15 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "i2c.h"
 #include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "ssd1306.h"
+#include "tetrisStartMenu.h"
+#include "tetrisScoring.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -50,6 +53,7 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
+void tetrisInit();
 
 /* USER CODE END PFP */
 
@@ -87,30 +91,16 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART2_UART_Init();
+  MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-
+  tetrisInit();
+  printScore();
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  if(!HAL_GPIO_ReadPin(rightButton_GPIO_Port, rightButton_Pin))
-	  {
-		 HAL_GPIO_TogglePin(testLed_GPIO_Port, testLed_Pin);
-		 HAL_Delay(100);
-	  }
-	  if(!HAL_GPIO_ReadPin(rotateButton_GPIO_Port, rotateButton_Pin))
-	  {
-		 HAL_GPIO_TogglePin(testLed_GPIO_Port, testLed_Pin);
-		 HAL_Delay(200);
-	  }
-	  if(!HAL_GPIO_ReadPin(fallButton_GPIO_Port, fallButton_Pin))
-	  {
-		 HAL_GPIO_TogglePin(testLed_GPIO_Port, testLed_Pin);
-		 HAL_Delay(500);
-	  }
-
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -160,8 +150,9 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2;
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2|RCC_PERIPHCLK_I2C1;
   PeriphClkInit.Usart2ClockSelection = RCC_USART2CLKSOURCE_PCLK1;
+  PeriphClkInit.I2c1ClockSelection = RCC_I2C1CLKSOURCE_PCLK1;
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
     Error_Handler();
@@ -169,6 +160,28 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+void tetrisInit(){
+  ssd1306_Init();
+  ssd1306_DrawRectangle(0, 0, 127, 63, White);  //ext border
+  ssd1306_DrawRectangle(1, 1, 126, 62, White);  //interior
+  ssd1306_UpdateScreen();   //!! Could Blink ?
+
+  //FACULTATIF DECORS
+  tetrisStartMenu(White);
+  
+  //ecrire le nom du jeu en GROS
+  //initialiser le reste
+}
+
+
+
+//functions to draw pieces
+void drawL(uint8_t x, uint8_t y) { 
+	// ssd1306_FillRectangle(x, y, x+17, y+5, White); 
+	// ssd1306_FillRectangle(x+12, y+6, x+17, y+11, White); //left L but work
+  ssd1306_FillRectangle(x, y+6, x+17, y+11, White); 
+	ssd1306_FillRectangle(x+12, y+11, x+17, y+17, White); 
+} 
 
 /* USER CODE END 4 */
 

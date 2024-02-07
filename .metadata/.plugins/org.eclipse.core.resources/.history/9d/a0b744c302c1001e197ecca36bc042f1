@@ -1,0 +1,15 @@
+/*
+ * tetrisScoring.h
+ *
+ *  Created on: Feb 1, 2024
+ *      Author: PONTET
+ */
+
+#ifndef TETRISSCORING_H_
+#define TETRISSCORING_H_
+
+uint16_t score = 0;
+
+uint16_t getScore();
+
+#endif /* TETRISSCORING_H_ */

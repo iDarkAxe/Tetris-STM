@@ -1,0 +1,59 @@
+#include "tetrisScoring.h"
+#include "ssd1306_fonts.h"
+#include "ssd1306.h"
+
+
+uint32_t tetrisScore = 100000;
+
+
+/**
+  * @brief Getter of score
+  * @retval Return the value of score
+  */
+uint16_t getScore(){
+	return tetrisScore;
+}
+
+/**
+  * @brief  Add points to the score,
+  * 		using numberOfLineCompleted and levelNumber as factors
+  * @param  numberOfLineCompleted: numberOfLineCompleted in one fall by a piece
+  */
+void addScore(uint8_t numberOfLineCompleted)
+{
+	//ajouter des points si on clique sur fallButton ? == augmenter la difficulté
+
+	uint8_t levelNumber = 1;	//VERIFIER COMMENT ON LE GERE
+	switch(numberOfLineCompleted){
+	case 0:
+		//pas de nouveau point
+		break;
+	case 1:
+		tetrisScore += 100*levelNumber;
+		break;
+	case 2:
+		tetrisScore += 300*levelNumber;
+		break;
+	case 3:
+		tetrisScore += 500*levelNumber;
+		break;
+	case 4:
+		tetrisScore += 800*levelNumber;
+		break;
+
+	case 5:
+		//erreur CAS IMPOSSIBLE
+		break;
+	}
+}
+
+/**
+  * @brief  Print the score on the screen
+  */
+void printScore(){
+	char strScore[12];
+	sprintf(strScore, "%d points", tetrisScore);
+	ssd1306_SetCursor(10, 10);
+	ssd1306_WriteString(strScore, Font_6x8, White);
+	ssd1306_UpdateScreen();
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;Tetris_STM_code/ssd1306_2&apos;" deleteContents="false" description="Delete resource &apos;Tetris_STM_code/ssd1306_2&apos;" element1="/Tetris_STM_code/ssd1306_2" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1706789340182"/>
+</session>
