@@ -1,10 +1,10 @@
-09:01:52 **** Incremental Build of configuration Debug for project Tetris_STM_code ****
+10:32:22 **** Incremental Build of configuration Debug for project Tetris_STM_code ****
 make -j16 all 
 arm-none-eabi-size  Tetris_STM_code.elf 
    text	   data	    bss	    dec	    hex	filename
-  19120	    112	   3152	  22384	   5770	Tetris_STM_code.elf
+  22696	   1924	   3164	  27784	   6c88	Tetris_STM_code.elf
 Finished building: default.size.stdout
  
 
-09:01:52 Build Finished. 0 errors, 0 warnings. (took 241ms)
+10:32:22 Build Finished. 0 errors, 0 warnings. (took 238ms)
 

@@ -1,3 +1,12 @@
+/**
+  ******************************************************************************
+  * @file           : tetrisScoring.c
+  * @brief          : Program for Tetris Scoring system
+  ******************************************************************************
+
+  ******************************************************************************
+  */
+
 #include "tetrisScoring.h"
 #include "ssd1306_fonts.h"
 #include "ssd1306.h"
@@ -6,12 +15,20 @@
 uint32_t tetrisScore = 100000;
 uint8_t piecePosee = 100;
 
-/**
-  * @brief Getter of score
+/** @brief Getter of score
   * @retval Return the value of score
   */
 uint32_t getScore(){
 	return tetrisScore;
+}
+
+/** @brief Calculate the Score
+ * @param  numberOfLineCompleted
+  */
+void calculateScore(int numberOfLineCompleted){
+	addScorePiece();
+	addScoreLine(numberOfLineCompleted);
+	return;
 }
 
 /** @brief  Add points to the score when a Piece fall to its place
