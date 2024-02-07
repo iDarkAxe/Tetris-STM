@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['printscore_0',['printScore',['../tetris_scoring_8c.html#a26da11a341ee07a8a79252f3464ed1d6',1,'tetrisScoring.c']]]
+  ['newlevelcalculate_0',['newLevelCalculate',['../tetris_leveling_8c.html#aeba70d21eab6f37620dbcc60a9de542a',1,'tetrisLeveling.c']]]
 ];

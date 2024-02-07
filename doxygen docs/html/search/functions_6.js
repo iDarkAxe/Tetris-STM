@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['tetrisborduredecor_0',['tetrisBordureDecor',['../tetris_start_menu_8c.html#a1b46f95cb32d9af8eca89bad57d18210',1,'tetrisStartMenu.c']]],
-  ['tetrisstartmenu_1',['tetrisStartMenu',['../tetris_start_menu_8c.html#a47a98462681ee054d7eaa6f08ba31b47',1,'tetrisStartMenu.c']]]
+  ['randompiece_0',['randomPiece',['../tetris_game_8c.html#a2ed5bd4d5ecf8d9597e80b61dad4f0e9',1,'tetrisGame.c']]],
+  ['removeline_1',['removeLine',['../tetris_game_8c.html#a7c23a5fa3b48f5020d6a71fc47a86031',1,'tetrisGame.c']]]
 ];
