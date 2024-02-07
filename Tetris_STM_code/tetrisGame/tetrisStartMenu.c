@@ -1,5 +1,16 @@
+/**
+  ******************************************************************************
+  * @file           : tetrisStartMenu.c
+  * @brief          : Program to draw the Menu
+  ******************************************************************************
+
+  ******************************************************************************
+  */
+
 #include "tetrisStartMenu.h"
 
+/** @brief Draw the decor
+  */
 void tetrisBordureDecor(SSD1306_COLOR color)
 {
   //BORD DROIT HAUT
@@ -64,6 +75,8 @@ void tetrisBordureDecor(SSD1306_COLOR color)
   HAL_Delay(100);
 }
 
+/** @brief Draw the start menu
+  */
 void tetrisStartMenu(SSD1306_COLOR color){
   tetrisBordureDecor(color);
   ssd1306_UpdateScreen();
