@@ -213,3 +213,8 @@ void drawTetrisStartGame()
 {
 
 }
+
+
+void drawTetrisStartGame(){
+
+}

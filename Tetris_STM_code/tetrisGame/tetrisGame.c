@@ -16,8 +16,10 @@
 #include <stdio.h>
 #include <string.h> // memcpy
 #include <stdlib.h> // random
-#include "tetrisScoring.h"
-#include "userOled.h"
+#include <tim.h>
+
+#include "../tetrisGame/tetrisScoring.h"
+#include "../tetrisGame/userOled.h"
 
 #define PIECE_TOUCHED 2
 #define PIECE_FALLED 1
@@ -106,7 +108,7 @@ int moveFallDelay = 500;
 
 /** @brief Inputs du jeu, permet de simplifier le code
   */
-enum inputs { gauche = -1, droite = 1, bas = 2, rotate = 3, menu = 4};
+enum inputs { gauche = -1, droite = 1, fall = 2, rotate = 3, menu = 4};
 
 //declaration fonctions
 void addPieceIntoStack(TETRAMINO_ATM*);  // int[][16]
@@ -122,6 +124,8 @@ void moveDownStack(int);
 void randomPiece(TETRAMINO_ATM*);
 
 
+int userInput =0;
+
 int tetrisGame()
 {
 	//TODO REFLECHIR SI ON VEUT VRAIMENT DE LA RNG OU PAS
@@ -129,7 +133,6 @@ int tetrisGame()
     TETRAMINO_ATM tetramino;
 
     char pieceMoved = 0;
-    int userInput = 5;
     int fallState;
     int gameState = SPAWN_STATE;
     
@@ -154,7 +157,7 @@ int tetrisGame()
                             pieceMoved = 1;
                         }
 						break;
-            		case bas:
+            		case fall:
 						//TODO TESTER la clock
                     	nextFallTime = HAL_GetTick() + 0; // trigger fall immediatly when falling() is called (below)
 //                        nextFallTime = clock() + 0;
@@ -170,6 +173,7 @@ int tetrisGame()
             		default:
             			break;	//TODO gerer les erreurs
             		}
+            		userInput = 0;
                 }
 
                 fallState = falling(&tetramino);
@@ -439,4 +443,49 @@ void randomPiece(TETRAMINO_ATM* tetraminoAtm)
         }
     }
     return;
+}
+
+/** @brief Gestion des interruptions
+ * @param  GPIO_Pin: Pin sur lequel a lieu l'interruption
+  */
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
+
+	switch(GPIO_Pin){
+		case rightButton_Pin:
+		case leftButton_Pin:
+		case rotateButton_Pin:
+		case fallButton_Pin:
+			HAL_TIM_Base_Start_IT(&htim22);
+			break;
+		default:
+			break;
+	}
+}
+
+/** @brief Fin du timer pour lire les boutons
+ * @param  *htim: timer
+  */
+// Callback: timer has rolled over
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
+
+	  if (htim == &htim22 )
+	  {
+		if(!HAL_GPIO_ReadPin(leftButton_GPIO_Port, leftButton_Pin)){
+			userInput = gauche;
+		}
+		if(!HAL_GPIO_ReadPin(rightButton_GPIO_Port, rightButton_Pin)){
+			userInput = droite;
+		}
+		if(!HAL_GPIO_ReadPin(rotateButton_GPIO_Port, rotateButton_Pin)){
+			userInput = rotate;
+		}
+		if(!HAL_GPIO_ReadPin(fallButton_GPIO_Port, fallButton_Pin)){
+			userInput = fall;
+		}
+		if(!HAL_GPIO_ReadPin(menuButton_GPIO_Port, menuButton_Pin)){
+			userInput = menu;
+		}
+		HAL_TIM_Base_Stop_IT(&htim22);
+		__HAL_TIM_SET_COUNTER(&htim22, 0);
+	  }
 }

@@ -59,16 +59,23 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define rightButton_Pin GPIO_PIN_1
 #define rightButton_GPIO_Port GPIOA
+#define rightButton_EXTI_IRQn EXTI0_1_IRQn
 #define VCP_TX_Pin GPIO_PIN_2
 #define VCP_TX_GPIO_Port GPIOA
 #define rotateButton_Pin GPIO_PIN_3
 #define rotateButton_GPIO_Port GPIOA
+#define rotateButton_EXTI_IRQn EXTI2_3_IRQn
 #define fallButton_Pin GPIO_PIN_4
 #define fallButton_GPIO_Port GPIOA
+#define fallButton_EXTI_IRQn EXTI4_15_IRQn
 #define testLed_Pin GPIO_PIN_5
 #define testLed_GPIO_Port GPIOA
-#define menuButton_Pin GPIO_PIN_6
+#define leftButton_Pin GPIO_PIN_6
+#define leftButton_GPIO_Port GPIOA
+#define leftButton_EXTI_IRQn EXTI4_15_IRQn
+#define menuButton_Pin GPIO_PIN_7
 #define menuButton_GPIO_Port GPIOA
+#define menuButton_EXTI_IRQn EXTI4_15_IRQn
 #define TMS_Pin GPIO_PIN_13
 #define TMS_GPIO_Port GPIOA
 #define TCK_Pin GPIO_PIN_14
