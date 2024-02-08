@@ -1,10 +1,5 @@
 var searchData=
 [
-  ['piecebar_0',['pieceBar',['../tetris_game_8c.html#ac86ee2d2c05564b3d9f159c0a553913c',1,'tetrisGame.c']]],
-  ['piecel_1',['pieceL',['../tetris_game_8c.html#a5b2e17510c0e92ae5ff2986fdec4932a',1,'tetrisGame.c']]],
-  ['piecesquare_2',['pieceSquare',['../tetris_game_8c.html#a2dc8d45c928817ebdc407620216fc78d',1,'tetrisGame.c']]],
-  ['piecet_3',['pieceT',['../tetris_game_8c.html#ac378d659dc480fdcad748ff2a083ede9',1,'tetrisGame.c']]],
-  ['piecezigzag_4',['pieceZigzag',['../tetris_game_8c.html#af26d357baa41d307fa45584a48bfe733',1,'tetrisGame.c']]],
-  ['playstack_5',['playStack',['../tetris_game_8c.html#a15f6a876cfe88237588b2ae13f1cb2f8',1,'tetrisGame.c']]],
-  ['printscore_6',['printScore',['../tetris_scoring_8c.html#a26da11a341ee07a8a79252f3464ed1d6',1,'tetrisScoring.c']]]
+  ['inputs_0',['inputs',['../tetris_game_8c.html#afde3b66b6b41bd008469f366fa756e54',1,'tetrisGame.c']]],
+  ['isclippinginstack_1',['isClippingInStack',['../tetris_game_8c.html#acec8ebe56cff6e50618ca33e63f439d3',1,'tetrisGame.c']]]
 ];

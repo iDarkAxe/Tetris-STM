@@ -14,6 +14,9 @@ typedef struct {
 #ifdef SSD1306_INCLUDE_FONT_6x8
 extern FontDef Font_6x8;
 #endif
+#ifdef SSD1306_INCLUDE_FONT_6x8_NEW
+extern FontDef Font_6x8_new;
+#endif
 #ifdef SSD1306_INCLUDE_FONT_7x10
 extern FontDef Font_7x10;
 #endif

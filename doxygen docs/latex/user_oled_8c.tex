@@ -1,5 +1,5 @@
-\doxysection{C\+:/\+Users/pontet/\+Desktop/\+Tetris\+\_\+\+STM/\+Tetris\+\_\+\+STM\+\_\+code/tetris\+Game/user\+Oled.c File Reference}
-\hypertarget{user_oled_8c}{}\label{user_oled_8c}\index{C:/Users/pontet/Desktop/Tetris\_STM/Tetris\_STM\_code/tetrisGame/userOled.c@{C:/Users/pontet/Desktop/Tetris\_STM/Tetris\_STM\_code/tetrisGame/userOled.c}}
+\doxysection{C\+:/\+Users/pontet.APOLLO2/\+Documents/\+Git\+\_\+\+Repos/\+Tetris-\/\+STM/\+Tetris\+\_\+\+STM\+\_\+code/tetris\+Game/user\+Oled.c File Reference}
+\hypertarget{user_oled_8c}{}\label{user_oled_8c}\index{C:/Users/pontet.APOLLO2/Documents/Git\_Repos/Tetris-\/STM/Tetris\_STM\_code/tetrisGame/userOled.c@{C:/Users/pontet.APOLLO2/Documents/Git\_Repos/Tetris-\/STM/Tetris\_STM\_code/tetrisGame/userOled.c}}
 
 
 \+: Others functions for Oled drawing  
@@ -9,20 +9,43 @@
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{user_oled_8c_ae3c5b39bc7062ef7ec32ad2c875c526e}\label{user_oled_8c_ae3c5b39bc7062ef7ec32ad2c875c526e} 
-void {\bfseries create\+Border} ()
-\item 
+\Hypertarget{user_oled_8c_a5ddae6e19852caa13e77f7aa2b50e3b3}\label{user_oled_8c_a5ddae6e19852caa13e77f7aa2b50e3b3} 
+void {\bfseries draw\+Border} ()
+\begin{DoxyCompactList}\small\item\em Draw the border of the game. \end{DoxyCompactList}\item 
 \Hypertarget{user_oled_8c_a3a25a8ee25260d16cc10fc35c2ea38fe}\label{user_oled_8c_a3a25a8ee25260d16cc10fc35c2ea38fe} 
 void {\bfseries draw\+Tile} (uint8\+\_\+t x, uint8\+\_\+t y, SSD1306\+\_\+\+COLOR color)
-\item 
-\Hypertarget{user_oled_8c_a6f41720fd4da3fcfab5ac1259c7823c7}\label{user_oled_8c_a6f41720fd4da3fcfab5ac1259c7823c7} 
-void {\bfseries draw\+Stack} (int stack\mbox{[}23\mbox{]}\mbox{[}16\mbox{]})
-\item 
+\begin{DoxyCompactList}\small\item\em Draw a normal tile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{user_oled_8c_a6f41720fd4da3fcfab5ac1259c7823c7}{draw\+Stack}} (int stack\mbox{[}23\mbox{]}\mbox{[}16\mbox{]})
+\begin{DoxyCompactList}\small\item\em Draw the entire stack. \end{DoxyCompactList}\item 
 \Hypertarget{user_oled_8c_a0f8f8c9637e27d98da21de92973f1443}\label{user_oled_8c_a0f8f8c9637e27d98da21de92973f1443} 
 void {\bfseries game\+Over\+Animation} ()
+\begin{DoxyCompactList}\small\item\em Plays the game\+Over Animation. \end{DoxyCompactList}\item 
+\Hypertarget{user_oled_8c_a305f138587ae309f2f0e2ba3ddd83796}\label{user_oled_8c_a305f138587ae309f2f0e2ba3ddd83796} 
+void {\bfseries draw\+Tetris\+Start\+Game} ()
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 \+: Others functions for Oled drawing 
 
+\begin{DoxyDate}{Date}
+08 février 2024 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{user_oled_8c_a6f41720fd4da3fcfab5ac1259c7823c7}\label{user_oled_8c_a6f41720fd4da3fcfab5ac1259c7823c7} 
+\index{userOled.c@{userOled.c}!drawStack@{drawStack}}
+\index{drawStack@{drawStack}!userOled.c@{userOled.c}}
+\doxysubsubsection{\texorpdfstring{drawStack()}{drawStack()}}
+{\footnotesize\ttfamily void draw\+Stack (\begin{DoxyParamCaption}\item[{int}]{stack\mbox{[}23\mbox{]}\mbox{[}16\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Draw the entire stack. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}} & the stack of the game \\
+\hline
+\end{DoxyParams}

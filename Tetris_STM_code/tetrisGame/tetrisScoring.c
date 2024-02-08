@@ -3,7 +3,7 @@
   * @file           : tetrisScoring.c
   * @brief          : Program for Tetris Scoring system
   ******************************************************************************
-
+  * @date 08 février 2024
   ******************************************************************************
   */
 
@@ -12,6 +12,9 @@
 #include "ssd1306_fonts.h"
 #include "ssd1306.h"
 #include <stdio.h>
+#include "string.h"
+#include "tetrisLeveling.h"
+#include "userOled.h"
 
 #include "../tetrisGame/tetrisLeveling.h"
 
@@ -78,8 +81,10 @@ void addScoreLine(uint8_t _numberOfLineCompleted)
   */
 void printScore(){
 	char strScore[12];
-	sprintf(strScore, "%ld points", tetrisScore);
-	ssd1306_SetCursor(10, 10);
-	ssd1306_WriteString(strScore, Font_6x8, White);
+	sprintf(strScore, "%ld", tetrisScore);
+	ssd1306_SetCursorVertical(50, (61-(61-strlen(strScore)*6)/2));
+	ssd1306_WriteStringVertical(strScore, Font_6x8, White);
+	ssd1306_SetCursorVertical(60, 49);
+	ssd1306_WriteStringVertical("points", Font_6x8, White);
 	ssd1306_UpdateScreen();
 }

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Tetris_STM_code: C:/Users/pontet/Desktop/Tetris_STM/Tetris_STM_code/tetrisGame/tetrisGame.c File Reference</title>
+<title>Tetris_STM_code: C:/Users/pontet.APOLLO2/Documents/Git_Repos/Tetris-STM/Tetris_STM_code/tetrisGame/tetrisGame.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -96,6 +96,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to locate the current tetramino in the game.  <a href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -124,8 +125,8 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:afde3b66b6b41bd008469f366fa756e54" id="r_afde3b66b6b41bd008469f366fa756e54"><td class="memItemLeft" align="right" valign="top"><a id="afde3b66b6b41bd008469f366fa756e54" name="afde3b66b6b41bd008469f366fa756e54"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>inputs</b> { <br />
-&#160;&#160;<b>gauche</b> = 0
+<tr class="memitem:afde3b66b6b41bd008469f366fa756e54" id="r_afde3b66b6b41bd008469f366fa756e54"><td class="memItemLeft" align="right" valign="top"><a id="afde3b66b6b41bd008469f366fa756e54" name="afde3b66b6b41bd008469f366fa756e54"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afde3b66b6b41bd008469f366fa756e54">inputs</a> { <br />
+&#160;&#160;<b>gauche</b> = -1
 , <b>droite</b> = 1
 , <b>bas</b> = 2
 , <b>rotate</b> = 3
@@ -133,31 +134,33 @@ Enumerations</h2></td></tr>
 &#160;&#160;<b>menu</b> = 4
 <br />
  }</td></tr>
+<tr class="memdesc:afde3b66b6b41bd008469f366fa756e54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inputs du jeu, permet de simplifier le code. <br /></td></tr>
 <tr class="separator:afde3b66b6b41bd008469f366fa756e54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ac96dd1047b765582dd463eba40703f94" id="r_ac96dd1047b765582dd463eba40703f94"><td class="memItemLeft" align="right" valign="top"><a id="ac96dd1047b765582dd463eba40703f94" name="ac96dd1047b765582dd463eba40703f94"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addPieceIntoStack</b> (<a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *)</td></tr>
-<tr class="separator:ac96dd1047b765582dd463eba40703f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f65da666182c9e2904f1c74bdc3440f" id="r_a5f65da666182c9e2904f1c74bdc3440f"><td class="memItemLeft" align="right" valign="top"><a id="a5f65da666182c9e2904f1c74bdc3440f" name="a5f65da666182c9e2904f1c74bdc3440f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>removePieceFromStack</b> (<a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *)</td></tr>
-<tr class="separator:a5f65da666182c9e2904f1c74bdc3440f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2a6e01b79974ee58b13d39005f34b5e" id="r_af2a6e01b79974ee58b13d39005f34b5e"><td class="memItemLeft" align="right" valign="top"><a id="af2a6e01b79974ee58b13d39005f34b5e" name="af2a6e01b79974ee58b13d39005f34b5e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>isClippingInStack</b> (<a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *)</td></tr>
-<tr class="separator:af2a6e01b79974ee58b13d39005f34b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0851fb429b5ee26b78d23dcb963ef542" id="r_a0851fb429b5ee26b78d23dcb963ef542"><td class="memItemLeft" align="right" valign="top"><a id="a0851fb429b5ee26b78d23dcb963ef542" name="a0851fb429b5ee26b78d23dcb963ef542"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>falling</b> (<a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *)</td></tr>
-<tr class="separator:a0851fb429b5ee26b78d23dcb963ef542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a375de1b92009d1f690f457586a470145" id="r_a375de1b92009d1f690f457586a470145"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a375de1b92009d1f690f457586a470145">addPieceIntoStack</a> (<a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *tetraminoAtm)</td></tr>
+<tr class="memdesc:a375de1b92009d1f690f457586a470145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de placer une pièce dans le jeu.  <br /></td></tr>
+<tr class="separator:a375de1b92009d1f690f457586a470145"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc91f41cf420b07107119d403639621d" id="r_adc91f41cf420b07107119d403639621d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc91f41cf420b07107119d403639621d">removePieceFromStack</a> (<a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *tetraminoAtm)</td></tr>
+<tr class="memdesc:adc91f41cf420b07107119d403639621d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de supprimer une pièce du jeu.  <br /></td></tr>
+<tr class="separator:adc91f41cf420b07107119d403639621d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acec8ebe56cff6e50618ca33e63f439d3" id="r_acec8ebe56cff6e50618ca33e63f439d3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acec8ebe56cff6e50618ca33e63f439d3">isClippingInStack</a> (<a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *tetraminoAtm)</td></tr>
+<tr class="memdesc:acec8ebe56cff6e50618ca33e63f439d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet prédire si la pièce va rentrer en colision avec les blocs déjà présents.  <br /></td></tr>
+<tr class="separator:acec8ebe56cff6e50618ca33e63f439d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4540cbee1e2edd11790b49cc7333367" id="r_ab4540cbee1e2edd11790b49cc7333367"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4540cbee1e2edd11790b49cc7333367">falling</a> (<a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *tetraminoAtm)</td></tr>
+<tr class="memdesc:ab4540cbee1e2edd11790b49cc7333367"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de faire descendre naturellement une pièce du jeu.  <br /></td></tr>
+<tr class="separator:ab4540cbee1e2edd11790b49cc7333367"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2c2de4ce470468a0af82bb42ea2a338" id="r_ae2c2de4ce470468a0af82bb42ea2a338"><td class="memItemLeft" align="right" valign="top"><a id="ae2c2de4ce470468a0af82bb42ea2a338" name="ae2c2de4ce470468a0af82bb42ea2a338"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>printStack</b> (void)</td></tr>
+<tr class="memdesc:ae2c2de4ce470468a0af82bb42ea2a338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche la stack sur le terminal. <br /></td></tr>
 <tr class="separator:ae2c2de4ce470468a0af82bb42ea2a338"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a717f50a93deda8cd822b102c928dffe4" id="r_a717f50a93deda8cd822b102c928dffe4"><td class="memItemLeft" align="right" valign="top"><a id="a717f50a93deda8cd822b102c928dffe4" name="a717f50a93deda8cd822b102c928dffe4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>movePiece</b> (<a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *, int)</td></tr>
-<tr class="separator:a717f50a93deda8cd822b102c928dffe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a612c3e71b1fb7c1ebb922dbd5673db15" id="r_a612c3e71b1fb7c1ebb922dbd5673db15"><td class="memItemLeft" align="right" valign="top"><a id="a612c3e71b1fb7c1ebb922dbd5673db15" name="a612c3e71b1fb7c1ebb922dbd5673db15"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>rotatePiece</b> (<a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *)</td></tr>
-<tr class="separator:a612c3e71b1fb7c1ebb922dbd5673db15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab44c65b4c5ef7a94e5701f074211391" id="r_aab44c65b4c5ef7a94e5701f074211391"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab44c65b4c5ef7a94e5701f074211391">movePiece</a> (<a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *tetraminoAtm, int direction)</td></tr>
+<tr class="memdesc:aab44c65b4c5ef7a94e5701f074211391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de déplacer une pièce en fonction de sa direction.  <br /></td></tr>
+<tr class="separator:aab44c65b4c5ef7a94e5701f074211391"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a179348ccd32ecd168c08a74b28ba17" id="r_a3a179348ccd32ecd168c08a74b28ba17"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a179348ccd32ecd168c08a74b28ba17">rotatePiece</a> (<a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *tetraminoAtm)</td></tr>
+<tr class="memdesc:a3a179348ccd32ecd168c08a74b28ba17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet tourner une pièce, seulement si elle ne va pas clip.  <br /></td></tr>
+<tr class="separator:a3a179348ccd32ecd168c08a74b28ba17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08cf243217343b641447c591f3c00483" id="r_a08cf243217343b641447c591f3c00483"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08cf243217343b641447c591f3c00483">getLineCompleted</a> ()</td></tr>
 <tr class="memdesc:a08cf243217343b641447c591f3c00483"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate LineCompleted and moveDownStack if lineFull  <br /></td></tr>
 <tr class="separator:a08cf243217343b641447c591f3c00483"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -209,7 +212,64 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>moveFallDelay</b> = 50
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>: Main program of the Tetris Game </p>
+<dl class="section date"><dt>Date</dt><dd>08 février 2024 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a375de1b92009d1f690f457586a470145" name="a375de1b92009d1f690f457586a470145"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a375de1b92009d1f690f457586a470145">&#9670;&#160;</a></span>addPieceIntoStack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addPieceIntoStack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *</td>          <td class="paramname"><span class="paramname"><em>tetraminoAtm</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Permet de placer une pièce dans le jeu. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*tetraminoAtm</td><td>Current tetramino used </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab4540cbee1e2edd11790b49cc7333367" name="ab4540cbee1e2edd11790b49cc7333367"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4540cbee1e2edd11790b49cc7333367">&#9670;&#160;</a></span>falling()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int falling </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *</td>          <td class="paramname"><span class="paramname"><em>tetraminoAtm</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Permet de faire descendre naturellement une pièce du jeu. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*tetraminoAtm</td><td>Current tetramino used</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">state</td><td>PIECE_TOUCHED, or PIECE_FALLED </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a08cf243217343b641447c591f3c00483" name="a08cf243217343b641447c591f3c00483"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a08cf243217343b641447c591f3c00483">&#9670;&#160;</a></span>getLineCompleted()</h2>
 
@@ -235,6 +295,37 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>moveFallDelay</b> = 50
 
 </div>
 </div>
+<a id="acec8ebe56cff6e50618ca33e63f439d3" name="acec8ebe56cff6e50618ca33e63f439d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acec8ebe56cff6e50618ca33e63f439d3">&#9670;&#160;</a></span>isClippingInStack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int isClippingInStack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *</td>          <td class="paramname"><span class="paramname"><em>tetraminoAtm</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Permet prédire si la pièce va rentrer en colision avec les blocs déjà présents. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*tetraminoAtm</td><td>Current tetramino used</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">state</td><td>1 if would clip, 0 if not </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ac30a0cd4694054e0c19ac09dd5f9771a" name="ac30a0cd4694054e0c19ac09dd5f9771a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac30a0cd4694054e0c19ac09dd5f9771a">&#9670;&#160;</a></span>moveDownStack()</h2>
 
@@ -254,6 +345,42 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>moveFallDelay</b> = 50
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">startLine</td><td>line which got cleared </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aab44c65b4c5ef7a94e5701f074211391" name="aab44c65b4c5ef7a94e5701f074211391"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab44c65b4c5ef7a94e5701f074211391">&#9670;&#160;</a></span>movePiece()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int movePiece </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *</td>          <td class="paramname"><span class="paramname"><em>tetraminoAtm</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>direction</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Permet de déplacer une pièce en fonction de sa direction. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*tetraminoAtm</td><td>Current tetramino used </td></tr>
+    <tr><td class="paramname">direction</td><td>userInputs </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">state</td><td>1 si déplacement OK, 0 si non </td></tr>
   </table>
   </dd>
 </dl>
@@ -304,6 +431,62 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>moveFallDelay</b> = 50
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">line</td><td>line selected </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="adc91f41cf420b07107119d403639621d" name="adc91f41cf420b07107119d403639621d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc91f41cf420b07107119d403639621d">&#9670;&#160;</a></span>removePieceFromStack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void removePieceFromStack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *</td>          <td class="paramname"><span class="paramname"><em>tetraminoAtm</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Permet de supprimer une pièce du jeu. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*tetraminoAtm</td><td>Current tetramino used </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3a179348ccd32ecd168c08a74b28ba17" name="a3a179348ccd32ecd168c08a74b28ba17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a179348ccd32ecd168c08a74b28ba17">&#9670;&#160;</a></span>rotatePiece()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rotatePiece </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *</td>          <td class="paramname"><span class="paramname"><em>tetraminoAtm</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Permet tourner une pièce, seulement si elle ne va pas clip. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*tetraminoAtm</td><td>Current tetramino used </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">state</td><td>1 if rotated and 0 if clipping </td></tr>
   </table>
   </dd>
 </dl>
