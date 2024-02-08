@@ -56,3 +56,8 @@ void gameOverAnimation(){
 	ssd1306_WriteCommand(0xA6);
 	ssd1306_UpdateScreen();
 }
+
+
+void drawTetrisStartGame(){
+
+}

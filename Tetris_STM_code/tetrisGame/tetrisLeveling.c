@@ -10,7 +10,7 @@
 #ifndef TETRISLEVELING_C_
 #define TETRISLEVELING_C_
 
-#include "tetrisLeveling.h"
+#include "../tetrisGame/tetrisLeveling.h"
 
 int levelNumber = 0;
 

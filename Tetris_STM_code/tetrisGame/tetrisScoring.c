@@ -7,11 +7,13 @@
   ******************************************************************************
   */
 
-#include "tetrisScoring.h"
+#include "../tetrisGame/tetrisScoring.h"
+
 #include "ssd1306_fonts.h"
 #include "ssd1306.h"
 #include <stdio.h>
-#include "tetrisLeveling.h"
+
+#include "../tetrisGame/tetrisLeveling.h"
 
 uint32_t tetrisScore = 100000;
 uint8_t piecePosee = 100;

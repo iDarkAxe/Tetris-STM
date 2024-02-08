@@ -19,15 +19,17 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "i2c.h"
+#include "tim.h"
 #include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "ssd1306.h"
+
+#include "../../tetrisGame/tetrisGame.h"
+#include "../../tetrisGame/tetrisStartMenu.h"
 #include "userOled.h"
-#include "tetrisStartMenu.h"
-#include "tetrisGame.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -93,6 +95,7 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   MX_I2C1_Init();
+  MX_TIM22_Init();
   /* USER CODE BEGIN 2 */
   tetrisInit();
   tetrisGame();

@@ -7,7 +7,7 @@
   ******************************************************************************
   */
 
-#include "tetrisStartMenu.h"
+#include "../tetrisGame/tetrisStartMenu.h"
 
 /** @brief Draw the decor
   */
