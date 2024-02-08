@@ -37,6 +37,7 @@
 
 // Include only needed fonts
 #define SSD1306_INCLUDE_FONT_6x8
+#define SSD1306_INCLUDE_FONT_6x8_NEW
 #define SSD1306_INCLUDE_FONT_7x10
 #define SSD1306_INCLUDE_FONT_7x10_NEW
 //#define SSD1306_INCLUDE_FONT_11x18
