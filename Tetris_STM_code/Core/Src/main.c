@@ -95,7 +95,9 @@ int main(void)
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
   tetrisInit();
-  tetrisGame();
+  HAL_Delay(1000);
+  drawGameOver();
+  //tetrisGame();
   /* USER CODE END 2 */
 
   /* Infinite loop */
