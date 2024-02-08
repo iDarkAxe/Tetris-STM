@@ -25,6 +25,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "ssd1306.h"
+#include "userOled.h"
 #include "tetrisStartMenu.h"
 #include "tetrisGame.h"
 /* USER CODE END Includes */
@@ -162,12 +163,9 @@ void SystemClock_Config(void)
 /* USER CODE BEGIN 4 */
 void tetrisInit(){
   ssd1306_Init();
-
-  //FACULTATIF DECORS
-  tetrisStartMenu(White);
-  
-  //ecrire le nom du jeu en GROS
-  //initialiser le reste
+  drawBorder();
+  drawTetrisStartGame();
+  ssd1306_UpdateScreen();
 }
 
 /* USER CODE END 4 */
