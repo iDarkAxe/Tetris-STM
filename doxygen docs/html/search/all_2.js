@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['getlevelnumber_0',['getLevelNumber',['../tetris_leveling_8c.html#a5e3d2774fadf7f769e1d4b5b50ca0752',1,'tetrisLeveling.c']]],
-  ['getlinecompleted_1',['getLineCompleted',['../tetris_game_8c.html#a08cf243217343b641447c591f3c00483',1,'tetrisGame.c']]],
-  ['getscore_2',['getScore',['../tetris_scoring_8c.html#abf4ef5f0f52581fe195737642ff99062',1,'tetrisScoring.c']]]
+  ['drawborder_0',['drawBorder',['../user_oled_8c.html#a5ddae6e19852caa13e77f7aa2b50e3b3',1,'userOled.c']]],
+  ['drawstack_1',['drawStack',['../user_oled_8c.html#a6f41720fd4da3fcfab5ac1259c7823c7',1,'userOled.c']]],
+  ['drawtile_2',['drawTile',['../user_oled_8c.html#a3a25a8ee25260d16cc10fc35c2ea38fe',1,'userOled.c']]]
 ];

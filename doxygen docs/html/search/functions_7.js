@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['tetrisborduredecor_0',['tetrisBordureDecor',['../tetris_start_menu_8c.html#a1b46f95cb32d9af8eca89bad57d18210',1,'tetrisStartMenu.c']]],
-  ['tetrisstartmenu_1',['tetrisStartMenu',['../tetris_start_menu_8c.html#a47a98462681ee054d7eaa6f08ba31b47',1,'tetrisStartMenu.c']]]
+  ['newlevelcalculate_0',['newLevelCalculate',['../tetris_leveling_8c.html#aeba70d21eab6f37620dbcc60a9de542a',1,'tetrisLeveling.c']]]
 ];
