@@ -1,5 +1,5 @@
-\doxysection{C\+:/\+Users/pontet.APOLLO2/\+Documents/\+Git\+\_\+\+Repos/\+Tetris-\/\+STM/\+Tetris\+\_\+\+STM\+\_\+code/tetris\+Game/tetris\+Game.c File Reference}
-\hypertarget{tetris_game_8c}{}\label{tetris_game_8c}\index{C:/Users/pontet.APOLLO2/Documents/Git\_Repos/Tetris-\/STM/Tetris\_STM\_code/tetrisGame/tetrisGame.c@{C:/Users/pontet.APOLLO2/Documents/Git\_Repos/Tetris-\/STM/Tetris\_STM\_code/tetrisGame/tetrisGame.c}}
+\doxysection{C\+:/\+Users/kerfriden/\+Documents/\+Tetris-\/\+STM/\+Tetris\+\_\+\+STM\+\_\+code/tetris\+Game/tetris\+Game.c File Reference}
+\hypertarget{tetris_game_8c}{}\label{tetris_game_8c}\index{C:/Users/kerfriden/Documents/Tetris-\/STM/Tetris\_STM\_code/tetrisGame/tetrisGame.c@{C:/Users/kerfriden/Documents/Tetris-\/STM/Tetris\_STM\_code/tetrisGame/tetrisGame.c}}
 
 
 \+: Main program of the Tetris Game  
@@ -8,8 +8,9 @@
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$string.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
-{\ttfamily \#include "{}tetris\+Scoring.\+h"{}}\newline
-{\ttfamily \#include "{}user\+Oled.\+h"{}}\newline
+{\ttfamily \#include $<$tim.\+h$>$}\newline
+{\ttfamily \#include "{}../tetris\+Game/tetris\+Scoring.\+h"{}}\newline
+{\ttfamily \#include "{}../tetris\+Game/user\+Oled.\+h"{}}\newline
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,7 +47,7 @@ struct \mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}}
 enum \mbox{\hyperlink{tetris_game_8c_afde3b66b6b41bd008469f366fa756e54}{inputs}} \{ \newline
 {\bfseries gauche} = -\/1
 , {\bfseries droite} = 1
-, {\bfseries bas} = 2
+, {\bfseries fall} = 2
 , {\bfseries rotate} = 3
 , \newline
 {\bfseries menu} = 4
@@ -80,7 +81,11 @@ void \mbox{\hyperlink{tetris_game_8c_a2ed5bd4d5ecf8d9597e80b61dad4f0e9}{random\+
 \begin{DoxyCompactList}\small\item\em Select a random piece among the tetraminos. \end{DoxyCompactList}\item 
 \Hypertarget{tetris_game_8c_aaf103d842e6d9f5524319094721d4268}\label{tetris_game_8c_aaf103d842e6d9f5524319094721d4268} 
 int {\bfseries tetris\+Game} ()
-\end{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{tetris_game_8c_a0cd91fd3a9608559c2a87a8ba6cba55f}{HAL\+\_\+\+GPIO\+\_\+\+EXTI\+\_\+\+Callback}} (uint16\+\_\+t GPIO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Gestion des interruptions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tetris_game_8c_a8a3b0ad512a6e6c6157440b68d395eac}{HAL\+\_\+\+TIM\+\_\+\+Period\+Elapsed\+Callback}} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}htim)
+\begin{DoxyCompactList}\small\item\em Fin du timer pour lire les boutons. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -107,6 +112,9 @@ int {\bfseries rotate\+Fall\+Delay} = 500
 \item 
 \Hypertarget{tetris_game_8c_aedcfbdbf3fd724236be8e67315f45839}\label{tetris_game_8c_aedcfbdbf3fd724236be8e67315f45839} 
 int {\bfseries move\+Fall\+Delay} = 500
+\item 
+\Hypertarget{tetris_game_8c_a73f5e9d88fbbe86e97325c2ec617cebf}\label{tetris_game_8c_a73f5e9d88fbbe86e97325c2ec617cebf} 
+int {\bfseries user\+Input} =0
 \end{DoxyCompactItemize}
 
 
@@ -169,6 +177,36 @@ calculate Line\+Completed and move\+Down\+Stack if line\+Full
 {\em lines\+Count} & number of Lines completed \\
 \hline
 \end{DoxyRetVals}
+\Hypertarget{tetris_game_8c_a0cd91fd3a9608559c2a87a8ba6cba55f}\label{tetris_game_8c_a0cd91fd3a9608559c2a87a8ba6cba55f} 
+\index{tetrisGame.c@{tetrisGame.c}!HAL\_GPIO\_EXTI\_Callback@{HAL\_GPIO\_EXTI\_Callback}}
+\index{HAL\_GPIO\_EXTI\_Callback@{HAL\_GPIO\_EXTI\_Callback}!tetrisGame.c@{tetrisGame.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_GPIO\_EXTI\_Callback()}{HAL\_GPIO\_EXTI\_Callback()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+GPIO\+\_\+\+EXTI\+\_\+\+Callback (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{GPIO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+Gestion des interruptions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em GPIO\+\_\+\+Pin} & Pin sur lequel a lieu l\textquotesingle{}interruption \\
+\hline
+\end{DoxyParams}
+\Hypertarget{tetris_game_8c_a8a3b0ad512a6e6c6157440b68d395eac}\label{tetris_game_8c_a8a3b0ad512a6e6c6157440b68d395eac} 
+\index{tetrisGame.c@{tetrisGame.c}!HAL\_TIM\_PeriodElapsedCallback@{HAL\_TIM\_PeriodElapsedCallback}}
+\index{HAL\_TIM\_PeriodElapsedCallback@{HAL\_TIM\_PeriodElapsedCallback}!tetrisGame.c@{tetrisGame.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_TIM\_PeriodElapsedCallback()}{HAL\_TIM\_PeriodElapsedCallback()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+TIM\+\_\+\+Period\+Elapsed\+Callback (\begin{DoxyParamCaption}\item[{TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{htim }\end{DoxyParamCaption})}
+
+
+
+Fin du timer pour lire les boutons. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \texorpdfstring{$\ast$}{*}htim} & timer \\
+\hline
+\end{DoxyParams}
 \Hypertarget{tetris_game_8c_acec8ebe56cff6e50618ca33e63f439d3}\label{tetris_game_8c_acec8ebe56cff6e50618ca33e63f439d3} 
 \index{tetrisGame.c@{tetrisGame.c}!isClippingInStack@{isClippingInStack}}
 \index{isClippingInStack@{isClippingInStack}!tetrisGame.c@{tetrisGame.c}}

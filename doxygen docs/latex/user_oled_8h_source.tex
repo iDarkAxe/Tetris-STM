@@ -1,5 +1,5 @@
 \doxysection{user\+Oled.\+h}
-\hypertarget{user_oled_8h_source}{}\label{user_oled_8h_source}\index{C:/Users/pontet.APOLLO2/Documents/Git\_Repos/Tetris-\/STM/Tetris\_STM\_code/tetrisGame/userOled.h@{C:/Users/pontet.APOLLO2/Documents/Git\_Repos/Tetris-\/STM/Tetris\_STM\_code/tetrisGame/userOled.h}}
+\hypertarget{user_oled_8h_source}{}\label{user_oled_8h_source}\index{C:/Users/kerfriden/Documents/Tetris-\/STM/Tetris\_STM\_code/tetrisGame/userOled.h@{C:/Users/kerfriden/Documents/Tetris-\/STM/Tetris\_STM\_code/tetrisGame/userOled.h}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{/*}}
@@ -18,12 +18,14 @@
 \DoxyCodeLine{00014\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{user_oled_8c_a5ddae6e19852caa13e77f7aa2b50e3b3}{drawBorder}}();}
 \DoxyCodeLine{00015\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{user_oled_8c_a3a25a8ee25260d16cc10fc35c2ea38fe}{drawTile}}(uint8\_t\ x,\ uint8\_t\ y,\ SSD1306\_COLOR\ color);}
 \DoxyCodeLine{00016\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{user_oled_8c_a6f41720fd4da3fcfab5ac1259c7823c7}{drawStack}}(\textcolor{keywordtype}{int}\ stack[23][16]);}
-\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{user_oled_8c_a0f8f8c9637e27d98da21de92973f1443}{gameOverAnimation}}();}
-\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ ssd1306\_SetCursorVertical(uint8\_t\ x,\ uint8\_t\ y);}
-\DoxyCodeLine{00019\ \textcolor{keywordtype}{char}\ ssd1306\_WriteStringVertical(\textcolor{keywordtype}{char}*\ str,\ FontDef\ Font,\ SSD1306\_COLOR\ color);}
-\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ drawTetrisStartGame();}
-\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ clearPlayZone();}
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ USEROLED\_H\_\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{user_oled_8c_aeb2c7e9c7d14c9eccb7e624bd9611ef8}{drawGameOver}}();}
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{user_oled_8c_a4a8b7e31c3fe86ea9f12dd3ba0745eb3}{ssd1306\_SetCursorVertical}}(uint8\_t\ x,\ uint8\_t\ y);}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{user_oled_8c_a86b173139967c187e228c0a2c56215ce}{ssd1306\_WriteStringVertical}}(\textcolor{keywordtype}{char}*\ str,\ FontDef\ Font,\ SSD1306\_COLOR\ color);}
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{user_oled_8c_a305f138587ae309f2f0e2ba3ddd83796}{drawTetrisStartGame}}();}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{user_oled_8c_aaf80dc343615929a9d7ca23689b573e0}{clearPlayZone}}();}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ tetrisBordureDecor(SSD1306\_COLOR\ color);}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{user_oled_8c_a47f2a4556f74dae06c5a3d030af8d636}{drawDrawStartMenu}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ USEROLED\_H\_\ */}\textcolor{preprocessor}{}}
 
 \end{DoxyCode}

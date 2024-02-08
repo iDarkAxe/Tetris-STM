@@ -8,6 +8,7 @@
   */
 
 #include "userOled.h"
+#include "tetrisScoring.h"
 
 // Screen object
 static SSD1306_t SSD1306;
@@ -22,6 +23,8 @@ void drawBorder(){
 }
 
 /** @brief Draw a normal tile
+ *  @param x,y: position de la Tile à changer
+ *  @param color: couleur de la Tile
   */
 void drawTile(uint8_t x, uint8_t y, SSD1306_COLOR color){
 	ssd1306_FillRectangle(x, y, x+5, y+5, color);
@@ -65,6 +68,8 @@ void drawGameOver(){
 	ssd1306_UpdateScreen();
 }
 
+/** @brief Plays the StartGame Animation
+  */
 void drawTetrisStartGame(){
 	ssd1306_SetCursorVertical(20, 52);
 	ssd1306_WriteStringVertical("Tetris", Font_7x10_new, White);
@@ -78,10 +83,17 @@ void drawTetrisStartGame(){
 	drawDrawStartMenu();
 }
 
+/** @brief Clear the PlayZone
+  */
 void clearPlayZone(){
 	ssd1306_FillRectangle(2, 2, 125, 61, Black);
 }
 
+/** @brief Ecrit un caractère verticalement
+ *  @param ch: caractère à afficher
+ *  @param Font: police sélectionnée
+ *  @param color: couleur sélectionnée
+  */
 char ssd1306_WriteCharVertical(char ch, FontDef Font, SSD1306_COLOR color) {
     uint32_t i, b, j;
 
@@ -115,7 +127,11 @@ char ssd1306_WriteCharVertical(char ch, FontDef Font, SSD1306_COLOR color) {
     return ch;
 }
 
-/* Write full string to screenbuffer */
+/** @brief Ecrit une chaîne de caractères verticalement
+ *  @param str: chaîne de caractères à afficher
+ *  @param Font: police sélectionnée
+ *  @param color: couleur sélectionnée
+  */
 char ssd1306_WriteStringVertical(char* str, FontDef Font, SSD1306_COLOR color) {
     while (*str) {
         if (ssd1306_WriteCharVertical(*str, Font, color) != *str) {
@@ -128,12 +144,17 @@ char ssd1306_WriteStringVertical(char* str, FontDef Font, SSD1306_COLOR color) {
     // Everything ok
     return *str;
 }
+
+/** @brief Déplace le curseur à sa position Verticale
+ *  @param x,y : position du curseur à changer
+  */
 void ssd1306_SetCursorVertical(uint8_t x, uint8_t y) {
     SSD1306.CurrentX = x;
     SSD1306.CurrentY = y;
 }
 
 /** @brief Draw the decor
+ *  @param color: couleur sélectionnée
   */
 void tetrisBordureDecor(SSD1306_COLOR color)
 {
@@ -198,6 +219,8 @@ void tetrisBordureDecor(SSD1306_COLOR color)
   ssd1306_DrawPixel(122, 61, color);
 }
 
+/** @brief Affiche les tetriminos en bas du StartMenu
+  */
 void drawDrawStartMenu(){
 	ssd1306_FillRectangle(110, 50, 118, 52, White);//L
 	ssd1306_FillRectangle(116, 47, 118, 49, White);
@@ -207,14 +230,4 @@ void drawDrawStartMenu(){
 	ssd1306_FillRectangle(107, 23, 118, 25, White);//barre
 	ssd1306_FillRectangle(113, 12, 115, 20, White);//T
 	ssd1306_FillRectangle(116, 15, 118, 17, White);
-}
-
-void drawTetrisStartGame()
-{
-
-}
-
-
-void drawTetrisStartGame(){
-
 }

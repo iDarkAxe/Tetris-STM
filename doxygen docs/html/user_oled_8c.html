@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Tetris_STM_code: C:/Users/pontet.APOLLO2/Documents/Git_Repos/Tetris-STM/Tetris_STM_code/tetrisGame/userOled.c File Reference</title>
+<title>Tetris_STM_code: C:/Users/kerfriden/Documents/Tetris-STM/Tetris_STM_code/tetrisGame/userOled.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -84,6 +84,7 @@ $(function() {
 <p>: Others functions for Oled drawing  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;userOled.h&quot;</code><br />
+<code>#include &quot;tetrisScoring.h&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -91,20 +92,40 @@ Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>drawBorder</b> ()</td></tr>
 <tr class="memdesc:a5ddae6e19852caa13e77f7aa2b50e3b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the border of the game. <br /></td></tr>
 <tr class="separator:a5ddae6e19852caa13e77f7aa2b50e3b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a25a8ee25260d16cc10fc35c2ea38fe" id="r_a3a25a8ee25260d16cc10fc35c2ea38fe"><td class="memItemLeft" align="right" valign="top"><a id="a3a25a8ee25260d16cc10fc35c2ea38fe" name="a3a25a8ee25260d16cc10fc35c2ea38fe"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>drawTile</b> (uint8_t x, uint8_t y, SSD1306_COLOR color)</td></tr>
-<tr class="memdesc:a3a25a8ee25260d16cc10fc35c2ea38fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a normal tile. <br /></td></tr>
+<tr class="memitem:a3a25a8ee25260d16cc10fc35c2ea38fe" id="r_a3a25a8ee25260d16cc10fc35c2ea38fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a25a8ee25260d16cc10fc35c2ea38fe">drawTile</a> (uint8_t x, uint8_t y, SSD1306_COLOR color)</td></tr>
+<tr class="memdesc:a3a25a8ee25260d16cc10fc35c2ea38fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a normal tile.  <br /></td></tr>
 <tr class="separator:a3a25a8ee25260d16cc10fc35c2ea38fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f41720fd4da3fcfab5ac1259c7823c7" id="r_a6f41720fd4da3fcfab5ac1259c7823c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f41720fd4da3fcfab5ac1259c7823c7">drawStack</a> (int stack[23][16])</td></tr>
 <tr class="memdesc:a6f41720fd4da3fcfab5ac1259c7823c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the entire stack.  <br /></td></tr>
 <tr class="separator:a6f41720fd4da3fcfab5ac1259c7823c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f8f8c9637e27d98da21de92973f1443" id="r_a0f8f8c9637e27d98da21de92973f1443"><td class="memItemLeft" align="right" valign="top"><a id="a0f8f8c9637e27d98da21de92973f1443" name="a0f8f8c9637e27d98da21de92973f1443"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>gameOverAnimation</b> ()</td></tr>
-<tr class="memdesc:a0f8f8c9637e27d98da21de92973f1443"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays the gameOver Animation. <br /></td></tr>
-<tr class="separator:a0f8f8c9637e27d98da21de92973f1443"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb2c7e9c7d14c9eccb7e624bd9611ef8" id="r_aeb2c7e9c7d14c9eccb7e624bd9611ef8"><td class="memItemLeft" align="right" valign="top"><a id="aeb2c7e9c7d14c9eccb7e624bd9611ef8" name="aeb2c7e9c7d14c9eccb7e624bd9611ef8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>drawGameOver</b> ()</td></tr>
+<tr class="memdesc:aeb2c7e9c7d14c9eccb7e624bd9611ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays the gameOver Animation. <br /></td></tr>
+<tr class="separator:aeb2c7e9c7d14c9eccb7e624bd9611ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a305f138587ae309f2f0e2ba3ddd83796" id="r_a305f138587ae309f2f0e2ba3ddd83796"><td class="memItemLeft" align="right" valign="top"><a id="a305f138587ae309f2f0e2ba3ddd83796" name="a305f138587ae309f2f0e2ba3ddd83796"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>drawTetrisStartGame</b> ()</td></tr>
+<tr class="memdesc:a305f138587ae309f2f0e2ba3ddd83796"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plays the StartGame Animation. <br /></td></tr>
 <tr class="separator:a305f138587ae309f2f0e2ba3ddd83796"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf80dc343615929a9d7ca23689b573e0" id="r_aaf80dc343615929a9d7ca23689b573e0"><td class="memItemLeft" align="right" valign="top"><a id="aaf80dc343615929a9d7ca23689b573e0" name="aaf80dc343615929a9d7ca23689b573e0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clearPlayZone</b> ()</td></tr>
+<tr class="memdesc:aaf80dc343615929a9d7ca23689b573e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the PlayZone. <br /></td></tr>
+<tr class="separator:aaf80dc343615929a9d7ca23689b573e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae461009b93d8876c0985ab70868a17c8" id="r_ae461009b93d8876c0985ab70868a17c8"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae461009b93d8876c0985ab70868a17c8">ssd1306_WriteCharVertical</a> (char ch, FontDef Font, SSD1306_COLOR color)</td></tr>
+<tr class="memdesc:ae461009b93d8876c0985ab70868a17c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ecrit un caractère verticalement.  <br /></td></tr>
+<tr class="separator:ae461009b93d8876c0985ab70868a17c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86b173139967c187e228c0a2c56215ce" id="r_a86b173139967c187e228c0a2c56215ce"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86b173139967c187e228c0a2c56215ce">ssd1306_WriteStringVertical</a> (char *str, FontDef Font, SSD1306_COLOR color)</td></tr>
+<tr class="memdesc:a86b173139967c187e228c0a2c56215ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ecrit une chaîne de caractères verticalement.  <br /></td></tr>
+<tr class="separator:a86b173139967c187e228c0a2c56215ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a8b7e31c3fe86ea9f12dd3ba0745eb3" id="r_a4a8b7e31c3fe86ea9f12dd3ba0745eb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a8b7e31c3fe86ea9f12dd3ba0745eb3">ssd1306_SetCursorVertical</a> (uint8_t x, uint8_t y)</td></tr>
+<tr class="memdesc:a4a8b7e31c3fe86ea9f12dd3ba0745eb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Déplace le curseur à sa position Verticale.  <br /></td></tr>
+<tr class="separator:a4a8b7e31c3fe86ea9f12dd3ba0745eb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b46f95cb32d9af8eca89bad57d18210" id="r_a1b46f95cb32d9af8eca89bad57d18210"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b46f95cb32d9af8eca89bad57d18210">tetrisBordureDecor</a> (SSD1306_COLOR color)</td></tr>
+<tr class="memdesc:a1b46f95cb32d9af8eca89bad57d18210"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the decor.  <br /></td></tr>
+<tr class="separator:a1b46f95cb32d9af8eca89bad57d18210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47f2a4556f74dae06c5a3d030af8d636" id="r_a47f2a4556f74dae06c5a3d030af8d636"><td class="memItemLeft" align="right" valign="top"><a id="a47f2a4556f74dae06c5a3d030af8d636" name="a47f2a4556f74dae06c5a3d030af8d636"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>drawDrawStartMenu</b> ()</td></tr>
+<tr class="memdesc:a47f2a4556f74dae06c5a3d030af8d636"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche les tetriminos en bas du StartMenu. <br /></td></tr>
+<tr class="separator:a47f2a4556f74dae06c5a3d030af8d636"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>: Others functions for Oled drawing </p>
@@ -129,6 +150,167 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>drawTetrisStartGame</
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">stack[][]</td><td>the stack of the game </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3a25a8ee25260d16cc10fc35c2ea38fe" name="a3a25a8ee25260d16cc10fc35c2ea38fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a25a8ee25260d16cc10fc35c2ea38fe">&#9670;&#160;</a></span>drawTile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawTile </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>x</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>y</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SSD1306_COLOR</td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw a normal tile. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x,y</td><td>position de la Tile à changer </td></tr>
+    <tr><td class="paramname">color</td><td>couleur de la Tile </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4a8b7e31c3fe86ea9f12dd3ba0745eb3" name="a4a8b7e31c3fe86ea9f12dd3ba0745eb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a8b7e31c3fe86ea9f12dd3ba0745eb3">&#9670;&#160;</a></span>ssd1306_SetCursorVertical()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ssd1306_SetCursorVertical </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>x</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Déplace le curseur à sa position Verticale. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x,y</td><td>: position du curseur à changer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae461009b93d8876c0985ab70868a17c8" name="ae461009b93d8876c0985ab70868a17c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae461009b93d8876c0985ab70868a17c8">&#9670;&#160;</a></span>ssd1306_WriteCharVertical()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char ssd1306_WriteCharVertical </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>ch</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FontDef</td>          <td class="paramname"><span class="paramname"><em>Font</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SSD1306_COLOR</td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ecrit un caractère verticalement. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ch</td><td>caractère à afficher </td></tr>
+    <tr><td class="paramname">Font</td><td>police sélectionnée </td></tr>
+    <tr><td class="paramname">color</td><td>couleur sélectionnée </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a86b173139967c187e228c0a2c56215ce" name="a86b173139967c187e228c0a2c56215ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86b173139967c187e228c0a2c56215ce">&#9670;&#160;</a></span>ssd1306_WriteStringVertical()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char ssd1306_WriteStringVertical </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>str</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FontDef</td>          <td class="paramname"><span class="paramname"><em>Font</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SSD1306_COLOR</td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ecrit une chaîne de caractères verticalement. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>chaîne de caractères à afficher </td></tr>
+    <tr><td class="paramname">Font</td><td>police sélectionnée </td></tr>
+    <tr><td class="paramname">color</td><td>couleur sélectionnée </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1b46f95cb32d9af8eca89bad57d18210" name="a1b46f95cb32d9af8eca89bad57d18210"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b46f95cb32d9af8eca89bad57d18210">&#9670;&#160;</a></span>tetrisBordureDecor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tetrisBordureDecor </td>
+          <td>(</td>
+          <td class="paramtype">SSD1306_COLOR</td>          <td class="paramname"><span class="paramname"><em>color</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw the decor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>couleur sélectionnée </td></tr>
   </table>
   </dd>
 </dl>

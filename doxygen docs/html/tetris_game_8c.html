@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Tetris_STM_code: C:/Users/pontet.APOLLO2/Documents/Git_Repos/Tetris-STM/Tetris_STM_code/tetrisGame/tetrisGame.c File Reference</title>
+<title>Tetris_STM_code: C:/Users/kerfriden/Documents/Tetris-STM/Tetris_STM_code/tetrisGame/tetrisGame.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -90,8 +90,9 @@ $(function() {
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &quot;tetrisScoring.h&quot;</code><br />
-<code>#include &quot;userOled.h&quot;</code><br />
+<code>#include &lt;tim.h&gt;</code><br />
+<code>#include &quot;../tetrisGame/tetrisScoring.h&quot;</code><br />
+<code>#include &quot;../tetrisGame/userOled.h&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -128,7 +129,7 @@ Enumerations</h2></td></tr>
 <tr class="memitem:afde3b66b6b41bd008469f366fa756e54" id="r_afde3b66b6b41bd008469f366fa756e54"><td class="memItemLeft" align="right" valign="top"><a id="afde3b66b6b41bd008469f366fa756e54" name="afde3b66b6b41bd008469f366fa756e54"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afde3b66b6b41bd008469f366fa756e54">inputs</a> { <br />
 &#160;&#160;<b>gauche</b> = -1
 , <b>droite</b> = 1
-, <b>bas</b> = 2
+, <b>fall</b> = 2
 , <b>rotate</b> = 3
 , <br />
 &#160;&#160;<b>menu</b> = 4
@@ -176,6 +177,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printStack</b> (void)
 <tr class="memitem:aaf103d842e6d9f5524319094721d4268" id="r_aaf103d842e6d9f5524319094721d4268"><td class="memItemLeft" align="right" valign="top"><a id="aaf103d842e6d9f5524319094721d4268" name="aaf103d842e6d9f5524319094721d4268"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>tetrisGame</b> ()</td></tr>
 <tr class="separator:aaf103d842e6d9f5524319094721d4268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cd91fd3a9608559c2a87a8ba6cba55f" id="r_a0cd91fd3a9608559c2a87a8ba6cba55f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cd91fd3a9608559c2a87a8ba6cba55f">HAL_GPIO_EXTI_Callback</a> (uint16_t GPIO_Pin)</td></tr>
+<tr class="memdesc:a0cd91fd3a9608559c2a87a8ba6cba55f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gestion des interruptions.  <br /></td></tr>
+<tr class="separator:a0cd91fd3a9608559c2a87a8ba6cba55f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a3b0ad512a6e6c6157440b68d395eac" id="r_a8a3b0ad512a6e6c6157440b68d395eac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a3b0ad512a6e6c6157440b68d395eac">HAL_TIM_PeriodElapsedCallback</a> (TIM_HandleTypeDef *htim)</td></tr>
+<tr class="memdesc:a8a3b0ad512a6e6c6157440b68d395eac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fin du timer pour lire les boutons.  <br /></td></tr>
+<tr class="separator:a8a3b0ad512a6e6c6157440b68d395eac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -209,6 +216,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>rotateFallDelay</b> = 
 <tr class="memitem:aedcfbdbf3fd724236be8e67315f45839" id="r_aedcfbdbf3fd724236be8e67315f45839"><td class="memItemLeft" align="right" valign="top"><a id="aedcfbdbf3fd724236be8e67315f45839" name="aedcfbdbf3fd724236be8e67315f45839"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>moveFallDelay</b> = 500</td></tr>
 <tr class="separator:aedcfbdbf3fd724236be8e67315f45839"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73f5e9d88fbbe86e97325c2ec617cebf" id="r_a73f5e9d88fbbe86e97325c2ec617cebf"><td class="memItemLeft" align="right" valign="top"><a id="a73f5e9d88fbbe86e97325c2ec617cebf" name="a73f5e9d88fbbe86e97325c2ec617cebf"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>userInput</b> =0</td></tr>
+<tr class="separator:a73f5e9d88fbbe86e97325c2ec617cebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>: Main program of the Tetris Game </p>
@@ -289,6 +299,56 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>moveFallDelay</b> = 50
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">linesCount</td><td>number of Lines completed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0cd91fd3a9608559c2a87a8ba6cba55f" name="a0cd91fd3a9608559c2a87a8ba6cba55f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cd91fd3a9608559c2a87a8ba6cba55f">&#9670;&#160;</a></span>HAL_GPIO_EXTI_Callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HAL_GPIO_EXTI_Callback </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>GPIO_Pin</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gestion des interruptions. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">GPIO_Pin</td><td>Pin sur lequel a lieu l'interruption </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8a3b0ad512a6e6c6157440b68d395eac" name="a8a3b0ad512a6e6c6157440b68d395eac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a3b0ad512a6e6c6157440b68d395eac">&#9670;&#160;</a></span>HAL_TIM_PeriodElapsedCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HAL_TIM_PeriodElapsedCallback </td>
+          <td>(</td>
+          <td class="paramtype">TIM_HandleTypeDef *</td>          <td class="paramname"><span class="paramname"><em>htim</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fin du timer pour lire les boutons. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*htim</td><td>timer </td></tr>
   </table>
   </dd>
 </dl>
