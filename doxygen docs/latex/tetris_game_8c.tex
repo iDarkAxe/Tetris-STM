@@ -1,5 +1,5 @@
-\doxysection{C\+:/\+Users/pontet/\+Desktop/\+Tetris\+\_\+\+STM/\+Tetris\+\_\+\+STM\+\_\+code/tetris\+Game/tetris\+Game.c File Reference}
-\hypertarget{tetris_game_8c}{}\label{tetris_game_8c}\index{C:/Users/pontet/Desktop/Tetris\_STM/Tetris\_STM\_code/tetrisGame/tetrisGame.c@{C:/Users/pontet/Desktop/Tetris\_STM/Tetris\_STM\_code/tetrisGame/tetrisGame.c}}
+\doxysection{C\+:/\+Users/pontet.APOLLO2/\+Documents/\+Git\+\_\+\+Repos/\+Tetris-\/\+STM/\+Tetris\+\_\+\+STM\+\_\+code/tetris\+Game/tetris\+Game.c File Reference}
+\hypertarget{tetris_game_8c}{}\label{tetris_game_8c}\index{C:/Users/pontet.APOLLO2/Documents/Git\_Repos/Tetris-\/STM/Tetris\_STM\_code/tetrisGame/tetrisGame.c@{C:/Users/pontet.APOLLO2/Documents/Git\_Repos/Tetris-\/STM/Tetris\_STM\_code/tetrisGame/tetrisGame.c}}
 
 
 \+: Main program of the Tetris Game  
@@ -14,7 +14,7 @@
 \begin{DoxyCompactItemize}
 \item 
 struct \mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Structure to locate the current tetramino in the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
@@ -43,39 +43,33 @@ struct \mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{tetris_game_8c_afde3b66b6b41bd008469f366fa756e54}\label{tetris_game_8c_afde3b66b6b41bd008469f366fa756e54} 
-enum {\bfseries inputs} \{ \newline
-{\bfseries gauche} = 0
+enum \mbox{\hyperlink{tetris_game_8c_afde3b66b6b41bd008469f366fa756e54}{inputs}} \{ \newline
+{\bfseries gauche} = -\/1
 , {\bfseries droite} = 1
 , {\bfseries bas} = 2
 , {\bfseries rotate} = 3
 , \newline
 {\bfseries menu} = 4
  \}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Inputs du jeu, permet de simplifier le code. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{tetris_game_8c_ac96dd1047b765582dd463eba40703f94}\label{tetris_game_8c_ac96dd1047b765582dd463eba40703f94} 
-void {\bfseries add\+Piece\+Into\+Stack} (\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*})
-\item 
-\Hypertarget{tetris_game_8c_a5f65da666182c9e2904f1c74bdc3440f}\label{tetris_game_8c_a5f65da666182c9e2904f1c74bdc3440f} 
-void {\bfseries remove\+Piece\+From\+Stack} (\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*})
-\item 
-\Hypertarget{tetris_game_8c_af2a6e01b79974ee58b13d39005f34b5e}\label{tetris_game_8c_af2a6e01b79974ee58b13d39005f34b5e} 
-int {\bfseries is\+Clipping\+In\+Stack} (\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*})
-\item 
-\Hypertarget{tetris_game_8c_a0851fb429b5ee26b78d23dcb963ef542}\label{tetris_game_8c_a0851fb429b5ee26b78d23dcb963ef542} 
-int {\bfseries falling} (\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*})
-\item 
+void \mbox{\hyperlink{tetris_game_8c_a375de1b92009d1f690f457586a470145}{add\+Piece\+Into\+Stack}} (\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}tetramino\+Atm)
+\begin{DoxyCompactList}\small\item\em Permet de placer une pièce dans le jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tetris_game_8c_adc91f41cf420b07107119d403639621d}{remove\+Piece\+From\+Stack}} (\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}tetramino\+Atm)
+\begin{DoxyCompactList}\small\item\em Permet de supprimer une pièce du jeu. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tetris_game_8c_acec8ebe56cff6e50618ca33e63f439d3}{is\+Clipping\+In\+Stack}} (\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}tetramino\+Atm)
+\begin{DoxyCompactList}\small\item\em Permet prédire si la pièce va rentrer en colision avec les blocs déjà présents. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tetris_game_8c_ab4540cbee1e2edd11790b49cc7333367}{falling}} (\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}tetramino\+Atm)
+\begin{DoxyCompactList}\small\item\em Permet de faire descendre naturellement une pièce du jeu. \end{DoxyCompactList}\item 
 \Hypertarget{tetris_game_8c_ae2c2de4ce470468a0af82bb42ea2a338}\label{tetris_game_8c_ae2c2de4ce470468a0af82bb42ea2a338} 
 void {\bfseries print\+Stack} (void)
-\item 
-\Hypertarget{tetris_game_8c_a717f50a93deda8cd822b102c928dffe4}\label{tetris_game_8c_a717f50a93deda8cd822b102c928dffe4} 
-int {\bfseries move\+Piece} (\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}, int)
-\item 
-\Hypertarget{tetris_game_8c_a612c3e71b1fb7c1ebb922dbd5673db15}\label{tetris_game_8c_a612c3e71b1fb7c1ebb922dbd5673db15} 
-int {\bfseries rotate\+Piece} (\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*})
-\item 
+\begin{DoxyCompactList}\small\item\em Affiche la stack sur le terminal. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tetris_game_8c_aab44c65b4c5ef7a94e5701f074211391}{move\+Piece}} (\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}tetramino\+Atm, int direction)
+\begin{DoxyCompactList}\small\item\em Permet de déplacer une pièce en fonction de sa direction. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tetris_game_8c_a3a179348ccd32ecd168c08a74b28ba17}{rotate\+Piece}} (\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}tetramino\+Atm)
+\begin{DoxyCompactList}\small\item\em Permet tourner une pièce, seulement si elle ne va pas clip. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{tetris_game_8c_a08cf243217343b641447c591f3c00483}{get\+Line\+Completed}} ()
 \begin{DoxyCompactList}\small\item\em calculate Line\+Completed and move\+Down\+Stack if line\+Full \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{tetris_game_8c_a7c23a5fa3b48f5020d6a71fc47a86031}{remove\+Line}} (int line)
@@ -119,9 +113,47 @@ int {\bfseries move\+Fall\+Delay} = 500
 \doxysubsection{Detailed Description}
 \+: Main program of the Tetris Game 
 
+\begin{DoxyDate}{Date}
+08 février 2024 
+\end{DoxyDate}
 
 
 \doxysubsection{Function Documentation}
+\Hypertarget{tetris_game_8c_a375de1b92009d1f690f457586a470145}\label{tetris_game_8c_a375de1b92009d1f690f457586a470145} 
+\index{tetrisGame.c@{tetrisGame.c}!addPieceIntoStack@{addPieceIntoStack}}
+\index{addPieceIntoStack@{addPieceIntoStack}!tetrisGame.c@{tetrisGame.c}}
+\doxysubsubsection{\texorpdfstring{addPieceIntoStack()}{addPieceIntoStack()}}
+{\footnotesize\ttfamily void add\+Piece\+Into\+Stack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}}]{tetramino\+Atm }\end{DoxyParamCaption})}
+
+
+
+Permet de placer une pièce dans le jeu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \texorpdfstring{$\ast$}{*}tetramino\+Atm} & Current tetramino used \\
+\hline
+\end{DoxyParams}
+\Hypertarget{tetris_game_8c_ab4540cbee1e2edd11790b49cc7333367}\label{tetris_game_8c_ab4540cbee1e2edd11790b49cc7333367} 
+\index{tetrisGame.c@{tetrisGame.c}!falling@{falling}}
+\index{falling@{falling}!tetrisGame.c@{tetrisGame.c}}
+\doxysubsubsection{\texorpdfstring{falling()}{falling()}}
+{\footnotesize\ttfamily int falling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}}]{tetramino\+Atm }\end{DoxyParamCaption})}
+
+
+
+Permet de faire descendre naturellement une pièce du jeu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \texorpdfstring{$\ast$}{*}tetramino\+Atm} & Current tetramino used\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em state} & PIECE\+\_\+\+TOUCHED, or PIECE\+\_\+\+FALLED \\
+\hline
+\end{DoxyRetVals}
 \Hypertarget{tetris_game_8c_a08cf243217343b641447c591f3c00483}\label{tetris_game_8c_a08cf243217343b641447c591f3c00483} 
 \index{tetrisGame.c@{tetrisGame.c}!getLineCompleted@{getLineCompleted}}
 \index{getLineCompleted@{getLineCompleted}!tetrisGame.c@{tetrisGame.c}}
@@ -135,6 +167,26 @@ calculate Line\+Completed and move\+Down\+Stack if line\+Full
 
 \begin{DoxyRetVals}{Return values}
 {\em lines\+Count} & number of Lines completed \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{tetris_game_8c_acec8ebe56cff6e50618ca33e63f439d3}\label{tetris_game_8c_acec8ebe56cff6e50618ca33e63f439d3} 
+\index{tetrisGame.c@{tetrisGame.c}!isClippingInStack@{isClippingInStack}}
+\index{isClippingInStack@{isClippingInStack}!tetrisGame.c@{tetrisGame.c}}
+\doxysubsubsection{\texorpdfstring{isClippingInStack()}{isClippingInStack()}}
+{\footnotesize\ttfamily int is\+Clipping\+In\+Stack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}}]{tetramino\+Atm }\end{DoxyParamCaption})}
+
+
+
+Permet prédire si la pièce va rentrer en colision avec les blocs déjà présents. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \texorpdfstring{$\ast$}{*}tetramino\+Atm} & Current tetramino used\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em state} & 1 if would clip, 0 if not \\
 \hline
 \end{DoxyRetVals}
 \Hypertarget{tetris_game_8c_ac30a0cd4694054e0c19ac09dd5f9771a}\label{tetris_game_8c_ac30a0cd4694054e0c19ac09dd5f9771a} 
@@ -152,6 +204,28 @@ Move all the stack above "{}start\+Line"{} down by one line.
 {\em start\+Line} & line which got cleared \\
 \hline
 \end{DoxyParams}
+\Hypertarget{tetris_game_8c_aab44c65b4c5ef7a94e5701f074211391}\label{tetris_game_8c_aab44c65b4c5ef7a94e5701f074211391} 
+\index{tetrisGame.c@{tetrisGame.c}!movePiece@{movePiece}}
+\index{movePiece@{movePiece}!tetrisGame.c@{tetrisGame.c}}
+\doxysubsubsection{\texorpdfstring{movePiece()}{movePiece()}}
+{\footnotesize\ttfamily int move\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}}]{tetramino\+Atm,  }\item[{int}]{direction }\end{DoxyParamCaption})}
+
+
+
+Permet de déplacer une pièce en fonction de sa direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \texorpdfstring{$\ast$}{*}tetramino\+Atm} & Current tetramino used \\
+\hline
+{\em direction} & user\+Inputs \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em state} & 1 si déplacement OK, 0 si non \\
+\hline
+\end{DoxyRetVals}
 \Hypertarget{tetris_game_8c_a2ed5bd4d5ecf8d9597e80b61dad4f0e9}\label{tetris_game_8c_a2ed5bd4d5ecf8d9597e80b61dad4f0e9} 
 \index{tetrisGame.c@{tetrisGame.c}!randomPiece@{randomPiece}}
 \index{randomPiece@{randomPiece}!tetrisGame.c@{tetrisGame.c}}
@@ -182,6 +256,41 @@ Remove the selected line.
 {\em line} & line selected \\
 \hline
 \end{DoxyParams}
+\Hypertarget{tetris_game_8c_adc91f41cf420b07107119d403639621d}\label{tetris_game_8c_adc91f41cf420b07107119d403639621d} 
+\index{tetrisGame.c@{tetrisGame.c}!removePieceFromStack@{removePieceFromStack}}
+\index{removePieceFromStack@{removePieceFromStack}!tetrisGame.c@{tetrisGame.c}}
+\doxysubsubsection{\texorpdfstring{removePieceFromStack()}{removePieceFromStack()}}
+{\footnotesize\ttfamily void remove\+Piece\+From\+Stack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}}]{tetramino\+Atm }\end{DoxyParamCaption})}
+
+
+
+Permet de supprimer une pièce du jeu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \texorpdfstring{$\ast$}{*}tetramino\+Atm} & Current tetramino used \\
+\hline
+\end{DoxyParams}
+\Hypertarget{tetris_game_8c_a3a179348ccd32ecd168c08a74b28ba17}\label{tetris_game_8c_a3a179348ccd32ecd168c08a74b28ba17} 
+\index{tetrisGame.c@{tetrisGame.c}!rotatePiece@{rotatePiece}}
+\index{rotatePiece@{rotatePiece}!tetrisGame.c@{tetrisGame.c}}
+\doxysubsubsection{\texorpdfstring{rotatePiece()}{rotatePiece()}}
+{\footnotesize\ttfamily int rotate\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}}]{tetramino\+Atm }\end{DoxyParamCaption})}
+
+
+
+Permet tourner une pièce, seulement si elle ne va pas clip. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \texorpdfstring{$\ast$}{*}tetramino\+Atm} & Current tetramino used \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em state} & 1 if rotated and 0 if clipping \\
+\hline
+\end{DoxyRetVals}
 
 
 \doxysubsection{Variable Documentation}

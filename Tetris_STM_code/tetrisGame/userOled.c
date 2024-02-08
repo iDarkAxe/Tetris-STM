@@ -3,7 +3,7 @@
   * @file           : userOled.c
   * @brief          : Others functions for Oled drawing
   ******************************************************************************
-
+  * @date 08 février 2024
   ******************************************************************************
   */
 
@@ -207,4 +207,9 @@ void drawDrawStartMenu(){
 	ssd1306_FillRectangle(107, 23, 118, 25, White);//barre
 	ssd1306_FillRectangle(113, 12, 115, 20, White);//T
 	ssd1306_FillRectangle(116, 15, 118, 17, White);
+}
+
+void drawTetrisStartGame()
+{
+
 }
