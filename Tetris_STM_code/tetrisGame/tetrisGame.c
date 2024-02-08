@@ -3,7 +3,13 @@
   * @file           : tetrisGame.c
   * @brief          : Main program of the Tetris Game
   ******************************************************************************
-
+  * @date 08 février 2024
+  * @mainpage Tetris Game
+  * @section Introduction
+  *
+  * Ce jeu de Tetris a entièrement été réalisé par Adrien Kerfriden, Lou Vacher et Pierre PONTET.
+  *
+  * Il a été conçu pour fonctionner sur une carte STM32 L031K6.
   ******************************************************************************
   */
 

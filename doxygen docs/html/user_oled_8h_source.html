@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Tetris_STM_code: C:/Users/pontet/Desktop/Tetris_STM/Tetris_STM_code/tetrisGame/userOled.h Source File</title>
+<title>Tetris_STM_code: C:/Users/pontet.APOLLO2/Documents/Git_Repos/Tetris-STM/Tetris_STM_code/tetrisGame/userOled.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -96,12 +96,20 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;main.h&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;ssd1306.h&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keywordtype">void</span> createBorder();</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keywordtype">void</span> drawTile(uint8_t x, uint8_t y, SSD1306_COLOR color);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keywordtype">void</span> drawStack(<span class="keywordtype">int</span> stack[23][16]);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keywordtype">void</span> gameOverAnimation();</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#endif </span><span class="comment">/* USEROLED_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keywordtype">void</span> <a class="code hl_function" href="user_oled_8c.html#a5ddae6e19852caa13e77f7aa2b50e3b3">drawBorder</a>();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keywordtype">void</span> <a class="code hl_function" href="user_oled_8c.html#a3a25a8ee25260d16cc10fc35c2ea38fe">drawTile</a>(uint8_t x, uint8_t y, SSD1306_COLOR color);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keywordtype">void</span> <a class="code hl_function" href="user_oled_8c.html#a6f41720fd4da3fcfab5ac1259c7823c7">drawStack</a>(<span class="keywordtype">int</span> stack[23][16]);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keywordtype">void</span> <a class="code hl_function" href="user_oled_8c.html#a0f8f8c9637e27d98da21de92973f1443">gameOverAnimation</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keywordtype">void</span> ssd1306_SetCursorVertical(uint8_t x, uint8_t y);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keywordtype">char</span> ssd1306_WriteStringVertical(<span class="keywordtype">char</span>* str, FontDef Font, SSD1306_COLOR color);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">void</span> drawTetrisStartGame();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">void</span> clearPlayZone();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#endif </span><span class="comment">/* USEROLED_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="auser_oled_8c_html_a0f8f8c9637e27d98da21de92973f1443"><div class="ttname"><a href="user_oled_8c.html#a0f8f8c9637e27d98da21de92973f1443">gameOverAnimation</a></div><div class="ttdeci">void gameOverAnimation()</div><div class="ttdoc">Plays the gameOver Animation.</div><div class="ttdef"><b>Definition</b> userOled.c:47</div></div>
+<div class="ttc" id="auser_oled_8c_html_a3a25a8ee25260d16cc10fc35c2ea38fe"><div class="ttname"><a href="user_oled_8c.html#a3a25a8ee25260d16cc10fc35c2ea38fe">drawTile</a></div><div class="ttdeci">void drawTile(uint8_t x, uint8_t y, SSD1306_COLOR color)</div><div class="ttdoc">Draw a normal tile.</div><div class="ttdef"><b>Definition</b> userOled.c:23</div></div>
+<div class="ttc" id="auser_oled_8c_html_a5ddae6e19852caa13e77f7aa2b50e3b3"><div class="ttname"><a href="user_oled_8c.html#a5ddae6e19852caa13e77f7aa2b50e3b3">drawBorder</a></div><div class="ttdeci">void drawBorder()</div><div class="ttdoc">Draw the border of the game.</div><div class="ttdef"><b>Definition</b> userOled.c:14</div></div>
+<div class="ttc" id="auser_oled_8c_html_a6f41720fd4da3fcfab5ac1259c7823c7"><div class="ttname"><a href="user_oled_8c.html#a6f41720fd4da3fcfab5ac1259c7823c7">drawStack</a></div><div class="ttdeci">void drawStack(int stack[23][16])</div><div class="ttdoc">Draw the entire stack.</div><div class="ttdef"><b>Definition</b> userOled.c:30</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
