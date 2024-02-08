@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;Tetris_STM_code/user_Tetris/tetris.c&apos; to &apos;tetrisGame.c&apos;" description="Rename resource &apos;tetris.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="user_Tetris/tetris.c" name="tetrisGame.c" stamp="1707296631404" updateReferences="true"/>
-</session>
