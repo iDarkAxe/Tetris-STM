@@ -1,25 +1,5 @@
 #include <stdio.h> 
-typedef struct{ 
-    int *piece1; 
-    int *piece2; 
-     
-    int *piece3; 
-     
-    int *piece4; 
-    int *piece5; 
- 
-    int *piece6; 
-    int *piece7; 
-    int *piece8; 
-    int *piece9; 
-     
-    int *pieceA; 
-    int *pieceB; 
-    int *pieceC; 
-    int *pieceD; 
-}LISTE_TETRIMINOS; 
- 
-LISTE_TETRIMINOS liste_tetriminos; 
+
  
 //zigzag only 2 directions 
 int zigzag[4][4]= {{0,0,0,0} 
@@ -78,15 +58,3 @@ int L_g[4][4]= {{0,0,0,0}
                ,{1,1,1,0} 
                ,{0,0,1,0} 
                ,{0,0,0,0}}; 
- 
-int main() 
-{ 
-    for(int j=0; j<4; j++){ 
-        for(int i=0; i<4; i++){ 
-            printf("%d", line_rg[i][j]); 
-        } 
-        printf("\n"); 
-    } 
- 
-    return 0; 
-} 

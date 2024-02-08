@@ -1,17 +1,36 @@
+/**
+  ******************************************************************************
+  * @file           : tetrisScoring.c
+  * @brief          : Program for Tetris Scoring system
+  ******************************************************************************
+
+  ******************************************************************************
+  */
+
 #include "tetrisScoring.h"
 #include "ssd1306_fonts.h"
 #include "ssd1306.h"
 #include <stdio.h>
+#include "tetrisLeveling.h"
 
 uint32_t tetrisScore = 100000;
 uint8_t piecePosee = 100;
 
-/**
-  * @brief Getter of score
+/** @brief Getter of score
   * @retval Return the value of score
   */
 uint32_t getScore(){
 	return tetrisScore;
+}
+
+/** @brief Calculate the Score
+ * @param  numberOfLineCompleted
+  */
+void calculateScore(int _numberOfLineCompleted){
+	addScorePiece();
+	addScoreLine(_numberOfLineCompleted);
+	newLevelCalculate(_numberOfLineCompleted);
+	return;
 }
 
 /** @brief  Add points to the score when a Piece fall to its place
@@ -26,12 +45,11 @@ void addScorePiece()
   * 		using numberOfLineCompleted and levelNumber as factors
   * @param  numberOfLineCompleted: numberOfLineCompleted in one fall by a piece
   */
-void addScoreLine(uint8_t numberOfLineCompleted)
+void addScoreLine(uint8_t _numberOfLineCompleted)
 {
 	//ajouter des points si on clique sur fallButton ? == augmenter la difficulté
-
-	uint8_t levelNumber = 1;	//VERIFIER COMMENT ON LE GERE
-	switch(numberOfLineCompleted){
+	int levelNumber = getLevelNumber();
+	switch(_numberOfLineCompleted){
 	case 0:
 		//pas de nouveau point
 		break;

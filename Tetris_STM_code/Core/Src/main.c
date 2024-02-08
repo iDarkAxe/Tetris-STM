@@ -27,7 +27,7 @@
 #include "ssd1306.h"
 #include "userOled.h"
 #include "tetrisStartMenu.h"
-#include "tetrisScoring.h"
+#include "tetrisGame.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -95,6 +95,7 @@ int main(void)
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
   tetrisInit();
+  tetrisGame();
   /* USER CODE END 2 */
 
   /* Infinite loop */

@@ -12,7 +12,7 @@
 #include "ssd1306.h"
 
 void drawBorder();
-void drawTile(uint8_t x, uint8_t y);
+void drawTile(uint8_t x, uint8_t y, SSD1306_COLOR color);
 void drawStack(int stack[23][16]);
 void gameOverAnimation();
 void ssd1306_SetCursorVertical(uint8_t x, uint8_t y);

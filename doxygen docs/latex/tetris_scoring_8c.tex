@@ -1,0 +1,89 @@
+\doxysection{C\+:/\+Users/pontet/\+Desktop/\+Tetris\+\_\+\+STM/\+Tetris\+\_\+\+STM\+\_\+code/tetris\+Game/tetris\+Scoring.c File Reference}
+\hypertarget{tetris_scoring_8c}{}\label{tetris_scoring_8c}\index{C:/Users/pontet/Desktop/Tetris\_STM/Tetris\_STM\_code/tetrisGame/tetrisScoring.c@{C:/Users/pontet/Desktop/Tetris\_STM/Tetris\_STM\_code/tetrisGame/tetrisScoring.c}}
+
+
+\+: Program for Tetris Scoring system  
+
+
+{\ttfamily \#include "{}tetris\+Scoring.\+h"{}}\newline
+{\ttfamily \#include "{}ssd1306\+\_\+fonts.\+h"{}}\newline
+{\ttfamily \#include "{}ssd1306.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}tetris\+Leveling.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{tetris_scoring_8c_abf4ef5f0f52581fe195737642ff99062}{get\+Score}} ()
+\begin{DoxyCompactList}\small\item\em Getter of score. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tetris_scoring_8c_ab5449638cab4d1f6a50bf72a798d2cf8}{calculate\+Score}} (int \+\_\+number\+Of\+Line\+Completed)
+\begin{DoxyCompactList}\small\item\em Calculate the Score. \end{DoxyCompactList}\item 
+\Hypertarget{tetris_scoring_8c_a3d376a9de4a0761a7b6c55d4ffaecc16}\label{tetris_scoring_8c_a3d376a9de4a0761a7b6c55d4ffaecc16} 
+void {\bfseries add\+Score\+Piece} ()
+\begin{DoxyCompactList}\small\item\em Add points to the score when a Piece fall to its place. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tetris_scoring_8c_a133fc5864ff727c69ac9701c7d42750a}{add\+Score\+Line}} (uint8\+\_\+t \+\_\+number\+Of\+Line\+Completed)
+\begin{DoxyCompactList}\small\item\em Add points to the score, using number\+Of\+Line\+Completed and level\+Number as factors. \end{DoxyCompactList}\item 
+\Hypertarget{tetris_scoring_8c_a26da11a341ee07a8a79252f3464ed1d6}\label{tetris_scoring_8c_a26da11a341ee07a8a79252f3464ed1d6} 
+void {\bfseries print\+Score} ()
+\begin{DoxyCompactList}\small\item\em Print the score on the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{tetris_scoring_8c_a2d73c8b076c07121e8d730fae3357d1e}\label{tetris_scoring_8c_a2d73c8b076c07121e8d730fae3357d1e} 
+uint32\+\_\+t {\bfseries tetris\+Score} = 100000
+\item 
+\Hypertarget{tetris_scoring_8c_a1b2817eb8baad160de83e063b033c6bd}\label{tetris_scoring_8c_a1b2817eb8baad160de83e063b033c6bd} 
+uint8\+\_\+t {\bfseries piece\+Posee} = 100
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Program for Tetris Scoring system 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{tetris_scoring_8c_a133fc5864ff727c69ac9701c7d42750a}\label{tetris_scoring_8c_a133fc5864ff727c69ac9701c7d42750a} 
+\index{tetrisScoring.c@{tetrisScoring.c}!addScoreLine@{addScoreLine}}
+\index{addScoreLine@{addScoreLine}!tetrisScoring.c@{tetrisScoring.c}}
+\doxysubsubsection{\texorpdfstring{addScoreLine()}{addScoreLine()}}
+{\footnotesize\ttfamily void add\+Score\+Line (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{\+\_\+number\+Of\+Line\+Completed }\end{DoxyParamCaption})}
+
+
+
+Add points to the score, using number\+Of\+Line\+Completed and level\+Number as factors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number\+Of\+Line\+Completed} & number\+Of\+Line\+Completed in one fall by a piece \\
+\hline
+\end{DoxyParams}
+\Hypertarget{tetris_scoring_8c_ab5449638cab4d1f6a50bf72a798d2cf8}\label{tetris_scoring_8c_ab5449638cab4d1f6a50bf72a798d2cf8} 
+\index{tetrisScoring.c@{tetrisScoring.c}!calculateScore@{calculateScore}}
+\index{calculateScore@{calculateScore}!tetrisScoring.c@{tetrisScoring.c}}
+\doxysubsubsection{\texorpdfstring{calculateScore()}{calculateScore()}}
+{\footnotesize\ttfamily void calculate\+Score (\begin{DoxyParamCaption}\item[{int}]{\+\_\+number\+Of\+Line\+Completed }\end{DoxyParamCaption})}
+
+
+
+Calculate the Score. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number\+Of\+Line\+Completed} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{tetris_scoring_8c_abf4ef5f0f52581fe195737642ff99062}\label{tetris_scoring_8c_abf4ef5f0f52581fe195737642ff99062} 
+\index{tetrisScoring.c@{tetrisScoring.c}!getScore@{getScore}}
+\index{getScore@{getScore}!tetrisScoring.c@{tetrisScoring.c}}
+\doxysubsubsection{\texorpdfstring{getScore()}{getScore()}}
+{\footnotesize\ttfamily uint32\+\_\+t get\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter of score. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Return} & the value of score \\
+\hline
+\end{DoxyRetVals}

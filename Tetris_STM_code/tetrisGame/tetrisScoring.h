@@ -12,8 +12,9 @@
 
 
 uint32_t getScore();
+void calculateScore(int);
 void addScorePiece();
-void addScore(uint8_t numberOfLineCompleted);
+void addScoreLine(uint8_t);
 
 void printScore();
 

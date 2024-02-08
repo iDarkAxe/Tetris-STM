@@ -1,11 +1,17 @@
+/**
+  ******************************************************************************
+  * @file           : tetrisGame.c
+  * @brief          : Main program of the Tetris Game
+  ******************************************************************************
+
+  ******************************************************************************
+  */
+
 #include <stdio.h>
 #include <string.h> // memcpy
-#include <conio.h>  // get la touche
-#include <time.h>   // délai avec clock()
 #include <stdlib.h> // random
-
-#define MOVE_LEFT -1
-#define MOVE_RIGHT 1
+#include "tetrisScoring.h"
+#include "userOled.h"
 
 #define PIECE_TOUCHED 2
 #define PIECE_FALLED 1
@@ -16,35 +22,41 @@
 #define SPAWN_STATE 2
 #define GAMEOVER_STATE 3
 
-
+/** @brief Zigzag piece in 4 by 4 grid
+  */
 int pieceZigzag[4][4]= {{0,0,0,0},
                         {1,1,0,0},
                         {0,1,1,0},
                         {0,0,0,0}};
 
-
+/** @brief Bar piece in 4 by 4 grid
+  */
 int pieceBar[4][4]= {   {0,1,0,0},
                         {0,1,0,0},
                         {0,1,0,0},
                         {0,1,0,0}};
-
+/** @brief Square piece in 4 by 4 grid
+  */
 int pieceSquare[4][4]= {{0,0,0,0},
                         {0,1,1,0},
                         {0,1,1,0},
                         {0,0,0,0}};         
-
+/** @brief L piece in 4 by 4 grid
+  */
 int pieceL[4][4]= { {0,0,0,0},
                     {0,1,0,0},
                     {0,1,0,0},
                     {0,1,1,0}};
-
+/** @brief T piece in 4 by 4 grid
+  */
 int pieceT[4][4]= { {0,0,0,0},
                     {1,1,1,0},
                     {0,1,0,0},
                     {0,0,0,0}};   
 
 
-//play window
+/** @brief PlayWindow
+  */
 int playStack[23][16] = 
     {{1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1},
     {1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1},
@@ -70,7 +82,9 @@ int playStack[23][16] =
     {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
     {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}};
     
-//structure to locate the current tetramino in the game
+
+/** @brief Structure to locate the current tetramino in the game
+  */
 typedef struct{
     int coordY;
     int coordX;
@@ -78,12 +92,15 @@ typedef struct{
 }TETRAMINO_ATM;
 
 
-long int nextFallTime = 0;
+uint32_t nextFallTime = 0;
 
-int fallDelay = 1000;   // les diminuer au fil du temps/score ?
+int fallDelay = 1000;   // les diminuer au fil du temps/level ?
 int rotateFallDelay = 500;
 int moveFallDelay = 500;
 
+/** @brief Inputs du jeu, permet de simplifier le code
+  */
+enum inputs { gauche = 0, droite = 1, bas = 2, rotate = 3, menu = 4};   
 
 //declaration fonctions
 void addPieceIntoStack(TETRAMINO_ATM*);  // int[][16]
@@ -93,61 +110,60 @@ int falling(TETRAMINO_ATM*);
 void printStack(void);
 int movePiece(TETRAMINO_ATM*, int);
 int rotatePiece(TETRAMINO_ATM*);
-int scoreCalculation(void);
+int getLineCompleted();
 void removeLine(int);
 void moveDownStack(int);
 void randomPiece(TETRAMINO_ATM*);
 
 
-int main()
+int tetrisGame()
 {
-    // Init the RNG
-    srand(time(NULL));
-
+	//TODO REFLECHIR SI ON VEUT VRAIMENT DE LA RNG OU PAS
     // Structure avec la pièce
     TETRAMINO_ATM tetramino;
 
     char pieceMoved = 0;
-    char userInput;   
+    int userInput = 5;
     int fallState;
     int gameState = SPAWN_STATE;
-    int scoreTotal = 0;
     
     while(1)
     {
         switch(gameState)
         {
             case PLAY_STATE:
-                if(kbhit())
+            	if(1)	//si exti n'importe quelle touche
                 {
-                    userInput = getch();
-
-                    if(userInput == 'q')
-                    {
-                        if(movePiece(&tetramino, MOVE_LEFT)){
+//                	userInput = 's';  //TODO changer pour détecter les inputs
+					//old : userInput = getch();
+            		switch(userInput)
+            		{
+            		case gauche:
+            			if(movePiece(&tetramino, gauche)){
                             pieceMoved = 1;
                         }
-                    } 
-                    else if(userInput == 'd')
-                    {
-                        if(movePiece(&tetramino, MOVE_RIGHT)){
+            			break;
+            		case droite:
+						if(movePiece(&tetramino, droite)){
                             pieceMoved = 1;
                         }
-                    }
-                    else if(userInput == 's')
-                    {
-                        nextFallTime = clock() + 0; // trigger fall immediatly when falling() is called (below)
-                    }
-                    else if(userInput == 'r')
-                    {
-                        if(rotatePiece(&tetramino)){
+						break;
+            		case bas:
+						//TODO TESTER la clock
+                    	nextFallTime = HAL_GetTick() + 0; // trigger fall immediatly when falling() is called (below)
+//                        nextFallTime = clock() + 0;
+                    	break;
+            		case rotate:
+						if(rotatePiece(&tetramino)){
                             pieceMoved = 1;
                         }
-                    }
-                    else if(userInput == ' ')
-                    {
-                        gameState = GAMEOVER_STATE;
-                    }
+						break;
+            		case 19:	//TODO on implémente ou pas ?
+            			gameState = GAMEOVER_STATE;
+            			break;
+            		default:
+            			break;	//TODO gerer les erreurs
+            		}
                 }
 
                 fallState = falling(&tetramino);
@@ -160,7 +176,7 @@ int main()
                 {
                     pieceMoved = 0;
                     addPieceIntoStack(&tetramino);
-                    printStack();
+                    drawStack(playStack);
                     removePieceFromStack(&tetramino);
                 }
 
@@ -174,9 +190,9 @@ int main()
 
         case SCORE_STATE:
             addPieceIntoStack(&tetramino);  //piece wont move anymore, add it to stack before score calculation
-            scoreTotal += scoreCalculation();
-            printStack();
-            printf("score : %d\n", scoreTotal);
+            calculateScore(getLineCompleted());
+            drawStack(playStack);
+            printf("score : %ld\n", getScore());
             gameState = SPAWN_STATE;
             
             break;
@@ -191,7 +207,7 @@ int main()
                 gameState = GAMEOVER_STATE;
             } else {
                 addPieceIntoStack(&tetramino);
-                printStack();
+                drawStack(playStack);
                 removePieceFromStack(&tetramino);
                 gameState = PLAY_STATE;
             }
@@ -201,7 +217,7 @@ int main()
 
         case GAMEOVER_STATE:
             printf("\nGame over !\n");
-            printf("Score total : %d\n", scoreTotal);
+            printf("Score total : %ld\n", getScore());
             printf("\nAppuyez sur entree pour quitter...\n");
             getchar();
             return 0;
@@ -210,7 +226,9 @@ int main()
     return 0;
 }
 
-
+/** @brief Permet de placer une pièce dans le jeu
+ *  @param *tetraminoAtm: Current tetramino used
+  */
 void addPieceIntoStack(TETRAMINO_ATM* tetraminoAtm){
     for (int i = 0; i < 4; i++){
         for(int j = 0; j < 4; j++){
@@ -221,7 +239,9 @@ void addPieceIntoStack(TETRAMINO_ATM* tetraminoAtm){
     }
 }
 
-
+/** @brief Permet de supprimer une pièce du jeu
+ *  @param *tetraminoAtm: Current tetramino used
+  */
 void removePieceFromStack(TETRAMINO_ATM* tetraminoAtm){
     for (int i = 0; i < 4; i++){
         for(int j = 0; j < 4; j++){
@@ -232,9 +252,11 @@ void removePieceFromStack(TETRAMINO_ATM* tetraminoAtm){
     }
 }
 
-
-// returns 1 if the current piece would clip into the stack
-// else returns 0
+/** @brief Permet prédire si la pièce va rentrer en colision avec les blocs déjà présents
+ *  @param *tetraminoAtm: Current tetramino used
+ * 
+ *  @retval state: 1 if would clip, 0 if not
+  */
 int isClippingInStack(TETRAMINO_ATM* tetraminoAtm)
 {
     for(int i = 0; i < 4; i++){
@@ -248,13 +270,17 @@ int isClippingInStack(TETRAMINO_ATM* tetraminoAtm)
     return 0;
 }
 
-
+/** @brief Permet de faire descendre naturellement une pièce du jeu
+ *  @param *tetraminoAtm: Current tetramino used
+ * 
+ *  @retval state: PIECE_TOUCHED, or PIECE_FALLED
+  */
 int falling(TETRAMINO_ATM* tetraminoAtm)
 {
-    if(clock() < nextFallTime){
+    if(HAL_GetTick() < nextFallTime){
         return FALL_COOLDOWN;
     }
-    nextFallTime = clock() + fallDelay;
+    nextFallTime = HAL_GetTick() + fallDelay;
 
     tetraminoAtm->coordY += 1;
     if(isClippingInStack(tetraminoAtm)){
@@ -265,7 +291,8 @@ int falling(TETRAMINO_ATM* tetraminoAtm)
     }
 }
 
-
+/** @brief Affiche la stack sur le terminal
+  */
 void printStack(void)
 {
     printf("\n\n\n");
@@ -278,15 +305,19 @@ void printStack(void)
     return;
 }
 
-
+/** @brief Permet de déplacer une pièce en fonction de sa direction
+ *  @param *tetraminoAtm: Current tetramino used
+ *  @param direction: 
+ *  @retval state: //TODO ????? JE MET quoi là ?
+  */
 int movePiece(TETRAMINO_ATM* tetraminoAtm, int direction)
 {
-    int movement = 0;
+    int movement = 0;   //TODO OPTIMISER POUR SUPPRIMER movement
 
-    if(direction == MOVE_LEFT) {
+    if(direction == gauche) {
         movement = -1;
     } 
-    else if(direction == MOVE_RIGHT) {
+    else if(direction == droite) {
         movement = 1;
     }
 
@@ -296,13 +327,15 @@ int movePiece(TETRAMINO_ATM* tetraminoAtm, int direction)
         tetraminoAtm->coordX -= movement;
         return 0;
     } else {
-        nextFallTime = clock() + moveFallDelay; // piece moved, so add delay before next fall
+        nextFallTime = HAL_GetTick() + moveFallDelay; // piece moved, so add delay before next fall
         return 1;
     }
 }
 
-
-// returns 1 if rotation was applied, or 0 if it didnt rotate because of clipping
+/** @brief Permet tourner une pièce, seulement si elle ne va pas clip
+ *  @param *tetraminoAtm: Current tetramino used
+ *  @retval state: 1 if rotated and 0 if clipping
+  */
 int rotatePiece(TETRAMINO_ATM* tetraminoAtm)
 {
     int tempCopy[4][4];
@@ -320,13 +353,16 @@ int rotatePiece(TETRAMINO_ATM* tetraminoAtm)
         return 0;
     } else {
         //managed to rotate, tetramino has been modified, all good
-        nextFallTime = clock() + rotateFallDelay; // piece rotated, so add delay before next fall
+        nextFallTime = HAL_GetTick() + rotateFallDelay; // piece rotated, so add delay before next fall
         return 1;
     }
 }
 
-
-int scoreCalculation(void)
+/**
+  * @brief  calculate LineCompleted and moveDownStack if lineFull
+  * @retval linesCount: number of Lines completed
+  */
+int getLineCompleted()
 {
     int linesCount = 0;
     int isLineFull = 0;
@@ -338,7 +374,6 @@ int scoreCalculation(void)
                 isLineFull = 1;
             }
         }
-
         if(isLineFull == 0){  // line was full of 1's
             moveDownStack(i);
             linesCount++;
@@ -347,7 +382,9 @@ int scoreCalculation(void)
     return linesCount;
 }
 
-
+/** @brief Remove the selected line
+ * @param  line: line selected
+  */
 void removeLine(int line)
 {
     for(int i = (0+3); i < (16-3); i++){
@@ -356,19 +393,21 @@ void removeLine(int line)
     return;
 }
 
-
+/** @brief Move all the stack  above "startLine" down by one line
+ *  @param startLine: line which got cleared
+  */
 void moveDownStack(int startLine)
 {
-    //all lines above "startLine" will shift 1 tile down
     for(int i = startLine; i > 0; i--){  // start from bottom, to the top
         memcpy(playStack+i, playStack+(i-1), sizeof(playStack[i]));
     }
-    
     removeLine(0);  // and empty the 1st line
     return;
 }
 
-
+/** @brief Select a random piece among the tetraminos
+ * @param  tetraminoAtm: list of tetraminos
+  */
 void randomPiece(TETRAMINO_ATM* tetraminoAtm)
 {
     int randomPiece = rand() % 5; // [0 ; 4] car 5 pièces
