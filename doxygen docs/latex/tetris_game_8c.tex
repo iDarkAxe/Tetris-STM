@@ -44,7 +44,7 @@ struct \mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}}
 \item 
 \Hypertarget{tetris_game_8c_afde3b66b6b41bd008469f366fa756e54}\label{tetris_game_8c_afde3b66b6b41bd008469f366fa756e54} 
 enum \mbox{\hyperlink{tetris_game_8c_afde3b66b6b41bd008469f366fa756e54}{inputs}} \{ \newline
-{\bfseries gauche} = 0
+{\bfseries gauche} = -\/1
 , {\bfseries droite} = 1
 , {\bfseries bas} = 2
 , {\bfseries rotate} = 3
@@ -218,12 +218,12 @@ Permet de déplacer une pièce en fonction de sa direction.
 \begin{DoxyParams}{Parameters}
 {\em \texorpdfstring{$\ast$}{*}tetramino\+Atm} & Current tetramino used \\
 \hline
-{\em direction} & \\
+{\em direction} & user\+Inputs \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{Return values}
-{\em state} & //\+TODO ????? JE MET quoi là ? \\
+{\em state} & 1 si déplacement OK, 0 si non \\
 \hline
 \end{DoxyRetVals}
 \Hypertarget{tetris_game_8c_a2ed5bd4d5ecf8d9597e80b61dad4f0e9}\label{tetris_game_8c_a2ed5bd4d5ecf8d9597e80b61dad4f0e9} 

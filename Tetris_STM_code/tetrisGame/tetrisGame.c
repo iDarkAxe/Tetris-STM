@@ -106,7 +106,7 @@ int moveFallDelay = 500;
 
 /** @brief Inputs du jeu, permet de simplifier le code
   */
-enum inputs { gauche = 0, droite = 1, bas = 2, rotate = 3, menu = 4};   
+enum inputs { gauche = -1, droite = 1, bas = 2, rotate = 3, menu = 4};
 
 //declaration fonctions
 void addPieceIntoStack(TETRAMINO_ATM*);  // int[][16]
@@ -313,24 +313,15 @@ void printStack(void)
 
 /** @brief Permet de déplacer une pièce en fonction de sa direction
  *  @param *tetraminoAtm: Current tetramino used
- *  @param direction: 
- *  @retval state: //TODO ????? JE MET quoi là ?
+ *  @param direction: userInputs
+ *  @retval state: 1 si déplacement OK, 0 si non
   */
 int movePiece(TETRAMINO_ATM* tetraminoAtm, int direction)
 {
-    int movement = 0;   //TODO OPTIMISER POUR SUPPRIMER movement
-
-    if(direction == gauche) {
-        movement = -1;
-    } 
-    else if(direction == droite) {
-        movement = 1;
-    }
-
-    tetraminoAtm->coordX += movement;
+    tetraminoAtm->coordX += direction;
 
     if(isClippingInStack(tetraminoAtm)) {
-        tetraminoAtm->coordX -= movement;
+        tetraminoAtm->coordX -= direction;
         return 0;
     } else {
         nextFallTime = HAL_GetTick() + moveFallDelay; // piece moved, so add delay before next fall

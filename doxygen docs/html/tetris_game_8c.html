@@ -126,7 +126,7 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:afde3b66b6b41bd008469f366fa756e54" id="r_afde3b66b6b41bd008469f366fa756e54"><td class="memItemLeft" align="right" valign="top"><a id="afde3b66b6b41bd008469f366fa756e54" name="afde3b66b6b41bd008469f366fa756e54"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afde3b66b6b41bd008469f366fa756e54">inputs</a> { <br />
-&#160;&#160;<b>gauche</b> = 0
+&#160;&#160;<b>gauche</b> = -1
 , <b>droite</b> = 1
 , <b>bas</b> = 2
 , <b>rotate</b> = 3
@@ -374,13 +374,13 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>moveFallDelay</b> = 50
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">*tetraminoAtm</td><td>Current tetramino used </td></tr>
-    <tr><td class="paramname">direction</td><td></td></tr>
+    <tr><td class="paramname">direction</td><td>userInputs </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">state</td><td>//TODO ????? JE MET quoi là ? </td></tr>
+    <tr><td class="paramname">state</td><td>1 si déplacement OK, 0 si non </td></tr>
   </table>
   </dd>
 </dl>
