@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Tetris_STM_code: C:/Users/kerfriden/Documents/Tetris-STM/Tetris_STM_code/tetrisGame/tetrisLeveling.h Source File</title>
+<title>Tetris_STM_code: C:/Users/pontet/Documents/Git_Repos/Tetris_STM/Tetris_STM_code/tetrisGame/tetrisLeveling.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -93,12 +93,14 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#ifndef TETRISLEVELING_H_</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define TETRISLEVELING_H_</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keywordtype">int</span> <a class="code hl_function" href="tetris_leveling_8c.html#a5e3d2774fadf7f769e1d4b5b50ca0752">getLevelNumber</a>();</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keywordtype">void</span> <a class="code hl_function" href="tetris_leveling_8c.html#aeba70d21eab6f37620dbcc60a9de542a">newLevelCalculate</a>(<span class="keywordtype">int</span>);</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#endif </span><span class="comment">/* TETRISLEVELING_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="atetris_leveling_8c_html_a5e3d2774fadf7f769e1d4b5b50ca0752"><div class="ttname"><a href="tetris_leveling_8c.html#a5e3d2774fadf7f769e1d4b5b50ca0752">getLevelNumber</a></div><div class="ttdeci">int getLevelNumber()</div><div class="ttdoc">Return levelNumber.</div><div class="ttdef"><b>Definition</b> tetrisLeveling.c:21</div></div>
-<div class="ttc" id="atetris_leveling_8c_html_aeba70d21eab6f37620dbcc60a9de542a"><div class="ttname"><a href="tetris_leveling_8c.html#aeba70d21eab6f37620dbcc60a9de542a">newLevelCalculate</a></div><div class="ttdeci">void newLevelCalculate(int _numberOfLineCompleted)</div><div class="ttdoc">Verify and change levelNumber.</div><div class="ttdef"><b>Definition</b> tetrisLeveling.c:30</div></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;main.h&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>uint8_t <a class="code hl_function" href="tetris_leveling_8c.html#acd58cbe3d18d5faa6ccd3a084881c296">getLevelNumber</a>();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keywordtype">void</span> <a class="code hl_function" href="tetris_leveling_8c.html#ae72ba64668f34137e4fe3886600662fe">newLevelCalculate</a>(uint8_t);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#endif </span><span class="comment">/* TETRISLEVELING_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="atetris_leveling_8c_html_acd58cbe3d18d5faa6ccd3a084881c296"><div class="ttname"><a href="tetris_leveling_8c.html#acd58cbe3d18d5faa6ccd3a084881c296">getLevelNumber</a></div><div class="ttdeci">uint8_t getLevelNumber()</div><div class="ttdoc">Return levelNumber.</div><div class="ttdef"><b>Definition</b> tetrisLeveling.c:21</div></div>
+<div class="ttc" id="atetris_leveling_8c_html_ae72ba64668f34137e4fe3886600662fe"><div class="ttname"><a href="tetris_leveling_8c.html#ae72ba64668f34137e4fe3886600662fe">newLevelCalculate</a></div><div class="ttdeci">void newLevelCalculate(uint8_t _numberOfLineCompleted)</div><div class="ttdoc">Verify and change levelNumber.</div><div class="ttdef"><b>Definition</b> tetrisLeveling.c:30</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

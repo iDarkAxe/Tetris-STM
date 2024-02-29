@@ -18,7 +18,7 @@
 
 #include "../tetrisGame/tetrisLeveling.h"
 
-uint32_t tetrisScore = 100000;
+uint32_t tetrisScore = 0;
 uint8_t piecePosee = 100;
 
 /** @brief Getter of score
@@ -82,9 +82,9 @@ void addScoreLine(uint8_t _numberOfLineCompleted)
 void printScore(){
 	char strScore[12];
 	sprintf(strScore, "%ld", tetrisScore);
-	ssd1306_SetCursorVertical(50, (61-(61-strlen(strScore)*6)/2));
+	ssd1306_SetCursorVertical(60, (61-(61-strlen(strScore)*6)/2));
 	ssd1306_WriteStringVertical(strScore, Font_6x8, White);
-	ssd1306_SetCursorVertical(60, 49);
+	ssd1306_SetCursorVertical(70, 49);
 	ssd1306_WriteStringVertical("points", Font_6x8, White);
 	ssd1306_UpdateScreen();
 }

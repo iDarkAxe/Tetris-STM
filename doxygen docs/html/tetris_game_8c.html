@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Tetris_STM_code: C:/Users/kerfriden/Documents/Tetris-STM/Tetris_STM_code/tetrisGame/tetrisGame.c File Reference</title>
+<title>Tetris_STM_code: C:/Users/pontet/Documents/Git_Repos/Tetris_STM/Tetris_STM_code/tetrisGame/tetrisGame.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -123,6 +123,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ac62481dbdcd378742c98abdd1d326e73" id="r_ac62481dbdcd378742c98abdd1d326e73"><td class="memItemLeft" align="right" valign="top"><a id="ac62481dbdcd378742c98abdd1d326e73" name="ac62481dbdcd378742c98abdd1d326e73"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>GAMEOVER_STATE</b>&#160;&#160;&#160;3</td></tr>
 <tr class="separator:ac62481dbdcd378742c98abdd1d326e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac80f56298756d54e0e7eb451df72176c" id="r_ac80f56298756d54e0e7eb451df72176c"><td class="memItemLeft" align="right" valign="top"><a id="ac80f56298756d54e0e7eb451df72176c" name="ac80f56298756d54e0e7eb451df72176c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>START_STATE</b>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:ac80f56298756d54e0e7eb451df72176c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -174,6 +177,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printStack</b> (void)
 <tr class="memitem:a2ed5bd4d5ecf8d9597e80b61dad4f0e9" id="r_a2ed5bd4d5ecf8d9597e80b61dad4f0e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ed5bd4d5ecf8d9597e80b61dad4f0e9">randomPiece</a> (<a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *tetraminoAtm)</td></tr>
 <tr class="memdesc:a2ed5bd4d5ecf8d9597e80b61dad4f0e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select a random piece among the tetraminos.  <br /></td></tr>
 <tr class="separator:a2ed5bd4d5ecf8d9597e80b61dad4f0e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade063724957c75dd97f122a38e1ac92b" id="r_ade063724957c75dd97f122a38e1ac92b"><td class="memItemLeft" align="right" valign="top"><a id="ade063724957c75dd97f122a38e1ac92b" name="ade063724957c75dd97f122a38e1ac92b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>tetrisInit</b> ()</td></tr>
+<tr class="separator:ade063724957c75dd97f122a38e1ac92b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf103d842e6d9f5524319094721d4268" id="r_aaf103d842e6d9f5524319094721d4268"><td class="memItemLeft" align="right" valign="top"><a id="aaf103d842e6d9f5524319094721d4268" name="aaf103d842e6d9f5524319094721d4268"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>tetrisGame</b> ()</td></tr>
 <tr class="separator:aaf103d842e6d9f5524319094721d4268"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -217,7 +223,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>rotateFallDelay</b> = 
 int&#160;</td><td class="memItemRight" valign="bottom"><b>moveFallDelay</b> = 500</td></tr>
 <tr class="separator:aedcfbdbf3fd724236be8e67315f45839"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73f5e9d88fbbe86e97325c2ec617cebf" id="r_a73f5e9d88fbbe86e97325c2ec617cebf"><td class="memItemLeft" align="right" valign="top"><a id="a73f5e9d88fbbe86e97325c2ec617cebf" name="a73f5e9d88fbbe86e97325c2ec617cebf"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>userInput</b> =0</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>userInput</b> = 0</td></tr>
 <tr class="separator:a73f5e9d88fbbe86e97325c2ec617cebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>

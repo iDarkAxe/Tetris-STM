@@ -51,24 +51,20 @@ void drawStack(int stack[23][16]){
 /** @brief Plays the gameOver Animation
   */
 void drawGameOver(){
-	for (int i = 0; i < 3; ++i) {
-		ssd1306_WriteCommand(0xA6);
-		ssd1306_UpdateScreen();
-		HAL_Delay(200);
-		ssd1306_WriteCommand(0xA7);
-		ssd1306_UpdateScreen();
-		HAL_Delay(200);
-	}
+	Clignotement_Ecran();
 	ssd1306_WriteCommand(0xA6);
 	ssd1306_UpdateScreen();
 	clearPlayZone();
-	ssd1306_SetCursorVertical(30, 59);
-	ssd1306_WriteStringVertical("GameOver", Font_7x10_new, White);
+	ssd1306_SetCursorVertical(30, 46);
+	ssd1306_WriteStringVertical("Game", Font_7x10_new, White);
+	ssd1306_SetCursorVertical(40, 46);
+	ssd1306_WriteStringVertical("Over", Font_7x10_new, White);
 	printScore();
+	drawTetriminos();
 	ssd1306_UpdateScreen();
 }
 
-/** @brief Plays the StartGame Animation
+/** @brief Plays the StartMenu Animation
   */
 void drawTetrisStartGame(){
 	ssd1306_SetCursorVertical(20, 52);
@@ -80,7 +76,7 @@ void drawTetrisStartGame(){
 	ssd1306_SetCursorVertical(90, 46);
 	ssd1306_WriteStringVertical("Click", Font_6x8_new, White);
 	tetrisBordureDecor(White);
-	drawDrawStartMenu();
+	drawTetriminos();
 }
 
 /** @brief Clear the PlayZone
@@ -221,7 +217,7 @@ void tetrisBordureDecor(SSD1306_COLOR color)
 
 /** @brief Affiche les tetriminos en bas du StartMenu
   */
-void drawDrawStartMenu(){
+void drawTetriminos(){
 	ssd1306_FillRectangle(110, 50, 118, 52, White);//L
 	ssd1306_FillRectangle(116, 47, 118, 49, White);
 	ssd1306_FillRectangle(113, 39, 118, 44, White);//carre
@@ -230,4 +226,34 @@ void drawDrawStartMenu(){
 	ssd1306_FillRectangle(107, 23, 118, 25, White);//barre
 	ssd1306_FillRectangle(113, 12, 115, 20, White);//T
 	ssd1306_FillRectangle(116, 15, 118, 17, White);
+}
+
+void Clignotement_Ecran()
+{
+	for (int i = 0; i < 3; ++i) {
+		ssd1306_WriteCommand(0xA6);
+		ssd1306_UpdateScreen();
+		HAL_Delay(200);
+		ssd1306_WriteCommand(0xA7);
+		ssd1306_UpdateScreen();
+		HAL_Delay(200);
+	}
+}
+
+void Clignotement_Click()
+{
+	static uint32_t tick = 0, lastTick = 0;
+	tick = HAL_GetTick();
+	if(tick - lastTick >= 800)
+	{
+		lastTick = tick;
+		ssd1306_SetCursorVertical(90, 46);
+		ssd1306_WriteStringVertical("Click", Font_6x8_new, Black);
+	}
+	else
+	{
+		ssd1306_SetCursorVertical(90, 46);
+		ssd1306_WriteStringVertical("Click", Font_6x8_new, White);
+	}
+	ssd1306_UpdateScreen();
 }

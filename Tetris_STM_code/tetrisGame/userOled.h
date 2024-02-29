@@ -20,6 +20,8 @@ char ssd1306_WriteStringVertical(char* str, FontDef Font, SSD1306_COLOR color);
 void drawTetrisStartGame();
 void clearPlayZone();
 void tetrisBordureDecor(SSD1306_COLOR color);
-void drawDrawStartMenu();
+void drawTetriminos();
+void Clignotement_Ecran();
+void Clignotement_Click();
 
 #endif /* USEROLED_H_ */

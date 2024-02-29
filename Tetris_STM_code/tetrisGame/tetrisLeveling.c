@@ -12,13 +12,13 @@
 
 #include "../tetrisGame/tetrisLeveling.h"
 
-int levelNumber = 0;
+uint8_t levelNumber = 0;
 
 /**
   * @brief  Return levelNumber
   * @retval levelNumber
   */
-int getLevelNumber()
+uint8_t getLevelNumber()
 {
 	return levelNumber;
 }
@@ -27,11 +27,12 @@ int getLevelNumber()
   * @brief  Verify and change levelNumber
   * @param _numberOfLineCompleted: each level requires a numberOfLine completed to be incremented
   */
-void newLevelCalculate(int _numberOfLineCompleted)
+void newLevelCalculate(uint8_t _numberOfLineCompleted)
 {
 	if(_numberOfLineCompleted >= (10*levelNumber)){
 		levelNumber+= 1;
 	}
+
 	//TODO GERER LA VITESSE DU JEU
 }
 

@@ -8,7 +8,9 @@
 #ifndef TETRISLEVELING_H_
 #define TETRISLEVELING_H_
 
-int getLevelNumber();
-void newLevelCalculate(int);
+#include "main.h"
+
+uint8_t getLevelNumber();
+void newLevelCalculate(uint8_t);
 
 #endif /* TETRISLEVELING_H_ */

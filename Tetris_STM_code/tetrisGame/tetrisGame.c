@@ -10,6 +10,8 @@
   * Ce jeu de Tetris a entièrement été réalisé par Adrien Kerfriden, Lou Vacher et Pierre Pontet.
   *
   * Il a été conçu pour fonctionner sur une carte STM32 L031K6.
+  *
+  * Il suffit de brancher 5 boutons, sur les broches PA1, PA3, PA4, PA6 et PA7.
   ******************************************************************************
   */
 
@@ -29,6 +31,7 @@
 #define SCORE_STATE 1
 #define SPAWN_STATE 2
 #define GAMEOVER_STATE 3
+#define START_STATE 4
 
 /** @brief Zigzag piece in 4 by 4 grid
   */
@@ -122,9 +125,17 @@ int getLineCompleted();
 void removeLine(int);
 void moveDownStack(int);
 void randomPiece(TETRAMINO_ATM*);
+void tetrisInit();
 
+int userInput = 0;
 
-int userInput =0;
+void tetrisInit(){
+  HAL_Delay(1000);	//Temps d'attente car il faut attendre que les condensateurs de l'écran soient chargés avant de commencer
+  ssd1306_Init();
+  drawBorder();
+  drawTetrisStartGame();
+  ssd1306_UpdateScreen();
+}
 
 int tetrisGame()
 {
@@ -134,17 +145,14 @@ int tetrisGame()
 
     char pieceMoved = 0;
     int fallState;
-    int gameState = SPAWN_STATE;
-    
+    int gameState = START_STATE;
     while(1)
     {
         switch(gameState)
         {
             case PLAY_STATE:
-            	if(1)	//si exti n'importe quelle touche
+            	if(1)
                 {
-//                	userInput = 's';  //TODO changer pour détecter les inputs
-					//old : userInput = getch();
             		switch(userInput)
             		{
             		case gauche:
@@ -226,11 +234,25 @@ int tetrisGame()
 
 
         case GAMEOVER_STATE:
-            printf("\nGame over !\n");
-            printf("Score total : %ld\n", getScore());
-            printf("\nAppuyez sur entree pour quitter...\n");
-            getchar();
-            return 0;
+        	drawGameOver();
+        	while(HAL_GPIO_ReadPin(menuButton_GPIO_Port, menuButton_Pin)){
+        		Clignotement_Click();
+		    }
+        	gameState = START_STATE;
+            break;
+
+        case START_STATE:
+		  tetrisInit();
+		  HAL_Delay(1000);
+		  while(HAL_GPIO_ReadPin(menuButton_GPIO_Port, menuButton_Pin)){
+			  Clignotement_Click();
+		  }
+		  gameState = SPAWN_STATE;
+        	break;
+
+        default:
+        	return 0;
+
         }
     }
     return 0;

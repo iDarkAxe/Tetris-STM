@@ -27,8 +27,7 @@
 /* USER CODE BEGIN Includes */
 #include "ssd1306.h"
 
-#include "../../tetrisGame/tetrisGame.h"
-#include "../../tetrisGame/tetrisStartMenu.h"
+#include "tetrisGame.h"
 #include "userOled.h"
 /* USER CODE END Includes */
 
@@ -56,7 +55,6 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-void tetrisInit();
 
 /* USER CODE END PFP */
 
@@ -97,9 +95,7 @@ int main(void)
   MX_I2C1_Init();
   MX_TIM22_Init();
   /* USER CODE BEGIN 2 */
-  tetrisInit();
-  HAL_Delay(1000);
-  drawGameOver();
+  tetrisGame();
   //tetrisGame();
   /* USER CODE END 2 */
 
@@ -166,12 +162,7 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-void tetrisInit(){
-  ssd1306_Init();
-  drawBorder();
-  drawTetrisStartGame();
-  ssd1306_UpdateScreen();
-}
+
 
 /* USER CODE END 4 */
 
