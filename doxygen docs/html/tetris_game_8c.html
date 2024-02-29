@@ -91,8 +91,8 @@ $(function() {
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;tim.h&gt;</code><br />
-<code>#include &quot;../tetrisGame/tetrisScoring.h&quot;</code><br />
-<code>#include &quot;../tetrisGame/userOled.h&quot;</code><br />
+<code>#include &quot;tetrisScoring.h&quot;</code><br />
+<code>#include &quot;userOled.h&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -111,24 +111,20 @@ Macros</h2></td></tr>
 <tr class="memitem:ae2235ecaf986e6a6333ffad799e04ca6" id="r_ae2235ecaf986e6a6333ffad799e04ca6"><td class="memItemLeft" align="right" valign="top"><a id="ae2235ecaf986e6a6333ffad799e04ca6" name="ae2235ecaf986e6a6333ffad799e04ca6"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>FALL_COOLDOWN</b>&#160;&#160;&#160;0</td></tr>
 <tr class="separator:ae2235ecaf986e6a6333ffad799e04ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a961bb6adb184df10a4065decbb2c7927" id="r_a961bb6adb184df10a4065decbb2c7927"><td class="memItemLeft" align="right" valign="top"><a id="a961bb6adb184df10a4065decbb2c7927" name="a961bb6adb184df10a4065decbb2c7927"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>PLAY_STATE</b>&#160;&#160;&#160;0</td></tr>
-<tr class="separator:a961bb6adb184df10a4065decbb2c7927"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a815587dc8930c28725e10fec0aef785c" id="r_a815587dc8930c28725e10fec0aef785c"><td class="memItemLeft" align="right" valign="top"><a id="a815587dc8930c28725e10fec0aef785c" name="a815587dc8930c28725e10fec0aef785c"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SCORE_STATE</b>&#160;&#160;&#160;1</td></tr>
-<tr class="separator:a815587dc8930c28725e10fec0aef785c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8df292547b0bf92960c3f03193edc67" id="r_ad8df292547b0bf92960c3f03193edc67"><td class="memItemLeft" align="right" valign="top"><a id="ad8df292547b0bf92960c3f03193edc67" name="ad8df292547b0bf92960c3f03193edc67"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SPAWN_STATE</b>&#160;&#160;&#160;2</td></tr>
-<tr class="separator:ad8df292547b0bf92960c3f03193edc67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac62481dbdcd378742c98abdd1d326e73" id="r_ac62481dbdcd378742c98abdd1d326e73"><td class="memItemLeft" align="right" valign="top"><a id="ac62481dbdcd378742c98abdd1d326e73" name="ac62481dbdcd378742c98abdd1d326e73"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GAMEOVER_STATE</b>&#160;&#160;&#160;3</td></tr>
-<tr class="separator:ac62481dbdcd378742c98abdd1d326e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac80f56298756d54e0e7eb451df72176c" id="r_ac80f56298756d54e0e7eb451df72176c"><td class="memItemLeft" align="right" valign="top"><a id="ac80f56298756d54e0e7eb451df72176c" name="ac80f56298756d54e0e7eb451df72176c"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>START_STATE</b>&#160;&#160;&#160;4</td></tr>
-<tr class="separator:ac80f56298756d54e0e7eb451df72176c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:ad0ed1832dd134806ad335cdcc1a59ad2" id="r_ad0ed1832dd134806ad335cdcc1a59ad2"><td class="memItemLeft" align="right" valign="top"><a id="ad0ed1832dd134806ad335cdcc1a59ad2" name="ad0ed1832dd134806ad335cdcc1a59ad2"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0ed1832dd134806ad335cdcc1a59ad2">game_state</a> { <br />
+&#160;&#160;<b>PLAY_STATE</b> = 0
+, <b>SCORE_STATE</b> = 1
+, <b>SPAWN_STATE</b> = 2
+, <b>GAMEOVER_STATE</b> = 3
+, <br />
+&#160;&#160;<b>START_STATE</b> = 4
+<br />
+ }</td></tr>
+<tr class="memdesc:ad0ed1832dd134806ad335cdcc1a59ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Game States. <br /></td></tr>
+<tr class="separator:ad0ed1832dd134806ad335cdcc1a59ad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afde3b66b6b41bd008469f366fa756e54" id="r_afde3b66b6b41bd008469f366fa756e54"><td class="memItemLeft" align="right" valign="top"><a id="afde3b66b6b41bd008469f366fa756e54" name="afde3b66b6b41bd008469f366fa756e54"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afde3b66b6b41bd008469f366fa756e54">inputs</a> { <br />
 &#160;&#160;<b>gauche</b> = -1
 , <b>droite</b> = 1
@@ -171,6 +167,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>printStack</b> (void)
 <tr class="memitem:a7c23a5fa3b48f5020d6a71fc47a86031" id="r_a7c23a5fa3b48f5020d6a71fc47a86031"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c23a5fa3b48f5020d6a71fc47a86031">removeLine</a> (int line)</td></tr>
 <tr class="memdesc:a7c23a5fa3b48f5020d6a71fc47a86031"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the selected line.  <br /></td></tr>
 <tr class="separator:a7c23a5fa3b48f5020d6a71fc47a86031"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6aa12aa545905283b9192a522c836865" id="r_a6aa12aa545905283b9192a522c836865"><td class="memItemLeft" align="right" valign="top"><a id="a6aa12aa545905283b9192a522c836865" name="a6aa12aa545905283b9192a522c836865"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>resetPlayStack</b> ()</td></tr>
+<tr class="memdesc:a6aa12aa545905283b9192a522c836865"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the PlayStack. <br /></td></tr>
+<tr class="separator:a6aa12aa545905283b9192a522c836865"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac30a0cd4694054e0c19ac09dd5f9771a" id="r_ac30a0cd4694054e0c19ac09dd5f9771a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac30a0cd4694054e0c19ac09dd5f9771a">moveDownStack</a> (int startLine)</td></tr>
 <tr class="memdesc:ac30a0cd4694054e0c19ac09dd5f9771a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move all the stack above "startLine" down by one line.  <br /></td></tr>
 <tr class="separator:ac30a0cd4694054e0c19ac09dd5f9771a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -183,6 +183,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>tetrisInit</b> ()</td
 <tr class="memitem:aaf103d842e6d9f5524319094721d4268" id="r_aaf103d842e6d9f5524319094721d4268"><td class="memItemLeft" align="right" valign="top"><a id="aaf103d842e6d9f5524319094721d4268" name="aaf103d842e6d9f5524319094721d4268"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>tetrisGame</b> ()</td></tr>
 <tr class="separator:aaf103d842e6d9f5524319094721d4268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c55dad3d3336ee657f1bf1a4c896978" id="r_a2c55dad3d3336ee657f1bf1a4c896978"><td class="memItemLeft" align="right" valign="top"><a id="a2c55dad3d3336ee657f1bf1a4c896978" name="a2c55dad3d3336ee657f1bf1a4c896978"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>reduceFallDelay</b> ()</td></tr>
+<tr class="memdesc:a2c55dad3d3336ee657f1bf1a4c896978"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reducde the delay of fallTime. <br /></td></tr>
+<tr class="separator:a2c55dad3d3336ee657f1bf1a4c896978"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cd91fd3a9608559c2a87a8ba6cba55f" id="r_a0cd91fd3a9608559c2a87a8ba6cba55f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cd91fd3a9608559c2a87a8ba6cba55f">HAL_GPIO_EXTI_Callback</a> (uint16_t GPIO_Pin)</td></tr>
 <tr class="memdesc:a0cd91fd3a9608559c2a87a8ba6cba55f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gestion des interruptions.  <br /></td></tr>
 <tr class="separator:a0cd91fd3a9608559c2a87a8ba6cba55f"><td class="memSeparator" colspan="2">&#160;</td></tr>

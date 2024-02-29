@@ -9,5 +9,6 @@
 #define TETRISGAME_H_
 
 int tetrisGame();
+void reduceFallDelay();
 
 #endif /* TETRISGAME_H_ */

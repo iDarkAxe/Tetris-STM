@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['inputs_0',['inputs',['../tetris_game_8c.html#afde3b66b6b41bd008469f366fa756e54',1,'tetrisGame.c']]]
+  ['game_5fstate_0',['game_state',['../tetris_game_8c.html#ad0ed1832dd134806ad335cdcc1a59ad2',1,'tetrisGame.c']]]
 ];

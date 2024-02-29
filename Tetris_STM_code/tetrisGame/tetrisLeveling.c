@@ -10,7 +10,8 @@
 #ifndef TETRISLEVELING_C_
 #define TETRISLEVELING_C_
 
-#include "../tetrisGame/tetrisLeveling.h"
+#include "tetrisLeveling.h"
+#include "tetrisGame.h"
 
 uint8_t levelNumber = 0;
 
@@ -31,9 +32,9 @@ void newLevelCalculate(uint8_t _numberOfLineCompleted)
 {
 	if(_numberOfLineCompleted >= (10*levelNumber)){
 		levelNumber+= 1;
+		reduceFallDelay();
 	}
 
-	//TODO GERER LA VITESSE DU JEU
 }
 
 #endif /* TETRISLEVELING_C_ */

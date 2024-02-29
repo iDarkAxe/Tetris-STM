@@ -7,7 +7,7 @@
   ******************************************************************************
   */
 
-#include "../tetrisGame/tetrisScoring.h"
+#include "tetrisScoring.h"
 
 #include "ssd1306_fonts.h"
 #include "ssd1306.h"
@@ -16,7 +16,7 @@
 #include "tetrisLeveling.h"
 #include "userOled.h"
 
-#include "../tetrisGame/tetrisLeveling.h"
+#include "tetrisLeveling.h"
 
 uint32_t tetrisScore = 0;
 uint8_t piecePosee = 100;
@@ -70,8 +70,7 @@ void addScoreLine(uint8_t _numberOfLineCompleted)
 	case 4:
 		tetrisScore += 800*levelNumber;
 		break;
-	case 5:
-		//erreur CAS IMPOSSIBLE, il n'y a pas de
+	default:
 		break;
 	}
 }

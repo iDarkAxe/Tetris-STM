@@ -9,8 +9,8 @@
 {\ttfamily \#include $<$string.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \#include $<$tim.\+h$>$}\newline
-{\ttfamily \#include "{}../tetris\+Game/tetris\+Scoring.\+h"{}}\newline
-{\ttfamily \#include "{}../tetris\+Game/user\+Oled.\+h"{}}\newline
+{\ttfamily \#include "{}tetris\+Scoring.\+h"{}}\newline
+{\ttfamily \#include "{}user\+Oled.\+h"{}}\newline
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -27,25 +27,20 @@ struct \mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}}
 \item 
 \Hypertarget{tetris_game_8c_ae2235ecaf986e6a6333ffad799e04ca6}\label{tetris_game_8c_ae2235ecaf986e6a6333ffad799e04ca6} 
 \#define {\bfseries FALL\+\_\+\+COOLDOWN}~0
-\item 
-\Hypertarget{tetris_game_8c_a961bb6adb184df10a4065decbb2c7927}\label{tetris_game_8c_a961bb6adb184df10a4065decbb2c7927} 
-\#define {\bfseries PLAY\+\_\+\+STATE}~0
-\item 
-\Hypertarget{tetris_game_8c_a815587dc8930c28725e10fec0aef785c}\label{tetris_game_8c_a815587dc8930c28725e10fec0aef785c} 
-\#define {\bfseries SCORE\+\_\+\+STATE}~1
-\item 
-\Hypertarget{tetris_game_8c_ad8df292547b0bf92960c3f03193edc67}\label{tetris_game_8c_ad8df292547b0bf92960c3f03193edc67} 
-\#define {\bfseries SPAWN\+\_\+\+STATE}~2
-\item 
-\Hypertarget{tetris_game_8c_ac62481dbdcd378742c98abdd1d326e73}\label{tetris_game_8c_ac62481dbdcd378742c98abdd1d326e73} 
-\#define {\bfseries GAMEOVER\+\_\+\+STATE}~3
-\item 
-\Hypertarget{tetris_game_8c_ac80f56298756d54e0e7eb451df72176c}\label{tetris_game_8c_ac80f56298756d54e0e7eb451df72176c} 
-\#define {\bfseries START\+\_\+\+STATE}~4
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
+\Hypertarget{tetris_game_8c_ad0ed1832dd134806ad335cdcc1a59ad2}\label{tetris_game_8c_ad0ed1832dd134806ad335cdcc1a59ad2} 
+enum \mbox{\hyperlink{tetris_game_8c_ad0ed1832dd134806ad335cdcc1a59ad2}{game\+\_\+state}} \{ \newline
+{\bfseries PLAY\+\_\+\+STATE} = 0
+, {\bfseries SCORE\+\_\+\+STATE} = 1
+, {\bfseries SPAWN\+\_\+\+STATE} = 2
+, {\bfseries GAMEOVER\+\_\+\+STATE} = 3
+, \newline
+{\bfseries START\+\_\+\+STATE} = 4
+ \}
+\begin{DoxyCompactList}\small\item\em Game States. \end{DoxyCompactList}\item 
 \Hypertarget{tetris_game_8c_afde3b66b6b41bd008469f366fa756e54}\label{tetris_game_8c_afde3b66b6b41bd008469f366fa756e54} 
 enum \mbox{\hyperlink{tetris_game_8c_afde3b66b6b41bd008469f366fa756e54}{inputs}} \{ \newline
 {\bfseries gauche} = -\/1
@@ -78,6 +73,9 @@ int \mbox{\hyperlink{tetris_game_8c_a08cf243217343b641447c591f3c00483}{get\+Line
 \begin{DoxyCompactList}\small\item\em calculate Line\+Completed and move\+Down\+Stack if line\+Full \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{tetris_game_8c_a7c23a5fa3b48f5020d6a71fc47a86031}{remove\+Line}} (int line)
 \begin{DoxyCompactList}\small\item\em Remove the selected line. \end{DoxyCompactList}\item 
+\Hypertarget{tetris_game_8c_a6aa12aa545905283b9192a522c836865}\label{tetris_game_8c_a6aa12aa545905283b9192a522c836865} 
+void {\bfseries reset\+Play\+Stack} ()
+\begin{DoxyCompactList}\small\item\em Reset the Play\+Stack. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{tetris_game_8c_ac30a0cd4694054e0c19ac09dd5f9771a}{move\+Down\+Stack}} (int start\+Line)
 \begin{DoxyCompactList}\small\item\em Move all the stack above "{}start\+Line"{} down by one line. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{tetris_game_8c_a2ed5bd4d5ecf8d9597e80b61dad4f0e9}{random\+Piece}} (\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}tetramino\+Atm)
@@ -88,6 +86,9 @@ void {\bfseries tetris\+Init} ()
 \Hypertarget{tetris_game_8c_aaf103d842e6d9f5524319094721d4268}\label{tetris_game_8c_aaf103d842e6d9f5524319094721d4268} 
 int {\bfseries tetris\+Game} ()
 \item 
+\Hypertarget{tetris_game_8c_a2c55dad3d3336ee657f1bf1a4c896978}\label{tetris_game_8c_a2c55dad3d3336ee657f1bf1a4c896978} 
+void {\bfseries reduce\+Fall\+Delay} ()
+\begin{DoxyCompactList}\small\item\em Reducde the delay of fall\+Time. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{tetris_game_8c_a0cd91fd3a9608559c2a87a8ba6cba55f}{HAL\+\_\+\+GPIO\+\_\+\+EXTI\+\_\+\+Callback}} (uint16\+\_\+t GPIO\+\_\+\+Pin)
 \begin{DoxyCompactList}\small\item\em Gestion des interruptions. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{tetris_game_8c_a8a3b0ad512a6e6c6157440b68d395eac}{HAL\+\_\+\+TIM\+\_\+\+Period\+Elapsed\+Callback}} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}htim)
