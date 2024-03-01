@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['tetrisgame_2ec_0',['tetrisGame.c',['../tetris_game_8c.html',1,'']]],
-  ['tetrisleveling_2ec_1',['tetrisLeveling.c',['../tetris_leveling_8c.html',1,'']]],
-  ['tetrisscoring_2ec_2',['tetrisScoring.c',['../tetris_scoring_8c.html',1,'']]]
+  ['tetrisleveling_2ec_26',['tetrisLeveling.c',['../tetris_leveling_8c.html',1,'']]],
+  ['tetrisscoring_2ec_27',['tetrisScoring.c',['../tetris_scoring_8c.html',1,'']]]
 ];

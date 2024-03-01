@@ -1,48 +1,48 @@
-\doxysection{C\+:/\+Users/pontet/\+Documents/\+Git\+\_\+\+Repos/\+Tetris\+\_\+\+STM/\+Tetris\+\_\+\+STM\+\_\+code/tetris\+Game/user\+Oled.c File Reference}
-\hypertarget{user_oled_8c}{}\label{user_oled_8c}\index{C:/Users/pontet/Documents/Git\_Repos/Tetris\_STM/Tetris\_STM\_code/tetrisGame/userOled.c@{C:/Users/pontet/Documents/Git\_Repos/Tetris\_STM/Tetris\_STM\_code/tetrisGame/userOled.c}}
+\hypertarget{user_oled_8c}{}\doxysection{C\+:/\+Users/kerfriden.APOLLO2/\+Documents/\+Tetris-\/\+STM/\+Tetris-\/\+STM/\+Tetris\+\_\+\+STM\+\_\+code/tetris\+Game/user\+Oled.c File Reference}
+\label{user_oled_8c}\index{C:/Users/kerfriden.APOLLO2/Documents/Tetris-\/STM/Tetris-\/STM/Tetris\_STM\_code/tetrisGame/userOled.c@{C:/Users/kerfriden.APOLLO2/Documents/Tetris-\/STM/Tetris-\/STM/Tetris\_STM\_code/tetrisGame/userOled.c}}
 
 
 \+: Others functions for Oled drawing  
 
 
-{\ttfamily \#include "{}user\+Oled.\+h"{}}\newline
-{\ttfamily \#include "{}tetris\+Scoring.\+h"{}}\newline
-\doxysubsubsection*{Functions}
+{\ttfamily \#include \char`\"{}user\+Oled.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tetris\+Scoring.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{user_oled_8c_a5ddae6e19852caa13e77f7aa2b50e3b3}\label{user_oled_8c_a5ddae6e19852caa13e77f7aa2b50e3b3} 
-void {\bfseries draw\+Border} ()
+\mbox{\Hypertarget{user_oled_8c_a5ddae6e19852caa13e77f7aa2b50e3b3}\label{user_oled_8c_a5ddae6e19852caa13e77f7aa2b50e3b3}} 
+void \mbox{\hyperlink{user_oled_8c_a5ddae6e19852caa13e77f7aa2b50e3b3}{draw\+Border}} ()
 \begin{DoxyCompactList}\small\item\em Draw the border of the game. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{user_oled_8c_a3a25a8ee25260d16cc10fc35c2ea38fe}{draw\+Tile}} (uint8\+\_\+t x, uint8\+\_\+t y, SSD1306\+\_\+\+COLOR color)
 \begin{DoxyCompactList}\small\item\em Draw a normal tile. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{user_oled_8c_a6f41720fd4da3fcfab5ac1259c7823c7}{draw\+Stack}} (int stack\mbox{[}23\mbox{]}\mbox{[}16\mbox{]})
-\begin{DoxyCompactList}\small\item\em Draw the entire stack. \end{DoxyCompactList}\item 
-\Hypertarget{user_oled_8c_aeb2c7e9c7d14c9eccb7e624bd9611ef8}\label{user_oled_8c_aeb2c7e9c7d14c9eccb7e624bd9611ef8} 
-void {\bfseries draw\+Game\+Over} ()
+void \mbox{\hyperlink{user_oled_8c_a2f9d9e566e5746dca38a99ac8b8c2b81}{draw\+Play\+Zone}} (int stack\mbox{[}23\mbox{]}\mbox{[}16\mbox{]})
+\begin{DoxyCompactList}\small\item\em Draw the entire play zone. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{user_oled_8c_aeb2c7e9c7d14c9eccb7e624bd9611ef8}\label{user_oled_8c_aeb2c7e9c7d14c9eccb7e624bd9611ef8}} 
+void \mbox{\hyperlink{user_oled_8c_aeb2c7e9c7d14c9eccb7e624bd9611ef8}{draw\+Game\+Over}} ()
 \begin{DoxyCompactList}\small\item\em Plays the game\+Over Animation. \end{DoxyCompactList}\item 
-\Hypertarget{user_oled_8c_a305f138587ae309f2f0e2ba3ddd83796}\label{user_oled_8c_a305f138587ae309f2f0e2ba3ddd83796} 
-void {\bfseries draw\+Tetris\+Start\+Game} ()
+\mbox{\Hypertarget{user_oled_8c_a305f138587ae309f2f0e2ba3ddd83796}\label{user_oled_8c_a305f138587ae309f2f0e2ba3ddd83796}} 
+void \mbox{\hyperlink{user_oled_8c_a305f138587ae309f2f0e2ba3ddd83796}{draw\+Tetris\+Start\+Game}} ()
 \begin{DoxyCompactList}\small\item\em Plays the Start\+Menu Animation. \end{DoxyCompactList}\item 
-\Hypertarget{user_oled_8c_aaf80dc343615929a9d7ca23689b573e0}\label{user_oled_8c_aaf80dc343615929a9d7ca23689b573e0} 
-void {\bfseries clear\+Play\+Zone} ()
+\mbox{\Hypertarget{user_oled_8c_aaf80dc343615929a9d7ca23689b573e0}\label{user_oled_8c_aaf80dc343615929a9d7ca23689b573e0}} 
+void \mbox{\hyperlink{user_oled_8c_aaf80dc343615929a9d7ca23689b573e0}{clear\+Play\+Zone}} ()
 \begin{DoxyCompactList}\small\item\em Clear the Play\+Zone. \end{DoxyCompactList}\item 
 char \mbox{\hyperlink{user_oled_8c_ae461009b93d8876c0985ab70868a17c8}{ssd1306\+\_\+\+Write\+Char\+Vertical}} (char ch, Font\+Def Font, SSD1306\+\_\+\+COLOR color)
 \begin{DoxyCompactList}\small\item\em Ecrit un caractère verticalement. \end{DoxyCompactList}\item 
-char \mbox{\hyperlink{user_oled_8c_a86b173139967c187e228c0a2c56215ce}{ssd1306\+\_\+\+Write\+String\+Vertical}} (char \texorpdfstring{$\ast$}{*}str, Font\+Def Font, SSD1306\+\_\+\+COLOR color)
+char \mbox{\hyperlink{user_oled_8c_a86b173139967c187e228c0a2c56215ce}{ssd1306\+\_\+\+Write\+String\+Vertical}} (char $\ast$str, Font\+Def Font, SSD1306\+\_\+\+COLOR color)
 \begin{DoxyCompactList}\small\item\em Ecrit une chaîne de caractères verticalement. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{user_oled_8c_a4a8b7e31c3fe86ea9f12dd3ba0745eb3}{ssd1306\+\_\+\+Set\+Cursor\+Vertical}} (uint8\+\_\+t x, uint8\+\_\+t y)
 \begin{DoxyCompactList}\small\item\em Déplace le curseur à sa position Verticale. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{user_oled_8c_a1b46f95cb32d9af8eca89bad57d18210}{tetris\+Bordure\+Decor}} (SSD1306\+\_\+\+COLOR color)
 \begin{DoxyCompactList}\small\item\em Draw the decor. \end{DoxyCompactList}\item 
-\Hypertarget{user_oled_8c_ae0744272d835bb6e1f8ef839bfd92a06}\label{user_oled_8c_ae0744272d835bb6e1f8ef839bfd92a06} 
-void {\bfseries draw\+Tetriminos} ()
+\mbox{\Hypertarget{user_oled_8c_ae0744272d835bb6e1f8ef839bfd92a06}\label{user_oled_8c_ae0744272d835bb6e1f8ef839bfd92a06}} 
+void \mbox{\hyperlink{user_oled_8c_ae0744272d835bb6e1f8ef839bfd92a06}{draw\+Tetriminos}} ()
 \begin{DoxyCompactList}\small\item\em Affiche les tetriminos en bas du Start\+Menu. \end{DoxyCompactList}\item 
-\Hypertarget{user_oled_8c_a9ecefd15a6fad87becac106fde8ca70f}\label{user_oled_8c_a9ecefd15a6fad87becac106fde8ca70f} 
-void {\bfseries Clignotement\+\_\+\+Ecran} ()
-\item 
-\Hypertarget{user_oled_8c_aec8e34e8d938666651abcd63389fb345}\label{user_oled_8c_aec8e34e8d938666651abcd63389fb345} 
-void {\bfseries Clignotement\+\_\+\+Click} ()
-\end{DoxyCompactItemize}
+\mbox{\Hypertarget{user_oled_8c_a9ecefd15a6fad87becac106fde8ca70f}\label{user_oled_8c_a9ecefd15a6fad87becac106fde8ca70f}} 
+void \mbox{\hyperlink{user_oled_8c_a9ecefd15a6fad87becac106fde8ca70f}{Clignotement\+\_\+\+Ecran}} ()
+\begin{DoxyCompactList}\small\item\em Fait \char`\"{}clignoter\char`\"{} l\textquotesingle{}écran en inversant ses couleurs pendant un court instant. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{user_oled_8c_aec8e34e8d938666651abcd63389fb345}\label{user_oled_8c_aec8e34e8d938666651abcd63389fb345}} 
+void \mbox{\hyperlink{user_oled_8c_aec8e34e8d938666651abcd63389fb345}{Clignotement\+\_\+\+Click}} ()
+\begin{DoxyCompactList}\small\item\em Fait \char`\"{}clignoter\char`\"{} le mot \char`\"{}\+Click\char`\"{} à l\textquotesingle{}écran de démarrage, non bloquant. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -54,22 +54,22 @@ void {\bfseries Clignotement\+\_\+\+Click} ()
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{user_oled_8c_a6f41720fd4da3fcfab5ac1259c7823c7}\label{user_oled_8c_a6f41720fd4da3fcfab5ac1259c7823c7} 
-\index{userOled.c@{userOled.c}!drawStack@{drawStack}}
-\index{drawStack@{drawStack}!userOled.c@{userOled.c}}
-\doxysubsubsection{\texorpdfstring{drawStack()}{drawStack()}}
-{\footnotesize\ttfamily void draw\+Stack (\begin{DoxyParamCaption}\item[{int}]{stack\mbox{[}23\mbox{]}\mbox{[}16\mbox{]} }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{user_oled_8c_a2f9d9e566e5746dca38a99ac8b8c2b81}\label{user_oled_8c_a2f9d9e566e5746dca38a99ac8b8c2b81}} 
+\index{userOled.c@{userOled.c}!drawPlayZone@{drawPlayZone}}
+\index{drawPlayZone@{drawPlayZone}!userOled.c@{userOled.c}}
+\doxysubsubsection{\texorpdfstring{drawPlayZone()}{drawPlayZone()}}
+{\footnotesize\ttfamily void draw\+Play\+Zone (\begin{DoxyParamCaption}\item[{int}]{stack\mbox{[}23\mbox{]}\mbox{[}16\mbox{]} }\end{DoxyParamCaption})}
 
 
 
-Draw the entire stack. 
+Draw the entire play zone. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em stack\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}} & the stack of the game \\
+{\em stack\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}} & the play zone of the game \\
 \hline
 \end{DoxyParams}
-\Hypertarget{user_oled_8c_a3a25a8ee25260d16cc10fc35c2ea38fe}\label{user_oled_8c_a3a25a8ee25260d16cc10fc35c2ea38fe} 
+\mbox{\Hypertarget{user_oled_8c_a3a25a8ee25260d16cc10fc35c2ea38fe}\label{user_oled_8c_a3a25a8ee25260d16cc10fc35c2ea38fe}} 
 \index{userOled.c@{userOled.c}!drawTile@{drawTile}}
 \index{drawTile@{drawTile}!userOled.c@{userOled.c}}
 \doxysubsubsection{\texorpdfstring{drawTile()}{drawTile()}}
@@ -86,7 +86,7 @@ Draw a normal tile.
 {\em color} & couleur de la Tile \\
 \hline
 \end{DoxyParams}
-\Hypertarget{user_oled_8c_a4a8b7e31c3fe86ea9f12dd3ba0745eb3}\label{user_oled_8c_a4a8b7e31c3fe86ea9f12dd3ba0745eb3} 
+\mbox{\Hypertarget{user_oled_8c_a4a8b7e31c3fe86ea9f12dd3ba0745eb3}\label{user_oled_8c_a4a8b7e31c3fe86ea9f12dd3ba0745eb3}} 
 \index{userOled.c@{userOled.c}!ssd1306\_SetCursorVertical@{ssd1306\_SetCursorVertical}}
 \index{ssd1306\_SetCursorVertical@{ssd1306\_SetCursorVertical}!userOled.c@{userOled.c}}
 \doxysubsubsection{\texorpdfstring{ssd1306\_SetCursorVertical()}{ssd1306\_SetCursorVertical()}}
@@ -101,7 +101,7 @@ Déplace le curseur à sa position Verticale.
 {\em x,y} & \+: position du curseur à changer \\
 \hline
 \end{DoxyParams}
-\Hypertarget{user_oled_8c_ae461009b93d8876c0985ab70868a17c8}\label{user_oled_8c_ae461009b93d8876c0985ab70868a17c8} 
+\mbox{\Hypertarget{user_oled_8c_ae461009b93d8876c0985ab70868a17c8}\label{user_oled_8c_ae461009b93d8876c0985ab70868a17c8}} 
 \index{userOled.c@{userOled.c}!ssd1306\_WriteCharVertical@{ssd1306\_WriteCharVertical}}
 \index{ssd1306\_WriteCharVertical@{ssd1306\_WriteCharVertical}!userOled.c@{userOled.c}}
 \doxysubsubsection{\texorpdfstring{ssd1306\_WriteCharVertical()}{ssd1306\_WriteCharVertical()}}
@@ -120,11 +120,11 @@ Ecrit un caractère verticalement.
 {\em color} & couleur sélectionnée \\
 \hline
 \end{DoxyParams}
-\Hypertarget{user_oled_8c_a86b173139967c187e228c0a2c56215ce}\label{user_oled_8c_a86b173139967c187e228c0a2c56215ce} 
+\mbox{\Hypertarget{user_oled_8c_a86b173139967c187e228c0a2c56215ce}\label{user_oled_8c_a86b173139967c187e228c0a2c56215ce}} 
 \index{userOled.c@{userOled.c}!ssd1306\_WriteStringVertical@{ssd1306\_WriteStringVertical}}
 \index{ssd1306\_WriteStringVertical@{ssd1306\_WriteStringVertical}!userOled.c@{userOled.c}}
 \doxysubsubsection{\texorpdfstring{ssd1306\_WriteStringVertical()}{ssd1306\_WriteStringVertical()}}
-{\footnotesize\ttfamily char ssd1306\+\_\+\+Write\+String\+Vertical (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str,  }\item[{Font\+Def}]{Font,  }\item[{SSD1306\+\_\+\+COLOR}]{color }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily char ssd1306\+\_\+\+Write\+String\+Vertical (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{Font\+Def}]{Font,  }\item[{SSD1306\+\_\+\+COLOR}]{color }\end{DoxyParamCaption})}
 
 
 
@@ -139,7 +139,7 @@ Ecrit une chaîne de caractères verticalement.
 {\em color} & couleur sélectionnée \\
 \hline
 \end{DoxyParams}
-\Hypertarget{user_oled_8c_a1b46f95cb32d9af8eca89bad57d18210}\label{user_oled_8c_a1b46f95cb32d9af8eca89bad57d18210} 
+\mbox{\Hypertarget{user_oled_8c_a1b46f95cb32d9af8eca89bad57d18210}\label{user_oled_8c_a1b46f95cb32d9af8eca89bad57d18210}} 
 \index{userOled.c@{userOled.c}!tetrisBordureDecor@{tetrisBordureDecor}}
 \index{tetrisBordureDecor@{tetrisBordureDecor}!userOled.c@{userOled.c}}
 \doxysubsubsection{\texorpdfstring{tetrisBordureDecor()}{tetrisBordureDecor()}}

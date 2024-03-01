@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['newlevelcalculate_0',['newLevelCalculate',['../tetris_leveling_8c.html#ae72ba64668f34137e4fe3886600662fe',1,'tetrisLeveling.c']]]
+  ['useroled_2ec_24',['userOled.c',['../user_oled_8c.html',1,'']]]
 ];

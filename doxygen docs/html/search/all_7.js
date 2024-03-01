@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['movedownstack_0',['moveDownStack',['../tetris_game_8c.html#ac30a0cd4694054e0c19ac09dd5f9771a',1,'tetrisGame.c']]],
-  ['movepiece_1',['movePiece',['../tetris_game_8c.html#aab44c65b4c5ef7a94e5701f074211391',1,'tetrisGame.c']]]
+  ['tetrimino_19',['TETRIMINO',['../struct_t_e_t_r_i_m_i_n_o.html',1,'']]],
+  ['tetris_20game_20',['Tetris Game',['../index.html',1,'']]],
+  ['tetrisborduredecor_21',['tetrisBordureDecor',['../user_oled_8c.html#a1b46f95cb32d9af8eca89bad57d18210',1,'userOled.c']]],
+  ['tetrisleveling_2ec_22',['tetrisLeveling.c',['../tetris_leveling_8c.html',1,'']]],
+  ['tetrisscoring_2ec_23',['tetrisScoring.c',['../tetris_scoring_8c.html',1,'']]]
 ];

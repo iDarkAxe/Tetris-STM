@@ -30,10 +30,10 @@ void drawTile(uint8_t x, uint8_t y, SSD1306_COLOR color){
 	ssd1306_FillRectangle(x, y, x+5, y+5, color);
 }
 
-/** @brief Draw the entire stack
- * @param stack[][]: the stack of the game
+/** @brief Draw the entire play zone
+ * @param stack[][]: the play zone of the game
   */
-void drawStack(int stack[23][16]){
+void drawPlayZone(int stack[23][16]){
 	uint8_t i, j;
 	for (i = 0; i < 20; ++i) {
 		for (j = 3; j < 13; ++j) {
@@ -228,6 +228,8 @@ void drawTetriminos(){
 	ssd1306_FillRectangle(116, 15, 118, 17, White);
 }
 
+/** @brief Fait "clignoter" l'écran en inversant ses couleurs pendant un court instant
+  */
 void Clignotement_Ecran()
 {
 	for (int i = 0; i < 3; ++i) {
@@ -240,6 +242,8 @@ void Clignotement_Ecran()
 	}
 }
 
+/** @brief Fait "clignoter" le mot "Click" à l'écran de démarrage, non bloquant
+  */
 void Clignotement_Click()
 {
 	static uint32_t tick = 0, lastTick = 0;
