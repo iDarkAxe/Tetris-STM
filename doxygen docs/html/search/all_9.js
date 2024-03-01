@@ -1,11 +1,13 @@
 var searchData=
 [
   ['piecebar_0',['pieceBar',['../tetris_game_8c.html#ac86ee2d2c05564b3d9f159c0a553913c',1,'tetrisGame.c']]],
-  ['piecel_1',['pieceL',['../tetris_game_8c.html#a5b2e17510c0e92ae5ff2986fdec4932a',1,'tetrisGame.c']]],
-  ['piecesquare_2',['pieceSquare',['../tetris_game_8c.html#a2dc8d45c928817ebdc407620216fc78d',1,'tetrisGame.c']]],
-  ['piecet_3',['pieceT',['../tetris_game_8c.html#ac378d659dc480fdcad748ff2a083ede9',1,'tetrisGame.c']]],
-  ['piecezigzag_4',['pieceZigzag',['../tetris_game_8c.html#af26d357baa41d307fa45584a48bfe733',1,'tetrisGame.c']]],
-  ['playstack_5',['playStack',['../tetris_game_8c.html#a15f6a876cfe88237588b2ae13f1cb2f8',1,'tetrisGame.c']]],
-  ['printscore_6',['printScore',['../tetris_scoring_8c.html#a26da11a341ee07a8a79252f3464ed1d6',1,'tetrisScoring.c']]],
-  ['printstack_7',['printStack',['../tetris_game_8c.html#ae2c2de4ce470468a0af82bb42ea2a338',1,'tetrisGame.c']]]
+  ['piecej_1',['pieceJ',['../tetris_game_8c.html#a412ac308292218f2af8d61e2b94498b9',1,'tetrisGame.c']]],
+  ['piecel_2',['pieceL',['../tetris_game_8c.html#a5b2e17510c0e92ae5ff2986fdec4932a',1,'tetrisGame.c']]],
+  ['pieces_3',['pieceS',['../tetris_game_8c.html#a49918ba313471e7e46a0da237016e95e',1,'tetrisGame.c']]],
+  ['piecesquare_4',['pieceSquare',['../tetris_game_8c.html#a2dc8d45c928817ebdc407620216fc78d',1,'tetrisGame.c']]],
+  ['piecet_5',['pieceT',['../tetris_game_8c.html#ac378d659dc480fdcad748ff2a083ede9',1,'tetrisGame.c']]],
+  ['piecezigzag_6',['pieceZigzag',['../tetris_game_8c.html#af26d357baa41d307fa45584a48bfe733',1,'tetrisGame.c']]],
+  ['playzone_7',['playZone',['../tetris_game_8c.html#a7be166db2b2f61bfeaccb28b6b053172',1,'tetrisGame.c']]],
+  ['printplayzone_8',['printPlayZone',['../tetris_game_8c.html#a4a90606f9ac45fb3f2ebd55c8f9adbab',1,'tetrisGame.c']]],
+  ['printscore_9',['printScore',['../tetris_scoring_8c.html#a26da11a341ee07a8a79252f3464ed1d6',1,'tetrisScoring.c']]]
 ];

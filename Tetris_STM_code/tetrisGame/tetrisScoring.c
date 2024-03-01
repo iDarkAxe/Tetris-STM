@@ -29,7 +29,7 @@ uint32_t getScore(){
 }
 
 /** @brief Calculate the Score
- * @param  numberOfLineCompleted
+ * @param  _numberOfLineCompleted
   */
 void calculateScore(int _numberOfLineCompleted){
 	addScorePiece();
@@ -45,10 +45,9 @@ void addScorePiece()
 	tetrisScore += piecePosee;
 }
 
-/**
-  * @brief  Add points to the score,
+/** @brief  Add points to the score,
   * 		using numberOfLineCompleted and levelNumber as factors
-  * @param  numberOfLineCompleted: numberOfLineCompleted in one fall by a piece
+  * @param  _numberOfLineCompleted: numberOfLineCompleted in one fall by a piece
   */
 void addScoreLine(uint8_t _numberOfLineCompleted)
 {

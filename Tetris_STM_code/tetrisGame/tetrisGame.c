@@ -38,7 +38,12 @@ int pieceZigzag[4][4]= {{0,0,0,0},
                         {1,1,0,0},
                         {0,1,1,0},
                         {0,0,0,0}};
-
+/** @brief S piece in 4 by 4 grid
+  */
+int pieceS[4][4]= 	{{0,0,0,0},
+                    {0,0,1,1},
+                    {0,1,1,0},
+                    {0,0,0,0}};
 /** @brief Bar piece in 4 by 4 grid
   */
 int pieceBar[4][4]= {   {0,1,0,0},
@@ -56,6 +61,12 @@ int pieceSquare[4][4]= {{0,0,0,0},
 int pieceL[4][4]= { {0,0,0,0},
                     {0,1,0,0},
                     {0,1,0,0},
+                    {0,1,1,0}};
+/** @brief J piece in 4 by 4 grid
+  */
+int pieceJ[4][4]= { {0,0,0,0},
+                    {0,0,1,0},
+                    {0,0,1,0},
                     {0,1,1,0}};
 /** @brief T piece in 4 by 4 grid
   */
@@ -107,7 +118,7 @@ uint32_t nextFallTime = 0;
 int fallDelay = 1000;
 int rotateFallDelay = 500;
 int moveFallDelay = 500;
-int userInput = 0;
+int userInput = 0;	//stocke les entrées de l'utilisateur
 
 /** @brief Inputs du jeu, permet de simplifier le code
   */
@@ -128,8 +139,8 @@ void moveDownPlayZone(int);
 void randomPiece(TETRIMINO*);
 void tetrisInit();
 
-
-
+/** @brief Permet d'initialiser le jeu
+  */
 void tetrisInit(){
   ssd1306_Init();
   drawBorder();
@@ -137,6 +148,9 @@ void tetrisInit(){
   ssd1306_UpdateScreen();
 }
 
+/** @brief Permet de lancer le jeu
+ *  @retval 0 si erreur
+  */
 int tetrisGame()
 {
 	HAL_Delay(1000);	//Temps d'attente car il faut attendre que les condensateurs de l'écran soient chargés avant de commencer
@@ -437,7 +451,7 @@ void moveDownPlayZone(int startLine)
   */
 void randomPiece(TETRIMINO* currentTetrimino)
 {
-    int randomPiece = rand() % 5; // [0 ; 4] car 5 pièces
+    int randomPiece = rand() % 7; // [0 ; 6] car 7 pièces
     switch(randomPiece)
     {
         case 0:
@@ -459,9 +473,15 @@ void randomPiece(TETRIMINO* currentTetrimino)
         case 4:
             memcpy(currentTetrimino->piece, pieceT, sizeof(pieceT));
             break;
+        case 5:
+		   memcpy(currentTetrimino->piece, pieceS, sizeof(pieceS));
+		   break;
+        case 6:
+		   memcpy(currentTetrimino->piece, pieceJ, sizeof(pieceJ));
+		   break;
     }
 
-    int rotationCount = rand() % 4;  // [0 ; 3] entre 0 et 3 rotations
+    int rotationCount = rand() % 4;  // [0 ; 3] entre 0 et 3 sens de rotations
     for(int i = 0; i < rotationCount; i++){
         if(!rotatePiece(currentTetrimino))   // try to apply random rotation
         {

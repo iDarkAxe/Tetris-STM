@@ -96,8 +96,8 @@ $(function() {
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to locate the current tetramino in the game.  <a href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_t_e_t_r_i_m_i_n_o.html">TETRIMINO</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to locate the current tetrimino in the game.  <a href="struct_t_e_t_r_i_m_i_n_o.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -139,53 +139,54 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a375de1b92009d1f690f457586a470145" id="r_a375de1b92009d1f690f457586a470145"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a375de1b92009d1f690f457586a470145">addPieceIntoStack</a> (<a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *tetraminoAtm)</td></tr>
-<tr class="memdesc:a375de1b92009d1f690f457586a470145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de placer une pièce dans le jeu.  <br /></td></tr>
-<tr class="separator:a375de1b92009d1f690f457586a470145"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc91f41cf420b07107119d403639621d" id="r_adc91f41cf420b07107119d403639621d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc91f41cf420b07107119d403639621d">removePieceFromStack</a> (<a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *tetraminoAtm)</td></tr>
-<tr class="memdesc:adc91f41cf420b07107119d403639621d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de supprimer une pièce du jeu.  <br /></td></tr>
-<tr class="separator:adc91f41cf420b07107119d403639621d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acec8ebe56cff6e50618ca33e63f439d3" id="r_acec8ebe56cff6e50618ca33e63f439d3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acec8ebe56cff6e50618ca33e63f439d3">isClippingInStack</a> (<a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *tetraminoAtm)</td></tr>
-<tr class="memdesc:acec8ebe56cff6e50618ca33e63f439d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet prédire si la pièce va rentrer en colision avec les blocs déjà présents.  <br /></td></tr>
-<tr class="separator:acec8ebe56cff6e50618ca33e63f439d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4540cbee1e2edd11790b49cc7333367" id="r_ab4540cbee1e2edd11790b49cc7333367"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4540cbee1e2edd11790b49cc7333367">falling</a> (<a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *tetraminoAtm)</td></tr>
-<tr class="memdesc:ab4540cbee1e2edd11790b49cc7333367"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de faire descendre naturellement une pièce du jeu.  <br /></td></tr>
-<tr class="separator:ab4540cbee1e2edd11790b49cc7333367"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2c2de4ce470468a0af82bb42ea2a338" id="r_ae2c2de4ce470468a0af82bb42ea2a338"><td class="memItemLeft" align="right" valign="top"><a id="ae2c2de4ce470468a0af82bb42ea2a338" name="ae2c2de4ce470468a0af82bb42ea2a338"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>printStack</b> (void)</td></tr>
-<tr class="memdesc:ae2c2de4ce470468a0af82bb42ea2a338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche la stack sur le terminal. <br /></td></tr>
-<tr class="separator:ae2c2de4ce470468a0af82bb42ea2a338"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab44c65b4c5ef7a94e5701f074211391" id="r_aab44c65b4c5ef7a94e5701f074211391"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab44c65b4c5ef7a94e5701f074211391">movePiece</a> (<a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *tetraminoAtm, int direction)</td></tr>
-<tr class="memdesc:aab44c65b4c5ef7a94e5701f074211391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de déplacer une pièce en fonction de sa direction.  <br /></td></tr>
-<tr class="separator:aab44c65b4c5ef7a94e5701f074211391"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a179348ccd32ecd168c08a74b28ba17" id="r_a3a179348ccd32ecd168c08a74b28ba17"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a179348ccd32ecd168c08a74b28ba17">rotatePiece</a> (<a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *tetraminoAtm)</td></tr>
-<tr class="memdesc:a3a179348ccd32ecd168c08a74b28ba17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet tourner une pièce, seulement si elle ne va pas clip.  <br /></td></tr>
-<tr class="separator:a3a179348ccd32ecd168c08a74b28ba17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08cf243217343b641447c591f3c00483" id="r_a08cf243217343b641447c591f3c00483"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08cf243217343b641447c591f3c00483">getLineCompleted</a> ()</td></tr>
-<tr class="memdesc:a08cf243217343b641447c591f3c00483"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate LineCompleted and moveDownStack if lineFull  <br /></td></tr>
-<tr class="separator:a08cf243217343b641447c591f3c00483"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add4f295348a408efff71b59741a90421" id="r_add4f295348a408efff71b59741a90421"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add4f295348a408efff71b59741a90421">addPieceIntoPlayZone</a> (<a class="el" href="struct_t_e_t_r_i_m_i_n_o.html">TETRIMINO</a> *currentTetrimino)</td></tr>
+<tr class="memdesc:add4f295348a408efff71b59741a90421"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de placer la pièce dans le jeu.  <br /></td></tr>
+<tr class="separator:add4f295348a408efff71b59741a90421"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1941f6746172c03277a0e79a4ab8360e" id="r_a1941f6746172c03277a0e79a4ab8360e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1941f6746172c03277a0e79a4ab8360e">removePieceFromPlayZone</a> (<a class="el" href="struct_t_e_t_r_i_m_i_n_o.html">TETRIMINO</a> *currentTetrimino)</td></tr>
+<tr class="memdesc:a1941f6746172c03277a0e79a4ab8360e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de supprimer la pièce du jeu.  <br /></td></tr>
+<tr class="separator:a1941f6746172c03277a0e79a4ab8360e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a049fb027ff40b2097678f696b7ad0ad0" id="r_a049fb027ff40b2097678f696b7ad0ad0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a049fb027ff40b2097678f696b7ad0ad0">isClippingInPlayZone</a> (<a class="el" href="struct_t_e_t_r_i_m_i_n_o.html">TETRIMINO</a> *currentTetrimino)</td></tr>
+<tr class="memdesc:a049fb027ff40b2097678f696b7ad0ad0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de détecter si la pièce rentrerait en collision avec les blocs déjà présents.  <br /></td></tr>
+<tr class="separator:a049fb027ff40b2097678f696b7ad0ad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eb609501ee1a0448bae18623920e616" id="r_a1eb609501ee1a0448bae18623920e616"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1eb609501ee1a0448bae18623920e616">falling</a> (<a class="el" href="struct_t_e_t_r_i_m_i_n_o.html">TETRIMINO</a> *currentTetrimino)</td></tr>
+<tr class="memdesc:a1eb609501ee1a0448bae18623920e616"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de gérer la chute de la pièce.  <br /></td></tr>
+<tr class="separator:a1eb609501ee1a0448bae18623920e616"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a90606f9ac45fb3f2ebd55c8f9adbab" id="r_a4a90606f9ac45fb3f2ebd55c8f9adbab"><td class="memItemLeft" align="right" valign="top"><a id="a4a90606f9ac45fb3f2ebd55c8f9adbab" name="a4a90606f9ac45fb3f2ebd55c8f9adbab"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>printPlayZone</b> (void)</td></tr>
+<tr class="memdesc:a4a90606f9ac45fb3f2ebd55c8f9adbab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche la play zone sur le terminal. <br /></td></tr>
+<tr class="separator:a4a90606f9ac45fb3f2ebd55c8f9adbab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83dfa86093b929619b7c3cb9b9d262f1" id="r_a83dfa86093b929619b7c3cb9b9d262f1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83dfa86093b929619b7c3cb9b9d262f1">movePiece</a> (<a class="el" href="struct_t_e_t_r_i_m_i_n_o.html">TETRIMINO</a> *currentTetrimino, int direction)</td></tr>
+<tr class="memdesc:a83dfa86093b929619b7c3cb9b9d262f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de déplacer une pièce vers la gauche ou la droite.  <br /></td></tr>
+<tr class="separator:a83dfa86093b929619b7c3cb9b9d262f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5219e12d17dba0dd08f62a21437546eb" id="r_a5219e12d17dba0dd08f62a21437546eb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5219e12d17dba0dd08f62a21437546eb">rotatePiece</a> (<a class="el" href="struct_t_e_t_r_i_m_i_n_o.html">TETRIMINO</a> *currentTetrimino)</td></tr>
+<tr class="memdesc:a5219e12d17dba0dd08f62a21437546eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de pivoter de 90° une pièce, seulement si elle ne va pas clip.  <br /></td></tr>
+<tr class="separator:a5219e12d17dba0dd08f62a21437546eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77328ca89eace05fc46bf2c8b61eb36b" id="r_a77328ca89eace05fc46bf2c8b61eb36b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77328ca89eace05fc46bf2c8b61eb36b">getLinesCompleted</a> ()</td></tr>
+<tr class="memdesc:a77328ca89eace05fc46bf2c8b61eb36b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate amount of lines completed, and shifts down the playZone accordingly.  <br /></td></tr>
+<tr class="separator:a77328ca89eace05fc46bf2c8b61eb36b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c23a5fa3b48f5020d6a71fc47a86031" id="r_a7c23a5fa3b48f5020d6a71fc47a86031"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c23a5fa3b48f5020d6a71fc47a86031">removeLine</a> (int line)</td></tr>
-<tr class="memdesc:a7c23a5fa3b48f5020d6a71fc47a86031"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the selected line.  <br /></td></tr>
+<tr class="memdesc:a7c23a5fa3b48f5020d6a71fc47a86031"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the selected line (fill it with 0)  <br /></td></tr>
 <tr class="separator:a7c23a5fa3b48f5020d6a71fc47a86031"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6aa12aa545905283b9192a522c836865" id="r_a6aa12aa545905283b9192a522c836865"><td class="memItemLeft" align="right" valign="top"><a id="a6aa12aa545905283b9192a522c836865" name="a6aa12aa545905283b9192a522c836865"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>resetPlayStack</b> ()</td></tr>
-<tr class="memdesc:a6aa12aa545905283b9192a522c836865"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the PlayStack. <br /></td></tr>
-<tr class="separator:a6aa12aa545905283b9192a522c836865"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac30a0cd4694054e0c19ac09dd5f9771a" id="r_ac30a0cd4694054e0c19ac09dd5f9771a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac30a0cd4694054e0c19ac09dd5f9771a">moveDownStack</a> (int startLine)</td></tr>
-<tr class="memdesc:ac30a0cd4694054e0c19ac09dd5f9771a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move all the stack above "startLine" down by one line.  <br /></td></tr>
-<tr class="separator:ac30a0cd4694054e0c19ac09dd5f9771a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ed5bd4d5ecf8d9597e80b61dad4f0e9" id="r_a2ed5bd4d5ecf8d9597e80b61dad4f0e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ed5bd4d5ecf8d9597e80b61dad4f0e9">randomPiece</a> (<a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *tetraminoAtm)</td></tr>
-<tr class="memdesc:a2ed5bd4d5ecf8d9597e80b61dad4f0e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select a random piece among the tetraminos.  <br /></td></tr>
-<tr class="separator:a2ed5bd4d5ecf8d9597e80b61dad4f0e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac89bfd9069b07f55606a5b8706a21a2b" id="r_ac89bfd9069b07f55606a5b8706a21a2b"><td class="memItemLeft" align="right" valign="top"><a id="ac89bfd9069b07f55606a5b8706a21a2b" name="ac89bfd9069b07f55606a5b8706a21a2b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>resetPlayZone</b> ()</td></tr>
+<tr class="memdesc:ac89bfd9069b07f55606a5b8706a21a2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the PlayZone. <br /></td></tr>
+<tr class="separator:ac89bfd9069b07f55606a5b8706a21a2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5335d0e83ebdc370ca6e466f02a6267" id="r_af5335d0e83ebdc370ca6e466f02a6267"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5335d0e83ebdc370ca6e466f02a6267">moveDownPlayZone</a> (int startLine)</td></tr>
+<tr class="memdesc:af5335d0e83ebdc370ca6e466f02a6267"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move all the play zone above "startLine" down by one line.  <br /></td></tr>
+<tr class="separator:af5335d0e83ebdc370ca6e466f02a6267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7e83a1dc3fb42fc0dca7d9eb0f80d15" id="r_ae7e83a1dc3fb42fc0dca7d9eb0f80d15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7e83a1dc3fb42fc0dca7d9eb0f80d15">randomPiece</a> (<a class="el" href="struct_t_e_t_r_i_m_i_n_o.html">TETRIMINO</a> *currentTetrimino)</td></tr>
+<tr class="memdesc:ae7e83a1dc3fb42fc0dca7d9eb0f80d15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select a random piece among the tetriminos.  <br /></td></tr>
+<tr class="separator:ae7e83a1dc3fb42fc0dca7d9eb0f80d15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade063724957c75dd97f122a38e1ac92b" id="r_ade063724957c75dd97f122a38e1ac92b"><td class="memItemLeft" align="right" valign="top"><a id="ade063724957c75dd97f122a38e1ac92b" name="ade063724957c75dd97f122a38e1ac92b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>tetrisInit</b> ()</td></tr>
+<tr class="memdesc:ade063724957c75dd97f122a38e1ac92b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet d'initialiser le jeu. <br /></td></tr>
 <tr class="separator:ade063724957c75dd97f122a38e1ac92b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf103d842e6d9f5524319094721d4268" id="r_aaf103d842e6d9f5524319094721d4268"><td class="memItemLeft" align="right" valign="top"><a id="aaf103d842e6d9f5524319094721d4268" name="aaf103d842e6d9f5524319094721d4268"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>tetrisGame</b> ()</td></tr>
+<tr class="memitem:aaf103d842e6d9f5524319094721d4268" id="r_aaf103d842e6d9f5524319094721d4268"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf103d842e6d9f5524319094721d4268">tetrisGame</a> ()</td></tr>
+<tr class="memdesc:aaf103d842e6d9f5524319094721d4268"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de lancer le jeu.  <br /></td></tr>
 <tr class="separator:aaf103d842e6d9f5524319094721d4268"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c55dad3d3336ee657f1bf1a4c896978" id="r_a2c55dad3d3336ee657f1bf1a4c896978"><td class="memItemLeft" align="right" valign="top"><a id="a2c55dad3d3336ee657f1bf1a4c896978" name="a2c55dad3d3336ee657f1bf1a4c896978"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>reduceFallDelay</b> ()</td></tr>
-<tr class="memdesc:a2c55dad3d3336ee657f1bf1a4c896978"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reducde the delay of fallTime. <br /></td></tr>
+<tr class="memdesc:a2c55dad3d3336ee657f1bf1a4c896978"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduce the delay of fallTime. <br /></td></tr>
 <tr class="separator:a2c55dad3d3336ee657f1bf1a4c896978"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cd91fd3a9608559c2a87a8ba6cba55f" id="r_a0cd91fd3a9608559c2a87a8ba6cba55f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cd91fd3a9608559c2a87a8ba6cba55f">HAL_GPIO_EXTI_Callback</a> (uint16_t GPIO_Pin)</td></tr>
 <tr class="memdesc:a0cd91fd3a9608559c2a87a8ba6cba55f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gestion des interruptions.  <br /></td></tr>
@@ -199,6 +200,9 @@ Variables</h2></td></tr>
 <tr class="memitem:af26d357baa41d307fa45584a48bfe733" id="r_af26d357baa41d307fa45584a48bfe733"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af26d357baa41d307fa45584a48bfe733">pieceZigzag</a> [4][4]</td></tr>
 <tr class="memdesc:af26d357baa41d307fa45584a48bfe733"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zigzag piece in 4 by 4 grid.  <br /></td></tr>
 <tr class="separator:af26d357baa41d307fa45584a48bfe733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49918ba313471e7e46a0da237016e95e" id="r_a49918ba313471e7e46a0da237016e95e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49918ba313471e7e46a0da237016e95e">pieceS</a> [4][4]</td></tr>
+<tr class="memdesc:a49918ba313471e7e46a0da237016e95e"><td class="mdescLeft">&#160;</td><td class="mdescRight">S piece in 4 by 4 grid.  <br /></td></tr>
+<tr class="separator:a49918ba313471e7e46a0da237016e95e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac86ee2d2c05564b3d9f159c0a553913c" id="r_ac86ee2d2c05564b3d9f159c0a553913c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac86ee2d2c05564b3d9f159c0a553913c">pieceBar</a> [4][4]</td></tr>
 <tr class="memdesc:ac86ee2d2c05564b3d9f159c0a553913c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bar piece in 4 by 4 grid.  <br /></td></tr>
 <tr class="separator:ac86ee2d2c05564b3d9f159c0a553913c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -208,12 +212,15 @@ Variables</h2></td></tr>
 <tr class="memitem:a5b2e17510c0e92ae5ff2986fdec4932a" id="r_a5b2e17510c0e92ae5ff2986fdec4932a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b2e17510c0e92ae5ff2986fdec4932a">pieceL</a> [4][4]</td></tr>
 <tr class="memdesc:a5b2e17510c0e92ae5ff2986fdec4932a"><td class="mdescLeft">&#160;</td><td class="mdescRight">L piece in 4 by 4 grid.  <br /></td></tr>
 <tr class="separator:a5b2e17510c0e92ae5ff2986fdec4932a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a412ac308292218f2af8d61e2b94498b9" id="r_a412ac308292218f2af8d61e2b94498b9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a412ac308292218f2af8d61e2b94498b9">pieceJ</a> [4][4]</td></tr>
+<tr class="memdesc:a412ac308292218f2af8d61e2b94498b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">J piece in 4 by 4 grid.  <br /></td></tr>
+<tr class="separator:a412ac308292218f2af8d61e2b94498b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac378d659dc480fdcad748ff2a083ede9" id="r_ac378d659dc480fdcad748ff2a083ede9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac378d659dc480fdcad748ff2a083ede9">pieceT</a> [4][4]</td></tr>
 <tr class="memdesc:ac378d659dc480fdcad748ff2a083ede9"><td class="mdescLeft">&#160;</td><td class="mdescRight">T piece in 4 by 4 grid.  <br /></td></tr>
 <tr class="separator:ac378d659dc480fdcad748ff2a083ede9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15f6a876cfe88237588b2ae13f1cb2f8" id="r_a15f6a876cfe88237588b2ae13f1cb2f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15f6a876cfe88237588b2ae13f1cb2f8">playStack</a> [23][16]</td></tr>
-<tr class="memdesc:a15f6a876cfe88237588b2ae13f1cb2f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">PlayWindow.  <br /></td></tr>
-<tr class="separator:a15f6a876cfe88237588b2ae13f1cb2f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7be166db2b2f61bfeaccb28b6b053172" id="r_a7be166db2b2f61bfeaccb28b6b053172"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7be166db2b2f61bfeaccb28b6b053172">playZone</a> [23][16]</td></tr>
+<tr class="memdesc:a7be166db2b2f61bfeaccb28b6b053172"><td class="mdescLeft">&#160;</td><td class="mdescRight">PlayZone.  <br /></td></tr>
+<tr class="separator:a7be166db2b2f61bfeaccb28b6b053172"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26a0ac6017e6c2c5d95c6c4ef9cd0c77" id="r_a26a0ac6017e6c2c5d95c6c4ef9cd0c77"><td class="memItemLeft" align="right" valign="top"><a id="a26a0ac6017e6c2c5d95c6c4ef9cd0c77" name="a26a0ac6017e6c2c5d95c6c4ef9cd0c77"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>nextFallTime</b> = 0</td></tr>
 <tr class="separator:a26a0ac6017e6c2c5d95c6c4ef9cd0c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -234,33 +241,33 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>userInput</b> = 0</td>
 <div class="textblock"><p>: Main program of the Tetris Game </p>
 <dl class="section date"><dt>Date</dt><dd>08 février 2024 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a375de1b92009d1f690f457586a470145" name="a375de1b92009d1f690f457586a470145"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a375de1b92009d1f690f457586a470145">&#9670;&#160;</a></span>addPieceIntoStack()</h2>
+<a id="add4f295348a408efff71b59741a90421" name="add4f295348a408efff71b59741a90421"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add4f295348a408efff71b59741a90421">&#9670;&#160;</a></span>addPieceIntoPlayZone()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void addPieceIntoStack </td>
+          <td class="memname">void addPieceIntoPlayZone </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *</td>          <td class="paramname"><span class="paramname"><em>tetraminoAtm</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_t_e_t_r_i_m_i_n_o.html">TETRIMINO</a> *</td>          <td class="paramname"><span class="paramname"><em>currentTetrimino</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Permet de placer une pièce dans le jeu. </p>
+<p>Permet de placer la pièce dans le jeu. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">*tetraminoAtm</td><td>Current tetramino used </td></tr>
+    <tr><td class="paramname">*currentTetrimino</td><td>Current tetrimino used </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="ab4540cbee1e2edd11790b49cc7333367" name="ab4540cbee1e2edd11790b49cc7333367"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4540cbee1e2edd11790b49cc7333367">&#9670;&#160;</a></span>falling()</h2>
+<a id="a1eb609501ee1a0448bae18623920e616" name="a1eb609501ee1a0448bae18623920e616"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1eb609501ee1a0448bae18623920e616">&#9670;&#160;</a></span>falling()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -268,16 +275,16 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>userInput</b> = 0</td>
         <tr>
           <td class="memname">int falling </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *</td>          <td class="paramname"><span class="paramname"><em>tetraminoAtm</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_t_e_t_r_i_m_i_n_o.html">TETRIMINO</a> *</td>          <td class="paramname"><span class="paramname"><em>currentTetrimino</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Permet de faire descendre naturellement une pièce du jeu. </p>
+<p>Permet de gérer la chute de la pièce. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">*tetraminoAtm</td><td>Current tetramino used</td></tr>
+    <tr><td class="paramname">*currentTetrimino</td><td>Current tetrimino used</td></tr>
   </table>
   </dd>
 </dl>
@@ -290,14 +297,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>userInput</b> = 0</td>
 
 </div>
 </div>
-<a id="a08cf243217343b641447c591f3c00483" name="a08cf243217343b641447c591f3c00483"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08cf243217343b641447c591f3c00483">&#9670;&#160;</a></span>getLineCompleted()</h2>
+<a id="a77328ca89eace05fc46bf2c8b61eb36b" name="a77328ca89eace05fc46bf2c8b61eb36b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77328ca89eace05fc46bf2c8b61eb36b">&#9670;&#160;</a></span>getLinesCompleted()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int getLineCompleted </td>
+          <td class="memname">int getLinesCompleted </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
@@ -305,7 +312,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>userInput</b> = 0</td>
       </table>
 </div><div class="memdoc">
 
-<p>calculate LineCompleted and moveDownStack if lineFull </p>
+<p>Calculate amount of lines completed, and shifts down the playZone accordingly. </p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">linesCount</td><td>number of Lines completed </td></tr>
@@ -365,25 +372,25 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>userInput</b> = 0</td>
 
 </div>
 </div>
-<a id="acec8ebe56cff6e50618ca33e63f439d3" name="acec8ebe56cff6e50618ca33e63f439d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acec8ebe56cff6e50618ca33e63f439d3">&#9670;&#160;</a></span>isClippingInStack()</h2>
+<a id="a049fb027ff40b2097678f696b7ad0ad0" name="a049fb027ff40b2097678f696b7ad0ad0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a049fb027ff40b2097678f696b7ad0ad0">&#9670;&#160;</a></span>isClippingInPlayZone()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int isClippingInStack </td>
+          <td class="memname">int isClippingInPlayZone </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *</td>          <td class="paramname"><span class="paramname"><em>tetraminoAtm</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_t_e_t_r_i_m_i_n_o.html">TETRIMINO</a> *</td>          <td class="paramname"><span class="paramname"><em>currentTetrimino</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Permet prédire si la pièce va rentrer en colision avec les blocs déjà présents. </p>
+<p>Permet de détecter si la pièce rentrerait en collision avec les blocs déjà présents. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">*tetraminoAtm</td><td>Current tetramino used</td></tr>
+    <tr><td class="paramname">*currentTetrimino</td><td>Current tetrimino used</td></tr>
   </table>
   </dd>
 </dl>
@@ -396,14 +403,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>userInput</b> = 0</td>
 
 </div>
 </div>
-<a id="ac30a0cd4694054e0c19ac09dd5f9771a" name="ac30a0cd4694054e0c19ac09dd5f9771a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac30a0cd4694054e0c19ac09dd5f9771a">&#9670;&#160;</a></span>moveDownStack()</h2>
+<a id="af5335d0e83ebdc370ca6e466f02a6267" name="af5335d0e83ebdc370ca6e466f02a6267"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5335d0e83ebdc370ca6e466f02a6267">&#9670;&#160;</a></span>moveDownPlayZone()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void moveDownStack </td>
+          <td class="memname">void moveDownPlayZone </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>startLine</em></span></td><td>)</td>
           <td></td>
@@ -411,7 +418,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>userInput</b> = 0</td>
       </table>
 </div><div class="memdoc">
 
-<p>Move all the stack above "startLine" down by one line. </p>
+<p>Move all the play zone above "startLine" down by one line. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">startLine</td><td>line which got cleared </td></tr>
@@ -421,8 +428,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>userInput</b> = 0</td>
 
 </div>
 </div>
-<a id="aab44c65b4c5ef7a94e5701f074211391" name="aab44c65b4c5ef7a94e5701f074211391"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab44c65b4c5ef7a94e5701f074211391">&#9670;&#160;</a></span>movePiece()</h2>
+<a id="a83dfa86093b929619b7c3cb9b9d262f1" name="a83dfa86093b929619b7c3cb9b9d262f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83dfa86093b929619b7c3cb9b9d262f1">&#9670;&#160;</a></span>movePiece()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -430,7 +437,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>userInput</b> = 0</td>
         <tr>
           <td class="memname">int movePiece </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *</td>          <td class="paramname"><span class="paramname"><em>tetraminoAtm</em>, </span></td>
+          <td class="paramtype"><a class="el" href="struct_t_e_t_r_i_m_i_n_o.html">TETRIMINO</a> *</td>          <td class="paramname"><span class="paramname"><em>currentTetrimino</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -440,10 +447,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>userInput</b> = 0</td>
       </table>
 </div><div class="memdoc">
 
-<p>Permet de déplacer une pièce en fonction de sa direction. </p>
+<p>Permet de déplacer une pièce vers la gauche ou la droite. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">*tetraminoAtm</td><td>Current tetramino used </td></tr>
+    <tr><td class="paramname">*currentTetrimino</td><td>Current tetrimino used </td></tr>
     <tr><td class="paramname">direction</td><td>userInputs </td></tr>
   </table>
   </dd>
@@ -457,8 +464,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>userInput</b> = 0</td>
 
 </div>
 </div>
-<a id="a2ed5bd4d5ecf8d9597e80b61dad4f0e9" name="a2ed5bd4d5ecf8d9597e80b61dad4f0e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ed5bd4d5ecf8d9597e80b61dad4f0e9">&#9670;&#160;</a></span>randomPiece()</h2>
+<a id="ae7e83a1dc3fb42fc0dca7d9eb0f80d15" name="ae7e83a1dc3fb42fc0dca7d9eb0f80d15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7e83a1dc3fb42fc0dca7d9eb0f80d15">&#9670;&#160;</a></span>randomPiece()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -466,16 +473,16 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>userInput</b> = 0</td>
         <tr>
           <td class="memname">void randomPiece </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *</td>          <td class="paramname"><span class="paramname"><em>tetraminoAtm</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_t_e_t_r_i_m_i_n_o.html">TETRIMINO</a> *</td>          <td class="paramname"><span class="paramname"><em>currentTetrimino</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Select a random piece among the tetraminos. </p>
+<p>Select a random piece among the tetriminos. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tetraminoAtm</td><td>list of tetraminos </td></tr>
+    <tr><td class="paramname">currentTetrimino</td><td>list of tetriminos </td></tr>
   </table>
   </dd>
 </dl>
@@ -497,7 +504,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>userInput</b> = 0</td>
       </table>
 </div><div class="memdoc">
 
-<p>Remove the selected line. </p>
+<p>Remove the selected line (fill it with 0) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">line</td><td>line selected </td></tr>
@@ -507,33 +514,33 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>userInput</b> = 0</td>
 
 </div>
 </div>
-<a id="adc91f41cf420b07107119d403639621d" name="adc91f41cf420b07107119d403639621d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc91f41cf420b07107119d403639621d">&#9670;&#160;</a></span>removePieceFromStack()</h2>
+<a id="a1941f6746172c03277a0e79a4ab8360e" name="a1941f6746172c03277a0e79a4ab8360e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1941f6746172c03277a0e79a4ab8360e">&#9670;&#160;</a></span>removePieceFromPlayZone()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void removePieceFromStack </td>
+          <td class="memname">void removePieceFromPlayZone </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *</td>          <td class="paramname"><span class="paramname"><em>tetraminoAtm</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_t_e_t_r_i_m_i_n_o.html">TETRIMINO</a> *</td>          <td class="paramname"><span class="paramname"><em>currentTetrimino</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Permet de supprimer une pièce du jeu. </p>
+<p>Permet de supprimer la pièce du jeu. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">*tetraminoAtm</td><td>Current tetramino used </td></tr>
+    <tr><td class="paramname">*currentTetrimino</td><td>Current tetrimino used </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a3a179348ccd32ecd168c08a74b28ba17" name="a3a179348ccd32ecd168c08a74b28ba17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a179348ccd32ecd168c08a74b28ba17">&#9670;&#160;</a></span>rotatePiece()</h2>
+<a id="a5219e12d17dba0dd08f62a21437546eb" name="a5219e12d17dba0dd08f62a21437546eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5219e12d17dba0dd08f62a21437546eb">&#9670;&#160;</a></span>rotatePiece()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -541,22 +548,47 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>userInput</b> = 0</td>
         <tr>
           <td class="memname">int rotatePiece </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_t_e_t_r_a_m_i_n_o___a_t_m.html">TETRAMINO_ATM</a> *</td>          <td class="paramname"><span class="paramname"><em>tetraminoAtm</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_t_e_t_r_i_m_i_n_o.html">TETRIMINO</a> *</td>          <td class="paramname"><span class="paramname"><em>currentTetrimino</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Permet tourner une pièce, seulement si elle ne va pas clip. </p>
+<p>Permet de pivoter de 90° une pièce, seulement si elle ne va pas clip. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">*tetraminoAtm</td><td>Current tetramino used </td></tr>
+    <tr><td class="paramname">*currentTetrimino</td><td>Current tetrimino used </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">state</td><td>1 if rotated and 0 if clipping </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aaf103d842e6d9f5524319094721d4268" name="aaf103d842e6d9f5524319094721d4268"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf103d842e6d9f5524319094721d4268">&#9670;&#160;</a></span>tetrisGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int tetrisGame </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Permet de lancer le jeu. </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>si erreur </td></tr>
   </table>
   </dd>
 </dl>
@@ -584,6 +616,26 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>userInput</b> = 0</td>
 
 </div>
 </div>
+<a id="a412ac308292218f2af8d61e2b94498b9" name="a412ac308292218f2af8d61e2b94498b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a412ac308292218f2af8d61e2b94498b9">&#9670;&#160;</a></span>pieceJ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int pieceJ[4][4]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= { {0,0,0,0},</div>
+<div class="line">                    {0,0,1,0},</div>
+<div class="line">                    {0,0,1,0},</div>
+<div class="line">                    {0,1,1,0}}</div>
+</div><!-- fragment -->
+<p>J piece in 4 by 4 grid. </p>
+
+</div>
+</div>
 <a id="a5b2e17510c0e92ae5ff2986fdec4932a" name="a5b2e17510c0e92ae5ff2986fdec4932a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5b2e17510c0e92ae5ff2986fdec4932a">&#9670;&#160;</a></span>pieceL</h2>
 
@@ -601,6 +653,26 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>userInput</b> = 0</td>
 <div class="line">                    {0,1,1,0}}</div>
 </div><!-- fragment -->
 <p>L piece in 4 by 4 grid. </p>
+
+</div>
+</div>
+<a id="a49918ba313471e7e46a0da237016e95e" name="a49918ba313471e7e46a0da237016e95e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49918ba313471e7e46a0da237016e95e">&#9670;&#160;</a></span>pieceS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int pieceS[4][4]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">=   {{0,0,0,0},</div>
+<div class="line">                    {0,0,1,1},</div>
+<div class="line">                    {0,1,1,0},</div>
+<div class="line">                    {0,0,0,0}}</div>
+</div><!-- fragment -->
+<p>S piece in 4 by 4 grid. </p>
 
 </div>
 </div>
@@ -664,18 +736,18 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>userInput</b> = 0</td>
 
 </div>
 </div>
-<a id="a15f6a876cfe88237588b2ae13f1cb2f8" name="a15f6a876cfe88237588b2ae13f1cb2f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15f6a876cfe88237588b2ae13f1cb2f8">&#9670;&#160;</a></span>playStack</h2>
+<a id="a7be166db2b2f61bfeaccb28b6b053172" name="a7be166db2b2f61bfeaccb28b6b053172"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7be166db2b2f61bfeaccb28b6b053172">&#9670;&#160;</a></span>playZone</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int playStack[23][16]</td>
+          <td class="memname">int playZone[23][16]</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= </div>
+<b>Initial value:</b><div class="fragment"><div class="line">=</div>
 <div class="line">    {{1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1},</div>
 <div class="line">    {1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1},</div>
 <div class="line">    {1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1},</div>
@@ -700,7 +772,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>userInput</b> = 0</td>
 <div class="line">    {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},</div>
 <div class="line">    {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}}</div>
 </div><!-- fragment -->
-<p>PlayWindow. </p>
+<p>PlayZone. </p>
 
 </div>
 </div>

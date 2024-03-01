@@ -14,8 +14,8 @@
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}}
-\begin{DoxyCompactList}\small\item\em Structure to locate the current tetramino in the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+struct \mbox{\hyperlink{struct_t_e_t_r_i_m_i_n_o}{TETRIMINO}}
+\begin{DoxyCompactList}\small\item\em Structure to locate the current tetrimino in the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
@@ -54,41 +54,40 @@ enum \mbox{\hyperlink{tetris_game_8c_afde3b66b6b41bd008469f366fa756e54}{inputs}}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{tetris_game_8c_a375de1b92009d1f690f457586a470145}{add\+Piece\+Into\+Stack}} (\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}tetramino\+Atm)
-\begin{DoxyCompactList}\small\item\em Permet de placer une pièce dans le jeu. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{tetris_game_8c_adc91f41cf420b07107119d403639621d}{remove\+Piece\+From\+Stack}} (\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}tetramino\+Atm)
-\begin{DoxyCompactList}\small\item\em Permet de supprimer une pièce du jeu. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{tetris_game_8c_acec8ebe56cff6e50618ca33e63f439d3}{is\+Clipping\+In\+Stack}} (\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}tetramino\+Atm)
-\begin{DoxyCompactList}\small\item\em Permet prédire si la pièce va rentrer en colision avec les blocs déjà présents. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{tetris_game_8c_ab4540cbee1e2edd11790b49cc7333367}{falling}} (\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}tetramino\+Atm)
-\begin{DoxyCompactList}\small\item\em Permet de faire descendre naturellement une pièce du jeu. \end{DoxyCompactList}\item 
-\Hypertarget{tetris_game_8c_ae2c2de4ce470468a0af82bb42ea2a338}\label{tetris_game_8c_ae2c2de4ce470468a0af82bb42ea2a338} 
-void {\bfseries print\+Stack} (void)
-\begin{DoxyCompactList}\small\item\em Affiche la stack sur le terminal. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{tetris_game_8c_aab44c65b4c5ef7a94e5701f074211391}{move\+Piece}} (\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}tetramino\+Atm, int direction)
-\begin{DoxyCompactList}\small\item\em Permet de déplacer une pièce en fonction de sa direction. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{tetris_game_8c_a3a179348ccd32ecd168c08a74b28ba17}{rotate\+Piece}} (\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}tetramino\+Atm)
-\begin{DoxyCompactList}\small\item\em Permet tourner une pièce, seulement si elle ne va pas clip. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{tetris_game_8c_a08cf243217343b641447c591f3c00483}{get\+Line\+Completed}} ()
-\begin{DoxyCompactList}\small\item\em calculate Line\+Completed and move\+Down\+Stack if line\+Full \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tetris_game_8c_add4f295348a408efff71b59741a90421}{add\+Piece\+Into\+Play\+Zone}} (\mbox{\hyperlink{struct_t_e_t_r_i_m_i_n_o}{TETRIMINO}} \texorpdfstring{$\ast$}{*}current\+Tetrimino)
+\begin{DoxyCompactList}\small\item\em Permet de placer la pièce dans le jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tetris_game_8c_a1941f6746172c03277a0e79a4ab8360e}{remove\+Piece\+From\+Play\+Zone}} (\mbox{\hyperlink{struct_t_e_t_r_i_m_i_n_o}{TETRIMINO}} \texorpdfstring{$\ast$}{*}current\+Tetrimino)
+\begin{DoxyCompactList}\small\item\em Permet de supprimer la pièce du jeu. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tetris_game_8c_a049fb027ff40b2097678f696b7ad0ad0}{is\+Clipping\+In\+Play\+Zone}} (\mbox{\hyperlink{struct_t_e_t_r_i_m_i_n_o}{TETRIMINO}} \texorpdfstring{$\ast$}{*}current\+Tetrimino)
+\begin{DoxyCompactList}\small\item\em Permet de détecter si la pièce rentrerait en collision avec les blocs déjà présents. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tetris_game_8c_a1eb609501ee1a0448bae18623920e616}{falling}} (\mbox{\hyperlink{struct_t_e_t_r_i_m_i_n_o}{TETRIMINO}} \texorpdfstring{$\ast$}{*}current\+Tetrimino)
+\begin{DoxyCompactList}\small\item\em Permet de gérer la chute de la pièce. \end{DoxyCompactList}\item 
+\Hypertarget{tetris_game_8c_a4a90606f9ac45fb3f2ebd55c8f9adbab}\label{tetris_game_8c_a4a90606f9ac45fb3f2ebd55c8f9adbab} 
+void {\bfseries print\+Play\+Zone} (void)
+\begin{DoxyCompactList}\small\item\em Affiche la play zone sur le terminal. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tetris_game_8c_a83dfa86093b929619b7c3cb9b9d262f1}{move\+Piece}} (\mbox{\hyperlink{struct_t_e_t_r_i_m_i_n_o}{TETRIMINO}} \texorpdfstring{$\ast$}{*}current\+Tetrimino, int direction)
+\begin{DoxyCompactList}\small\item\em Permet de déplacer une pièce vers la gauche ou la droite. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tetris_game_8c_a5219e12d17dba0dd08f62a21437546eb}{rotate\+Piece}} (\mbox{\hyperlink{struct_t_e_t_r_i_m_i_n_o}{TETRIMINO}} \texorpdfstring{$\ast$}{*}current\+Tetrimino)
+\begin{DoxyCompactList}\small\item\em Permet de pivoter de 90° une pièce, seulement si elle ne va pas clip. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tetris_game_8c_a77328ca89eace05fc46bf2c8b61eb36b}{get\+Lines\+Completed}} ()
+\begin{DoxyCompactList}\small\item\em Calculate amount of lines completed, and shifts down the play\+Zone accordingly. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{tetris_game_8c_a7c23a5fa3b48f5020d6a71fc47a86031}{remove\+Line}} (int line)
-\begin{DoxyCompactList}\small\item\em Remove the selected line. \end{DoxyCompactList}\item 
-\Hypertarget{tetris_game_8c_a6aa12aa545905283b9192a522c836865}\label{tetris_game_8c_a6aa12aa545905283b9192a522c836865} 
-void {\bfseries reset\+Play\+Stack} ()
-\begin{DoxyCompactList}\small\item\em Reset the Play\+Stack. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{tetris_game_8c_ac30a0cd4694054e0c19ac09dd5f9771a}{move\+Down\+Stack}} (int start\+Line)
-\begin{DoxyCompactList}\small\item\em Move all the stack above "{}start\+Line"{} down by one line. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{tetris_game_8c_a2ed5bd4d5ecf8d9597e80b61dad4f0e9}{random\+Piece}} (\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}tetramino\+Atm)
-\begin{DoxyCompactList}\small\item\em Select a random piece among the tetraminos. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Remove the selected line (fill it with 0) \end{DoxyCompactList}\item 
+\Hypertarget{tetris_game_8c_ac89bfd9069b07f55606a5b8706a21a2b}\label{tetris_game_8c_ac89bfd9069b07f55606a5b8706a21a2b} 
+void {\bfseries reset\+Play\+Zone} ()
+\begin{DoxyCompactList}\small\item\em Reset the Play\+Zone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tetris_game_8c_af5335d0e83ebdc370ca6e466f02a6267}{move\+Down\+Play\+Zone}} (int start\+Line)
+\begin{DoxyCompactList}\small\item\em Move all the play zone above "{}start\+Line"{} down by one line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tetris_game_8c_ae7e83a1dc3fb42fc0dca7d9eb0f80d15}{random\+Piece}} (\mbox{\hyperlink{struct_t_e_t_r_i_m_i_n_o}{TETRIMINO}} \texorpdfstring{$\ast$}{*}current\+Tetrimino)
+\begin{DoxyCompactList}\small\item\em Select a random piece among the tetriminos. \end{DoxyCompactList}\item 
 \Hypertarget{tetris_game_8c_ade063724957c75dd97f122a38e1ac92b}\label{tetris_game_8c_ade063724957c75dd97f122a38e1ac92b} 
 void {\bfseries tetris\+Init} ()
-\item 
-\Hypertarget{tetris_game_8c_aaf103d842e6d9f5524319094721d4268}\label{tetris_game_8c_aaf103d842e6d9f5524319094721d4268} 
-int {\bfseries tetris\+Game} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}initialiser le jeu. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tetris_game_8c_aaf103d842e6d9f5524319094721d4268}{tetris\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Permet de lancer le jeu. \end{DoxyCompactList}\item 
 \Hypertarget{tetris_game_8c_a2c55dad3d3336ee657f1bf1a4c896978}\label{tetris_game_8c_a2c55dad3d3336ee657f1bf1a4c896978} 
 void {\bfseries reduce\+Fall\+Delay} ()
-\begin{DoxyCompactList}\small\item\em Reducde the delay of fall\+Time. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Reduce the delay of fall\+Time. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{tetris_game_8c_a0cd91fd3a9608559c2a87a8ba6cba55f}{HAL\+\_\+\+GPIO\+\_\+\+EXTI\+\_\+\+Callback}} (uint16\+\_\+t GPIO\+\_\+\+Pin)
 \begin{DoxyCompactList}\small\item\em Gestion des interruptions. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{tetris_game_8c_a8a3b0ad512a6e6c6157440b68d395eac}{HAL\+\_\+\+TIM\+\_\+\+Period\+Elapsed\+Callback}} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}htim)
@@ -98,16 +97,20 @@ void \mbox{\hyperlink{tetris_game_8c_a8a3b0ad512a6e6c6157440b68d395eac}{HAL\+\_\
 \item 
 int \mbox{\hyperlink{tetris_game_8c_af26d357baa41d307fa45584a48bfe733}{piece\+Zigzag}} \mbox{[}4\mbox{]}\mbox{[}4\mbox{]}
 \begin{DoxyCompactList}\small\item\em Zigzag piece in 4 by 4 grid. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tetris_game_8c_a49918ba313471e7e46a0da237016e95e}{pieceS}} \mbox{[}4\mbox{]}\mbox{[}4\mbox{]}
+\begin{DoxyCompactList}\small\item\em S piece in 4 by 4 grid. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{tetris_game_8c_ac86ee2d2c05564b3d9f159c0a553913c}{piece\+Bar}} \mbox{[}4\mbox{]}\mbox{[}4\mbox{]}
 \begin{DoxyCompactList}\small\item\em Bar piece in 4 by 4 grid. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{tetris_game_8c_a2dc8d45c928817ebdc407620216fc78d}{piece\+Square}} \mbox{[}4\mbox{]}\mbox{[}4\mbox{]}
 \begin{DoxyCompactList}\small\item\em Square piece in 4 by 4 grid. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{tetris_game_8c_a5b2e17510c0e92ae5ff2986fdec4932a}{pieceL}} \mbox{[}4\mbox{]}\mbox{[}4\mbox{]}
 \begin{DoxyCompactList}\small\item\em L piece in 4 by 4 grid. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tetris_game_8c_a412ac308292218f2af8d61e2b94498b9}{pieceJ}} \mbox{[}4\mbox{]}\mbox{[}4\mbox{]}
+\begin{DoxyCompactList}\small\item\em J piece in 4 by 4 grid. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{tetris_game_8c_ac378d659dc480fdcad748ff2a083ede9}{pieceT}} \mbox{[}4\mbox{]}\mbox{[}4\mbox{]}
 \begin{DoxyCompactList}\small\item\em T piece in 4 by 4 grid. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{tetris_game_8c_a15f6a876cfe88237588b2ae13f1cb2f8}{play\+Stack}} \mbox{[}23\mbox{]}\mbox{[}16\mbox{]}
-\begin{DoxyCompactList}\small\item\em Play\+Window. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{tetris_game_8c_a7be166db2b2f61bfeaccb28b6b053172}{play\+Zone}} \mbox{[}23\mbox{]}\mbox{[}16\mbox{]}
+\begin{DoxyCompactList}\small\item\em Play\+Zone. \end{DoxyCompactList}\item 
 \Hypertarget{tetris_game_8c_a26a0ac6017e6c2c5d95c6c4ef9cd0c77}\label{tetris_game_8c_a26a0ac6017e6c2c5d95c6c4ef9cd0c77} 
 uint32\+\_\+t {\bfseries next\+Fall\+Time} = 0
 \item 
@@ -134,34 +137,34 @@ int {\bfseries user\+Input} = 0
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{tetris_game_8c_a375de1b92009d1f690f457586a470145}\label{tetris_game_8c_a375de1b92009d1f690f457586a470145} 
-\index{tetrisGame.c@{tetrisGame.c}!addPieceIntoStack@{addPieceIntoStack}}
-\index{addPieceIntoStack@{addPieceIntoStack}!tetrisGame.c@{tetrisGame.c}}
-\doxysubsubsection{\texorpdfstring{addPieceIntoStack()}{addPieceIntoStack()}}
-{\footnotesize\ttfamily void add\+Piece\+Into\+Stack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}}]{tetramino\+Atm }\end{DoxyParamCaption})}
+\Hypertarget{tetris_game_8c_add4f295348a408efff71b59741a90421}\label{tetris_game_8c_add4f295348a408efff71b59741a90421} 
+\index{tetrisGame.c@{tetrisGame.c}!addPieceIntoPlayZone@{addPieceIntoPlayZone}}
+\index{addPieceIntoPlayZone@{addPieceIntoPlayZone}!tetrisGame.c@{tetrisGame.c}}
+\doxysubsubsection{\texorpdfstring{addPieceIntoPlayZone()}{addPieceIntoPlayZone()}}
+{\footnotesize\ttfamily void add\+Piece\+Into\+Play\+Zone (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_e_t_r_i_m_i_n_o}{TETRIMINO}} \texorpdfstring{$\ast$}{*}}]{current\+Tetrimino }\end{DoxyParamCaption})}
 
 
 
-Permet de placer une pièce dans le jeu. 
+Permet de placer la pièce dans le jeu. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em \texorpdfstring{$\ast$}{*}tetramino\+Atm} & Current tetramino used \\
+{\em \texorpdfstring{$\ast$}{*}current\+Tetrimino} & Current tetrimino used \\
 \hline
 \end{DoxyParams}
-\Hypertarget{tetris_game_8c_ab4540cbee1e2edd11790b49cc7333367}\label{tetris_game_8c_ab4540cbee1e2edd11790b49cc7333367} 
+\Hypertarget{tetris_game_8c_a1eb609501ee1a0448bae18623920e616}\label{tetris_game_8c_a1eb609501ee1a0448bae18623920e616} 
 \index{tetrisGame.c@{tetrisGame.c}!falling@{falling}}
 \index{falling@{falling}!tetrisGame.c@{tetrisGame.c}}
 \doxysubsubsection{\texorpdfstring{falling()}{falling()}}
-{\footnotesize\ttfamily int falling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}}]{tetramino\+Atm }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int falling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_e_t_r_i_m_i_n_o}{TETRIMINO}} \texorpdfstring{$\ast$}{*}}]{current\+Tetrimino }\end{DoxyParamCaption})}
 
 
 
-Permet de faire descendre naturellement une pièce du jeu. 
+Permet de gérer la chute de la pièce. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em \texorpdfstring{$\ast$}{*}tetramino\+Atm} & Current tetramino used\\
+{\em \texorpdfstring{$\ast$}{*}current\+Tetrimino} & Current tetrimino used\\
 \hline
 \end{DoxyParams}
 
@@ -169,15 +172,15 @@ Permet de faire descendre naturellement une pièce du jeu.
 {\em state} & PIECE\+\_\+\+TOUCHED, or PIECE\+\_\+\+FALLED \\
 \hline
 \end{DoxyRetVals}
-\Hypertarget{tetris_game_8c_a08cf243217343b641447c591f3c00483}\label{tetris_game_8c_a08cf243217343b641447c591f3c00483} 
-\index{tetrisGame.c@{tetrisGame.c}!getLineCompleted@{getLineCompleted}}
-\index{getLineCompleted@{getLineCompleted}!tetrisGame.c@{tetrisGame.c}}
-\doxysubsubsection{\texorpdfstring{getLineCompleted()}{getLineCompleted()}}
-{\footnotesize\ttfamily int get\+Line\+Completed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\Hypertarget{tetris_game_8c_a77328ca89eace05fc46bf2c8b61eb36b}\label{tetris_game_8c_a77328ca89eace05fc46bf2c8b61eb36b} 
+\index{tetrisGame.c@{tetrisGame.c}!getLinesCompleted@{getLinesCompleted}}
+\index{getLinesCompleted@{getLinesCompleted}!tetrisGame.c@{tetrisGame.c}}
+\doxysubsubsection{\texorpdfstring{getLinesCompleted()}{getLinesCompleted()}}
+{\footnotesize\ttfamily int get\+Lines\+Completed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-calculate Line\+Completed and move\+Down\+Stack if line\+Full 
+Calculate amount of lines completed, and shifts down the play\+Zone accordingly. 
 
 
 \begin{DoxyRetVals}{Return values}
@@ -214,19 +217,19 @@ Fin du timer pour lire les boutons.
 {\em \texorpdfstring{$\ast$}{*}htim} & timer \\
 \hline
 \end{DoxyParams}
-\Hypertarget{tetris_game_8c_acec8ebe56cff6e50618ca33e63f439d3}\label{tetris_game_8c_acec8ebe56cff6e50618ca33e63f439d3} 
-\index{tetrisGame.c@{tetrisGame.c}!isClippingInStack@{isClippingInStack}}
-\index{isClippingInStack@{isClippingInStack}!tetrisGame.c@{tetrisGame.c}}
-\doxysubsubsection{\texorpdfstring{isClippingInStack()}{isClippingInStack()}}
-{\footnotesize\ttfamily int is\+Clipping\+In\+Stack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}}]{tetramino\+Atm }\end{DoxyParamCaption})}
+\Hypertarget{tetris_game_8c_a049fb027ff40b2097678f696b7ad0ad0}\label{tetris_game_8c_a049fb027ff40b2097678f696b7ad0ad0} 
+\index{tetrisGame.c@{tetrisGame.c}!isClippingInPlayZone@{isClippingInPlayZone}}
+\index{isClippingInPlayZone@{isClippingInPlayZone}!tetrisGame.c@{tetrisGame.c}}
+\doxysubsubsection{\texorpdfstring{isClippingInPlayZone()}{isClippingInPlayZone()}}
+{\footnotesize\ttfamily int is\+Clipping\+In\+Play\+Zone (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_e_t_r_i_m_i_n_o}{TETRIMINO}} \texorpdfstring{$\ast$}{*}}]{current\+Tetrimino }\end{DoxyParamCaption})}
 
 
 
-Permet prédire si la pièce va rentrer en colision avec les blocs déjà présents. 
+Permet de détecter si la pièce rentrerait en collision avec les blocs déjà présents. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em \texorpdfstring{$\ast$}{*}tetramino\+Atm} & Current tetramino used\\
+{\em \texorpdfstring{$\ast$}{*}current\+Tetrimino} & Current tetrimino used\\
 \hline
 \end{DoxyParams}
 
@@ -234,34 +237,34 @@ Permet prédire si la pièce va rentrer en colision avec les blocs déjà prése
 {\em state} & 1 if would clip, 0 if not \\
 \hline
 \end{DoxyRetVals}
-\Hypertarget{tetris_game_8c_ac30a0cd4694054e0c19ac09dd5f9771a}\label{tetris_game_8c_ac30a0cd4694054e0c19ac09dd5f9771a} 
-\index{tetrisGame.c@{tetrisGame.c}!moveDownStack@{moveDownStack}}
-\index{moveDownStack@{moveDownStack}!tetrisGame.c@{tetrisGame.c}}
-\doxysubsubsection{\texorpdfstring{moveDownStack()}{moveDownStack()}}
-{\footnotesize\ttfamily void move\+Down\+Stack (\begin{DoxyParamCaption}\item[{int}]{start\+Line }\end{DoxyParamCaption})}
+\Hypertarget{tetris_game_8c_af5335d0e83ebdc370ca6e466f02a6267}\label{tetris_game_8c_af5335d0e83ebdc370ca6e466f02a6267} 
+\index{tetrisGame.c@{tetrisGame.c}!moveDownPlayZone@{moveDownPlayZone}}
+\index{moveDownPlayZone@{moveDownPlayZone}!tetrisGame.c@{tetrisGame.c}}
+\doxysubsubsection{\texorpdfstring{moveDownPlayZone()}{moveDownPlayZone()}}
+{\footnotesize\ttfamily void move\+Down\+Play\+Zone (\begin{DoxyParamCaption}\item[{int}]{start\+Line }\end{DoxyParamCaption})}
 
 
 
-Move all the stack above "{}start\+Line"{} down by one line. 
+Move all the play zone above "{}start\+Line"{} down by one line. 
 
 
 \begin{DoxyParams}{Parameters}
 {\em start\+Line} & line which got cleared \\
 \hline
 \end{DoxyParams}
-\Hypertarget{tetris_game_8c_aab44c65b4c5ef7a94e5701f074211391}\label{tetris_game_8c_aab44c65b4c5ef7a94e5701f074211391} 
+\Hypertarget{tetris_game_8c_a83dfa86093b929619b7c3cb9b9d262f1}\label{tetris_game_8c_a83dfa86093b929619b7c3cb9b9d262f1} 
 \index{tetrisGame.c@{tetrisGame.c}!movePiece@{movePiece}}
 \index{movePiece@{movePiece}!tetrisGame.c@{tetrisGame.c}}
 \doxysubsubsection{\texorpdfstring{movePiece()}{movePiece()}}
-{\footnotesize\ttfamily int move\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}}]{tetramino\+Atm,  }\item[{int}]{direction }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int move\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_e_t_r_i_m_i_n_o}{TETRIMINO}} \texorpdfstring{$\ast$}{*}}]{current\+Tetrimino,  }\item[{int}]{direction }\end{DoxyParamCaption})}
 
 
 
-Permet de déplacer une pièce en fonction de sa direction. 
+Permet de déplacer une pièce vers la gauche ou la droite. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em \texorpdfstring{$\ast$}{*}tetramino\+Atm} & Current tetramino used \\
+{\em \texorpdfstring{$\ast$}{*}current\+Tetrimino} & Current tetrimino used \\
 \hline
 {\em direction} & user\+Inputs \\
 \hline
@@ -271,19 +274,19 @@ Permet de déplacer une pièce en fonction de sa direction.
 {\em state} & 1 si déplacement OK, 0 si non \\
 \hline
 \end{DoxyRetVals}
-\Hypertarget{tetris_game_8c_a2ed5bd4d5ecf8d9597e80b61dad4f0e9}\label{tetris_game_8c_a2ed5bd4d5ecf8d9597e80b61dad4f0e9} 
+\Hypertarget{tetris_game_8c_ae7e83a1dc3fb42fc0dca7d9eb0f80d15}\label{tetris_game_8c_ae7e83a1dc3fb42fc0dca7d9eb0f80d15} 
 \index{tetrisGame.c@{tetrisGame.c}!randomPiece@{randomPiece}}
 \index{randomPiece@{randomPiece}!tetrisGame.c@{tetrisGame.c}}
 \doxysubsubsection{\texorpdfstring{randomPiece()}{randomPiece()}}
-{\footnotesize\ttfamily void random\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}}]{tetramino\+Atm }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void random\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_e_t_r_i_m_i_n_o}{TETRIMINO}} \texorpdfstring{$\ast$}{*}}]{current\+Tetrimino }\end{DoxyParamCaption})}
 
 
 
-Select a random piece among the tetraminos. 
+Select a random piece among the tetriminos. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em tetramino\+Atm} & list of tetraminos \\
+{\em current\+Tetrimino} & list of tetriminos \\
 \hline
 \end{DoxyParams}
 \Hypertarget{tetris_game_8c_a7c23a5fa3b48f5020d6a71fc47a86031}\label{tetris_game_8c_a7c23a5fa3b48f5020d6a71fc47a86031} 
@@ -294,46 +297,61 @@ Select a random piece among the tetraminos.
 
 
 
-Remove the selected line. 
+Remove the selected line (fill it with 0) 
 
 
 \begin{DoxyParams}{Parameters}
 {\em line} & line selected \\
 \hline
 \end{DoxyParams}
-\Hypertarget{tetris_game_8c_adc91f41cf420b07107119d403639621d}\label{tetris_game_8c_adc91f41cf420b07107119d403639621d} 
-\index{tetrisGame.c@{tetrisGame.c}!removePieceFromStack@{removePieceFromStack}}
-\index{removePieceFromStack@{removePieceFromStack}!tetrisGame.c@{tetrisGame.c}}
-\doxysubsubsection{\texorpdfstring{removePieceFromStack()}{removePieceFromStack()}}
-{\footnotesize\ttfamily void remove\+Piece\+From\+Stack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}}]{tetramino\+Atm }\end{DoxyParamCaption})}
+\Hypertarget{tetris_game_8c_a1941f6746172c03277a0e79a4ab8360e}\label{tetris_game_8c_a1941f6746172c03277a0e79a4ab8360e} 
+\index{tetrisGame.c@{tetrisGame.c}!removePieceFromPlayZone@{removePieceFromPlayZone}}
+\index{removePieceFromPlayZone@{removePieceFromPlayZone}!tetrisGame.c@{tetrisGame.c}}
+\doxysubsubsection{\texorpdfstring{removePieceFromPlayZone()}{removePieceFromPlayZone()}}
+{\footnotesize\ttfamily void remove\+Piece\+From\+Play\+Zone (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_e_t_r_i_m_i_n_o}{TETRIMINO}} \texorpdfstring{$\ast$}{*}}]{current\+Tetrimino }\end{DoxyParamCaption})}
 
 
 
-Permet de supprimer une pièce du jeu. 
+Permet de supprimer la pièce du jeu. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em \texorpdfstring{$\ast$}{*}tetramino\+Atm} & Current tetramino used \\
+{\em \texorpdfstring{$\ast$}{*}current\+Tetrimino} & Current tetrimino used \\
 \hline
 \end{DoxyParams}
-\Hypertarget{tetris_game_8c_a3a179348ccd32ecd168c08a74b28ba17}\label{tetris_game_8c_a3a179348ccd32ecd168c08a74b28ba17} 
+\Hypertarget{tetris_game_8c_a5219e12d17dba0dd08f62a21437546eb}\label{tetris_game_8c_a5219e12d17dba0dd08f62a21437546eb} 
 \index{tetrisGame.c@{tetrisGame.c}!rotatePiece@{rotatePiece}}
 \index{rotatePiece@{rotatePiece}!tetrisGame.c@{tetrisGame.c}}
 \doxysubsubsection{\texorpdfstring{rotatePiece()}{rotatePiece()}}
-{\footnotesize\ttfamily int rotate\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_e_t_r_a_m_i_n_o___a_t_m}{TETRAMINO\+\_\+\+ATM}} \texorpdfstring{$\ast$}{*}}]{tetramino\+Atm }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int rotate\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_e_t_r_i_m_i_n_o}{TETRIMINO}} \texorpdfstring{$\ast$}{*}}]{current\+Tetrimino }\end{DoxyParamCaption})}
 
 
 
-Permet tourner une pièce, seulement si elle ne va pas clip. 
+Permet de pivoter de 90° une pièce, seulement si elle ne va pas clip. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em \texorpdfstring{$\ast$}{*}tetramino\+Atm} & Current tetramino used \\
+{\em \texorpdfstring{$\ast$}{*}current\+Tetrimino} & Current tetrimino used \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{Return values}
 {\em state} & 1 if rotated and 0 if clipping \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{tetris_game_8c_aaf103d842e6d9f5524319094721d4268}\label{tetris_game_8c_aaf103d842e6d9f5524319094721d4268} 
+\index{tetrisGame.c@{tetrisGame.c}!tetrisGame@{tetrisGame}}
+\index{tetrisGame@{tetrisGame}!tetrisGame.c@{tetrisGame.c}}
+\doxysubsubsection{\texorpdfstring{tetrisGame()}{tetrisGame()}}
+{\footnotesize\ttfamily int tetris\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet de lancer le jeu. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em 0} & si erreur \\
 \hline
 \end{DoxyRetVals}
 
@@ -357,6 +375,24 @@ Permet tourner une pièce, seulement si elle ne va pas clip.
 
 Bar piece in 4 by 4 grid. 
 
+\Hypertarget{tetris_game_8c_a412ac308292218f2af8d61e2b94498b9}\label{tetris_game_8c_a412ac308292218f2af8d61e2b94498b9} 
+\index{tetrisGame.c@{tetrisGame.c}!pieceJ@{pieceJ}}
+\index{pieceJ@{pieceJ}!tetrisGame.c@{tetrisGame.c}}
+\doxysubsubsection{\texorpdfstring{pieceJ}{pieceJ}}
+{\footnotesize\ttfamily int pieceJ\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{\ \{0,0,0,0\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,0,1,0\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,0,1,0\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,1,1,0\}\}}
+
+\end{DoxyCode}
+
+
+J piece in 4 by 4 grid. 
+
 \Hypertarget{tetris_game_8c_a5b2e17510c0e92ae5ff2986fdec4932a}\label{tetris_game_8c_a5b2e17510c0e92ae5ff2986fdec4932a} 
 \index{tetrisGame.c@{tetrisGame.c}!pieceL@{pieceL}}
 \index{pieceL@{pieceL}!tetrisGame.c@{tetrisGame.c}}
@@ -374,6 +410,24 @@ Bar piece in 4 by 4 grid.
 
 
 L piece in 4 by 4 grid. 
+
+\Hypertarget{tetris_game_8c_a49918ba313471e7e46a0da237016e95e}\label{tetris_game_8c_a49918ba313471e7e46a0da237016e95e} 
+\index{tetrisGame.c@{tetrisGame.c}!pieceS@{pieceS}}
+\index{pieceS@{pieceS}!tetrisGame.c@{tetrisGame.c}}
+\doxysubsubsection{\texorpdfstring{pieceS}{pieceS}}
+{\footnotesize\ttfamily int pieceS\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ \ \{\{0,0,0,0\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,0,1,1\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,1,1,0\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,0,0,0\}\}}
+
+\end{DoxyCode}
+
+
+S piece in 4 by 4 grid. 
 
 \Hypertarget{tetris_game_8c_a2dc8d45c928817ebdc407620216fc78d}\label{tetris_game_8c_a2dc8d45c928817ebdc407620216fc78d} 
 \index{tetrisGame.c@{tetrisGame.c}!pieceSquare@{pieceSquare}}
@@ -429,15 +483,15 @@ T piece in 4 by 4 grid.
 
 Zigzag piece in 4 by 4 grid. 
 
-\Hypertarget{tetris_game_8c_a15f6a876cfe88237588b2ae13f1cb2f8}\label{tetris_game_8c_a15f6a876cfe88237588b2ae13f1cb2f8} 
-\index{tetrisGame.c@{tetrisGame.c}!playStack@{playStack}}
-\index{playStack@{playStack}!tetrisGame.c@{tetrisGame.c}}
-\doxysubsubsection{\texorpdfstring{playStack}{playStack}}
-{\footnotesize\ttfamily int play\+Stack\mbox{[}23\mbox{]}\mbox{[}16\mbox{]}}
+\Hypertarget{tetris_game_8c_a7be166db2b2f61bfeaccb28b6b053172}\label{tetris_game_8c_a7be166db2b2f61bfeaccb28b6b053172} 
+\index{tetrisGame.c@{tetrisGame.c}!playZone@{playZone}}
+\index{playZone@{playZone}!tetrisGame.c@{tetrisGame.c}}
+\doxysubsubsection{\texorpdfstring{playZone}{playZone}}
+{\footnotesize\ttfamily int play\+Zone\mbox{[}23\mbox{]}\mbox{[}16\mbox{]}}
 
 {\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{=\ }
+\DoxyCodeLine{=}
 \DoxyCodeLine{\ \ \ \ \{\{1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1\},}
 \DoxyCodeLine{\ \ \ \ \{1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1\},}
 \DoxyCodeLine{\ \ \ \ \{1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1\},}
@@ -465,5 +519,5 @@ Zigzag piece in 4 by 4 grid.
 \end{DoxyCode}
 
 
-Play\+Window. 
+Play\+Zone. 
 
