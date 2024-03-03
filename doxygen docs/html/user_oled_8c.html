@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Tetris_STM_code: C:/Users/pontet/Documents/Git_Repos/Tetris_STM/Tetris_STM_code/tetrisGame/userOled.c File Reference</title>
+<title>Tetris_STM_code: C:/Users/Pierre/Documents/Git_Repos/Tetris-STM/Tetris_STM_code/tetrisGame/userOled.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -119,9 +119,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clearPlayZone</b> ()<
 <tr class="memitem:a4a8b7e31c3fe86ea9f12dd3ba0745eb3" id="r_a4a8b7e31c3fe86ea9f12dd3ba0745eb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a8b7e31c3fe86ea9f12dd3ba0745eb3">ssd1306_SetCursorVertical</a> (uint8_t x, uint8_t y)</td></tr>
 <tr class="memdesc:a4a8b7e31c3fe86ea9f12dd3ba0745eb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Déplace le curseur à sa position Verticale.  <br /></td></tr>
 <tr class="separator:a4a8b7e31c3fe86ea9f12dd3ba0745eb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b46f95cb32d9af8eca89bad57d18210" id="r_a1b46f95cb32d9af8eca89bad57d18210"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b46f95cb32d9af8eca89bad57d18210">tetrisBordureDecor</a> (SSD1306_COLOR color)</td></tr>
-<tr class="memdesc:a1b46f95cb32d9af8eca89bad57d18210"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the decor.  <br /></td></tr>
-<tr class="separator:a1b46f95cb32d9af8eca89bad57d18210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99cdd81bceb4ed5d178c84c62ec794b8" id="r_a99cdd81bceb4ed5d178c84c62ec794b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99cdd81bceb4ed5d178c84c62ec794b8">drawBorderDecor</a> (SSD1306_COLOR color)</td></tr>
+<tr class="memdesc:a99cdd81bceb4ed5d178c84c62ec794b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the decor.  <br /></td></tr>
+<tr class="separator:a99cdd81bceb4ed5d178c84c62ec794b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0744272d835bb6e1f8ef839bfd92a06" id="r_ae0744272d835bb6e1f8ef839bfd92a06"><td class="memItemLeft" align="right" valign="top"><a id="ae0744272d835bb6e1f8ef839bfd92a06" name="ae0744272d835bb6e1f8ef839bfd92a06"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>drawTetriminos</b> ()</td></tr>
 <tr class="memdesc:ae0744272d835bb6e1f8ef839bfd92a06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche les tetriminos en bas du StartMenu. <br /></td></tr>
@@ -139,6 +139,31 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Clignotement_Click</b
 <div class="textblock"><p>: Others functions for Oled drawing </p>
 <dl class="section date"><dt>Date</dt><dd>08 février 2024 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a99cdd81bceb4ed5d178c84c62ec794b8" name="a99cdd81bceb4ed5d178c84c62ec794b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99cdd81bceb4ed5d178c84c62ec794b8">&#9670;&#160;</a></span>drawBorderDecor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drawBorderDecor </td>
+          <td>(</td>
+          <td class="paramtype">SSD1306_COLOR</td>          <td class="paramname"><span class="paramname"><em>color</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw the decor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>couleur sélectionnée </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a2f9d9e566e5746dca38a99ac8b8c2b81" name="a2f9d9e566e5746dca38a99ac8b8c2b81"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2f9d9e566e5746dca38a99ac8b8c2b81">&#9670;&#160;</a></span>drawPlayZone()</h2>
 
@@ -293,31 +318,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Clignotement_Click</b
   <table class="params">
     <tr><td class="paramname">str</td><td>chaîne de caractères à afficher </td></tr>
     <tr><td class="paramname">Font</td><td>police sélectionnée </td></tr>
-    <tr><td class="paramname">color</td><td>couleur sélectionnée </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a1b46f95cb32d9af8eca89bad57d18210" name="a1b46f95cb32d9af8eca89bad57d18210"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b46f95cb32d9af8eca89bad57d18210">&#9670;&#160;</a></span>tetrisBordureDecor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void tetrisBordureDecor </td>
-          <td>(</td>
-          <td class="paramtype">SSD1306_COLOR</td>          <td class="paramname"><span class="paramname"><em>color</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Draw the decor. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
     <tr><td class="paramname">color</td><td>couleur sélectionnée </td></tr>
   </table>
   </dd>
