@@ -242,6 +242,7 @@ int tetrisGame()
 
         case GAMEOVER_STATE:
         	drawGameOver();
+        	drawBorderDecor(White);
         	while(HAL_GPIO_ReadPin(menuButton_GPIO_Port, menuButton_Pin)){
         		Clignotement_Click();
 		    }

@@ -75,7 +75,7 @@ void drawTetrisStartGame(){
 	ssd1306_WriteStringVertical("GAMe", Font_7x10_new, White);
 	ssd1306_SetCursorVertical(90, 46);
 	ssd1306_WriteStringVertical("Click", Font_6x8_new, White);
-	tetrisBordureDecor(White);
+	drawBorderDecor(White);
 	drawTetriminos();
 }
 
@@ -152,7 +152,7 @@ void ssd1306_SetCursorVertical(uint8_t x, uint8_t y) {
 /** @brief Draw the decor
  *  @param color: couleur sélectionnée
   */
-void tetrisBordureDecor(SSD1306_COLOR color)
+void drawBorderDecor(SSD1306_COLOR color)
 {
   //BORD DROIT HAUT
   ssd1306_DrawPixel(2, 3, color);
