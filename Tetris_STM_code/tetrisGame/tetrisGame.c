@@ -154,7 +154,6 @@ void tetrisInit(){
 int tetrisGame()
 {
 	HAL_Delay(1000);	//Temps d'attente car il faut attendre que les condensateurs de l'écran soient chargés avant de commencer
-	//TODO REFLECHIR SI ON VEUT VRAIMENT DE LA RNG OU PAS
     // Structure avec la pièce
     TETRIMINO tetrimino;
 
@@ -256,6 +255,7 @@ int tetrisGame()
 		  while(HAL_GPIO_ReadPin(menuButton_GPIO_Port, menuButton_Pin)){
 			  Clignotement_Click();
 		  }
+		  srand(HAL_GetTick());	//regénère la cle de randomisation avec le temps total d'execution
 		  clearPlayZone();
 		  gameState = SPAWN_STATE;
         	break;
