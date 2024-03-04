@@ -25,8 +25,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "ssd1306.h"
-#include "tetrisStartMenu.h"
-#include "tetrisGame.h"
+#include "ssd1306_tests.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -53,7 +52,7 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-void tetrisInit();
+
 
 /* USER CODE END PFP */
 
@@ -93,8 +92,9 @@ int main(void)
   MX_USART2_UART_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-  tetrisInit();
-  tetrisGame();
+  HAL_Delay(1000);
+  ssd1306_Init();
+  ssd1306_TestFPS();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -160,15 +160,7 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-void tetrisInit(){
-  ssd1306_Init();
 
-  //FACULTATIF DECORS
-  tetrisStartMenu(White);
-  
-  //ecrire le nom du jeu en GROS
-  //initialiser le reste
-}
 
 /* USER CODE END 4 */
 
