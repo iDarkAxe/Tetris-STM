@@ -28,7 +28,7 @@ uint32_t getScore(){
 	return tetrisScore;
 }
 
-/** @brief Calculate the Score
+/** @brief Calculate the Score & updates the level if needed
  * @param  _numberOfLineCompleted
   */
 void calculateScore(int _numberOfLineCompleted){

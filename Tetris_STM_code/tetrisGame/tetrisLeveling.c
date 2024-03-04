@@ -13,7 +13,8 @@
 #include "tetrisLeveling.h"
 #include "tetrisGame.h"
 
-uint8_t levelNumber = 0;
+uint8_t levelNumber = 1;
+uint32_t totalLinesCompleted = 0;
 
 /**
   * @brief  Return levelNumber
@@ -30,7 +31,8 @@ uint8_t getLevelNumber()
   */
 void newLevelCalculate(uint8_t _numberOfLineCompleted)
 {
-	if(_numberOfLineCompleted >= (10*levelNumber)){
+	totalLinesCompleted += _numberOfLineCompleted;
+	if(totalLinesCompleted >= 10*levelNumber){
 		levelNumber+= 1;
 		reduceFallDelay();
 	}
