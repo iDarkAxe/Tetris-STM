@@ -1,0 +1,161 @@
+\begin{theindex}
+
+  \item {addPieceIntoPlayZone}
+    \subitem {tetrisGame.c}, \hyperpage{11}
+  \item {addScoreLine}
+    \subitem {tetrisScoring.c}, \hyperpage{19}
+
+  \indexspace
+
+  \item {C:/Users/Pierre/Documents/Git\_Repos/Tetris-\/STM/Tetris\_STM\_code/tetrisGame/tetrisGame.c}, 
+		\hyperpage{9}
+  \item {C:/Users/Pierre/Documents/Git\_Repos/Tetris-\/STM/Tetris\_STM\_code/tetrisGame/tetrisGame.h}, 
+		\hyperpage{16}
+  \item {C:/Users/Pierre/Documents/Git\_Repos/Tetris-\/STM/Tetris\_STM\_code/tetrisGame/tetrisLeveling.c}, 
+		\hyperpage{17}
+  \item {C:/Users/Pierre/Documents/Git\_Repos/Tetris-\/STM/Tetris\_STM\_code/tetrisGame/tetrisLeveling.h}, 
+		\hyperpage{18}
+  \item {C:/Users/Pierre/Documents/Git\_Repos/Tetris-\/STM/Tetris\_STM\_code/tetrisGame/tetrisScoring.c}, 
+		\hyperpage{18}
+  \item {C:/Users/Pierre/Documents/Git\_Repos/Tetris-\/STM/Tetris\_STM\_code/tetrisGame/tetrisScoring.h}, 
+		\hyperpage{19}
+  \item {C:/Users/Pierre/Documents/Git\_Repos/Tetris-\/STM/Tetris\_STM\_code/tetrisGame/userOled.c}, 
+		\hyperpage{20}
+  \item {C:/Users/Pierre/Documents/Git\_Repos/Tetris-\/STM/Tetris\_STM\_code/tetrisGame/userOled.h}, 
+		\hyperpage{22}
+  \item {calculateScore}
+    \subitem {tetrisScoring.c}, \hyperpage{19}
+
+  \indexspace
+
+  \item {drawBorderDecor}
+    \subitem {userOled.c}, \hyperpage{21}
+  \item {drawPlayZone}
+    \subitem {userOled.c}, \hyperpage{21}
+  \item {drawTile}
+    \subitem {userOled.c}, \hyperpage{21}
+
+  \indexspace
+
+  \item {falling}
+    \subitem {tetrisGame.c}, \hyperpage{11}
+
+  \indexspace
+
+  \item {getLevelNumber}
+    \subitem {tetrisLeveling.c}, \hyperpage{17}
+  \item {getLinesCompleted}
+    \subitem {tetrisGame.c}, \hyperpage{11}
+  \item {getScore}
+    \subitem {tetrisScoring.c}, \hyperpage{19}
+
+  \indexspace
+
+  \item {HAL\_GPIO\_EXTI\_Callback}
+    \subitem {tetrisGame.c}, \hyperpage{12}
+  \item {HAL\_TIM\_PeriodElapsedCallback}
+    \subitem {tetrisGame.c}, \hyperpage{12}
+
+  \indexspace
+
+  \item {isClippingInPlayZone}
+    \subitem {tetrisGame.c}, \hyperpage{12}
+
+  \indexspace
+
+  \item {moveDownPlayZone}
+    \subitem {tetrisGame.c}, \hyperpage{13}
+  \item {movePiece}
+    \subitem {tetrisGame.c}, \hyperpage{13}
+
+  \indexspace
+
+  \item {newLevelCalculate}
+    \subitem {tetrisLeveling.c}, \hyperpage{17}
+
+  \indexspace
+
+  \item {pieceBar}
+    \subitem {tetrisGame.c}, \hyperpage{14}
+  \item {pieceJ}
+    \subitem {tetrisGame.c}, \hyperpage{15}
+  \item {pieceL}
+    \subitem {tetrisGame.c}, \hyperpage{15}
+  \item {pieceS}
+    \subitem {tetrisGame.c}, \hyperpage{15}
+  \item {pieceSquare}
+    \subitem {tetrisGame.c}, \hyperpage{15}
+  \item {pieceT}
+    \subitem {tetrisGame.c}, \hyperpage{15}
+  \item {pieceZigzag}
+    \subitem {tetrisGame.c}, \hyperpage{16}
+  \item {playZone}
+    \subitem {tetrisGame.c}, \hyperpage{16}
+
+  \indexspace
+
+  \item {randomPiece}
+    \subitem {tetrisGame.c}, \hyperpage{13}
+  \item {removeLine}
+    \subitem {tetrisGame.c}, \hyperpage{13}
+  \item {removePieceFromPlayZone}
+    \subitem {tetrisGame.c}, \hyperpage{14}
+  \item {rotatePiece}
+    \subitem {tetrisGame.c}, \hyperpage{14}
+
+  \indexspace
+
+  \item {ssd1306\_SetCursorVertical}
+    \subitem {userOled.c}, \hyperpage{21}
+  \item {ssd1306\_WriteCharVertical}
+    \subitem {userOled.c}, \hyperpage{22}
+  \item {ssd1306\_WriteStringVertical}
+    \subitem {userOled.c}, \hyperpage{22}
+
+  \indexspace
+
+  \item {TETRIMINO}, \hyperpage{7}
+  \item {Tetris Game}, \hyperpage{1}
+  \item {tetrisGame}
+    \subitem {tetrisGame.c}, \hyperpage{14}
+  \item {tetrisGame.c}
+    \subitem {addPieceIntoPlayZone}, \hyperpage{11}
+    \subitem {falling}, \hyperpage{11}
+    \subitem {getLinesCompleted}, \hyperpage{11}
+    \subitem {HAL\_GPIO\_EXTI\_Callback}, \hyperpage{12}
+    \subitem {HAL\_TIM\_PeriodElapsedCallback}, \hyperpage{12}
+    \subitem {isClippingInPlayZone}, \hyperpage{12}
+    \subitem {moveDownPlayZone}, \hyperpage{13}
+    \subitem {movePiece}, \hyperpage{13}
+    \subitem {pieceBar}, \hyperpage{14}
+    \subitem {pieceJ}, \hyperpage{15}
+    \subitem {pieceL}, \hyperpage{15}
+    \subitem {pieceS}, \hyperpage{15}
+    \subitem {pieceSquare}, \hyperpage{15}
+    \subitem {pieceT}, \hyperpage{15}
+    \subitem {pieceZigzag}, \hyperpage{16}
+    \subitem {playZone}, \hyperpage{16}
+    \subitem {randomPiece}, \hyperpage{13}
+    \subitem {removeLine}, \hyperpage{13}
+    \subitem {removePieceFromPlayZone}, \hyperpage{14}
+    \subitem {rotatePiece}, \hyperpage{14}
+    \subitem {tetrisGame}, \hyperpage{14}
+  \item {tetrisLeveling.c}
+    \subitem {getLevelNumber}, \hyperpage{17}
+    \subitem {newLevelCalculate}, \hyperpage{17}
+  \item {tetrisScoring.c}
+    \subitem {addScoreLine}, \hyperpage{19}
+    \subitem {calculateScore}, \hyperpage{19}
+    \subitem {getScore}, \hyperpage{19}
+
+  \indexspace
+
+  \item {userOled.c}
+    \subitem {drawBorderDecor}, \hyperpage{21}
+    \subitem {drawPlayZone}, \hyperpage{21}
+    \subitem {drawTile}, \hyperpage{21}
+    \subitem {ssd1306\_SetCursorVertical}, \hyperpage{21}
+    \subitem {ssd1306\_WriteCharVertical}, \hyperpage{22}
+    \subitem {ssd1306\_WriteStringVertical}, \hyperpage{22}
+
+\end{theindex}

@@ -1,0 +1,61 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Tetris Game}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduction}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Class Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Class List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}File Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Class Documentation}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}TETRIMINO Struct Reference}{7}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{7}{subsection.4.1.1}%
+\contentsline {chapter}{\numberline {5}File Documentation}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pierre/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Git\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Repos/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tetris-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}STM/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tetris\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}STM\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}code/tetris\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game/tetris\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game.c File Reference}{9}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Detailed Description}{11}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Function Documentation}{11}{subsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.1}addPieceIntoPlayZone()}{11}{subsubsection.5.1.2.1}%
+\contentsline {subsubsection}{\numberline {5.1.2.2}falling()}{11}{subsubsection.5.1.2.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.3}getLinesCompleted()}{12}{subsubsection.5.1.2.3}%
+\contentsline {subsubsection}{\numberline {5.1.2.4}HAL\_GPIO\_EXTI\_Callback()}{12}{subsubsection.5.1.2.4}%
+\contentsline {subsubsection}{\numberline {5.1.2.5}HAL\_TIM\_PeriodElapsedCallback()}{12}{subsubsection.5.1.2.5}%
+\contentsline {subsubsection}{\numberline {5.1.2.6}isClippingInPlayZone()}{12}{subsubsection.5.1.2.6}%
+\contentsline {subsubsection}{\numberline {5.1.2.7}moveDownPlayZone()}{13}{subsubsection.5.1.2.7}%
+\contentsline {subsubsection}{\numberline {5.1.2.8}movePiece()}{13}{subsubsection.5.1.2.8}%
+\contentsline {subsubsection}{\numberline {5.1.2.9}randomPiece()}{13}{subsubsection.5.1.2.9}%
+\contentsline {subsubsection}{\numberline {5.1.2.10}removeLine()}{13}{subsubsection.5.1.2.10}%
+\contentsline {subsubsection}{\numberline {5.1.2.11}removePieceFromPlayZone()}{14}{subsubsection.5.1.2.11}%
+\contentsline {subsubsection}{\numberline {5.1.2.12}rotatePiece()}{14}{subsubsection.5.1.2.12}%
+\contentsline {subsubsection}{\numberline {5.1.2.13}tetrisGame()}{14}{subsubsection.5.1.2.13}%
+\contentsline {subsection}{\numberline {5.1.3}Variable Documentation}{14}{subsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.3.1}pieceBar}{14}{subsubsection.5.1.3.1}%
+\contentsline {subsubsection}{\numberline {5.1.3.2}pieceJ}{15}{subsubsection.5.1.3.2}%
+\contentsline {subsubsection}{\numberline {5.1.3.3}pieceL}{15}{subsubsection.5.1.3.3}%
+\contentsline {subsubsection}{\numberline {5.1.3.4}pieceS}{15}{subsubsection.5.1.3.4}%
+\contentsline {subsubsection}{\numberline {5.1.3.5}pieceSquare}{15}{subsubsection.5.1.3.5}%
+\contentsline {subsubsection}{\numberline {5.1.3.6}pieceT}{16}{subsubsection.5.1.3.6}%
+\contentsline {subsubsection}{\numberline {5.1.3.7}pieceZigzag}{16}{subsubsection.5.1.3.7}%
+\contentsline {subsubsection}{\numberline {5.1.3.8}playZone}{16}{subsubsection.5.1.3.8}%
+\contentsline {section}{\numberline {5.2}tetris\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{16}{section.5.2}%
+\contentsline {section}{\numberline {5.3}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pierre/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Git\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Repos/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tetris-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}STM/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tetris\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}STM\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}code/tetris\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game/tetris\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Leveling.c File Reference}{17}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Detailed Description}{17}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Function Documentation}{17}{subsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.2.1}getLevelNumber()}{17}{subsubsection.5.3.2.1}%
+\contentsline {subsubsection}{\numberline {5.3.2.2}newLevelCalculate()}{17}{subsubsection.5.3.2.2}%
+\contentsline {section}{\numberline {5.4}tetris\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Leveling.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{18}{section.5.4}%
+\contentsline {section}{\numberline {5.5}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pierre/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Git\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Repos/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tetris-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}STM/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tetris\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}STM\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}code/tetris\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game/tetris\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scoring.c File Reference}{18}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Detailed Description}{19}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Function Documentation}{19}{subsection.5.5.2}%
+\contentsline {subsubsection}{\numberline {5.5.2.1}addScoreLine()}{19}{subsubsection.5.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.5.2.2}calculateScore()}{19}{subsubsection.5.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.5.2.3}getScore()}{19}{subsubsection.5.5.2.3}%
+\contentsline {section}{\numberline {5.6}tetris\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scoring.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{19}{section.5.6}%
+\contentsline {section}{\numberline {5.7}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pierre/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Git\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Repos/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tetris-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}STM/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tetris\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}STM\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}code/tetris\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game/user\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Oled.c File Reference}{20}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Detailed Description}{21}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Function Documentation}{21}{subsection.5.7.2}%
+\contentsline {subsubsection}{\numberline {5.7.2.1}drawBorderDecor()}{21}{subsubsection.5.7.2.1}%
+\contentsline {subsubsection}{\numberline {5.7.2.2}drawPlayZone()}{21}{subsubsection.5.7.2.2}%
+\contentsline {subsubsection}{\numberline {5.7.2.3}drawTile()}{21}{subsubsection.5.7.2.3}%
+\contentsline {subsubsection}{\numberline {5.7.2.4}ssd1306\_SetCursorVertical()}{22}{subsubsection.5.7.2.4}%
+\contentsline {subsubsection}{\numberline {5.7.2.5}ssd1306\_WriteCharVertical()}{22}{subsubsection.5.7.2.5}%
+\contentsline {subsubsection}{\numberline {5.7.2.6}ssd1306\_WriteStringVertical()}{22}{subsubsection.5.7.2.6}%
+\contentsline {section}{\numberline {5.8}user\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Oled.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{22}{section.5.8}%
+\contentsline {chapter}{Index}{25}{section*.12}%
